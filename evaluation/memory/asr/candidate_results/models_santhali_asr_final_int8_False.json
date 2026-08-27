@@ -1,0 +1,12 @@
+{
+    "model": "models/santhali_asr_final",
+    "quantize_int8": false,
+    "base_python_ram_mb": 205.51,
+    "post_load_ram_mb": 483.8,
+    "peak_quantization_ram_mb": 483.8,
+    "post_quantization_ram_mb": 483.8,
+    "peak_inference_ram_mb": 851.45,
+    "post_inference_ram_mb": 869.43,
+    "load_time_s": 5.4,
+    "inference_time_s": 0.26
+}

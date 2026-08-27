@@ -1,0 +1,339 @@
+Exception Type: RuntimeError
+Exception Message: Could not load libtorchcodec. Likely causes:
+          1. FFmpeg is not properly installed in your environment. We support
+             versions 4, 5, 6, 7, 8, and 9, and we attempt to load libtorchcodec
+             for each of those versions. Errors for versions not installed on
+             your system are expected; only the error for your installed FFmpeg
+             version is relevant. On Windows, ensure you've installed the
+             "full-shared" version which ships DLLs.
+          2. The PyTorch version (2.13.0+cpu) is not compatible with
+             this version of TorchCodec. Refer to the version compatibility
+             table:
+             https://github.com/pytorch/torchcodec?tab=readme-ov-file#installing-torchcodec.
+          3. Another runtime dependency; see exceptions below.
+
+        The following exceptions were raised as we tried to load libtorchcodec:
+        
+[start of libtorchcodec loading traceback]
+FFmpeg version 9:
+Traceback (most recent call last):
+  File "C:\study files\sih project\venv\Lib\site-packages\torch\_ops.py", line 1516, in load_library
+    ctypes.CDLL(path)
+    ~~~~~~~~~~~^^^^^^
+  File "C:\Python314\Lib\ctypes\__init__.py", line 433, in __init__
+    self._handle = self._load_library(name, mode, handle, winmode)
+                   ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\ctypes\__init__.py", line 451, in _load_library
+    return _LoadLibrary(self._name, winmode)
+FileNotFoundError: Could not find module 'C:\study files\sih project\venv\Lib\site-packages\torchcodec\libtorchcodec_core9.dll' (or one of its dependencies). Try using the full path with constructor syntax.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\study files\sih project\venv\Lib\site-packages\torchcodec\_internally_replaced_utils.py", line 132, in load_core_libraries
+    torch.ops.load_library(core_library_path)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\study files\sih project\venv\Lib\site-packages\torch\_ops.py", line 1518, in load_library
+    raise OSError(f"Could not load this library: {path}") from e
+OSError: Could not load this library: C:\study files\sih project\venv\Lib\site-packages\torchcodec\libtorchcodec_core9.dll
+
+FFmpeg version 8:
+Traceback (most recent call last):
+  File "C:\study files\sih project\venv\Lib\site-packages\torch\_ops.py", line 1516, in load_library
+    ctypes.CDLL(path)
+    ~~~~~~~~~~~^^^^^^
+  File "C:\Python314\Lib\ctypes\__init__.py", line 433, in __init__
+    self._handle = self._load_library(name, mode, handle, winmode)
+                   ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\ctypes\__init__.py", line 451, in _load_library
+    return _LoadLibrary(self._name, winmode)
+FileNotFoundError: Could not find module 'C:\study files\sih project\venv\Lib\site-packages\torchcodec\libtorchcodec_core8.dll' (or one of its dependencies). Try using the full path with constructor syntax.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\study files\sih project\venv\Lib\site-packages\torchcodec\_internally_replaced_utils.py", line 132, in load_core_libraries
+    torch.ops.load_library(core_library_path)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\study files\sih project\venv\Lib\site-packages\torch\_ops.py", line 1518, in load_library
+    raise OSError(f"Could not load this library: {path}") from e
+OSError: Could not load this library: C:\study files\sih project\venv\Lib\site-packages\torchcodec\libtorchcodec_core8.dll
+
+FFmpeg version 7:
+Traceback (most recent call last):
+  File "C:\study files\sih project\venv\Lib\site-packages\torch\_ops.py", line 1516, in load_library
+    ctypes.CDLL(path)
+    ~~~~~~~~~~~^^^^^^
+  File "C:\Python314\Lib\ctypes\__init__.py", line 433, in __init__
+    self._handle = self._load_library(name, mode, handle, winmode)
+                   ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\ctypes\__init__.py", line 451, in _load_library
+    return _LoadLibrary(self._name, winmode)
+FileNotFoundError: Could not find module 'C:\study files\sih project\venv\Lib\site-packages\torchcodec\libtorchcodec_core7.dll' (or one of its dependencies). Try using the full path with constructor syntax.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\study files\sih project\venv\Lib\site-packages\torchcodec\_internally_replaced_utils.py", line 132, in load_core_libraries
+    torch.ops.load_library(core_library_path)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\study files\sih project\venv\Lib\site-packages\torch\_ops.py", line 1518, in load_library
+    raise OSError(f"Could not load this library: {path}") from e
+OSError: Could not load this library: C:\study files\sih project\venv\Lib\site-packages\torchcodec\libtorchcodec_core7.dll
+
+FFmpeg version 6:
+Traceback (most recent call last):
+  File "C:\study files\sih project\venv\Lib\site-packages\torch\_ops.py", line 1516, in load_library
+    ctypes.CDLL(path)
+    ~~~~~~~~~~~^^^^^^
+  File "C:\Python314\Lib\ctypes\__init__.py", line 433, in __init__
+    self._handle = self._load_library(name, mode, handle, winmode)
+                   ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\ctypes\__init__.py", line 451, in _load_library
+    return _LoadLibrary(self._name, winmode)
+FileNotFoundError: Could not find module 'C:\study files\sih project\venv\Lib\site-packages\torchcodec\libtorchcodec_core6.dll' (or one of its dependencies). Try using the full path with constructor syntax.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\study files\sih project\venv\Lib\site-packages\torchcodec\_internally_replaced_utils.py", line 132, in load_core_libraries
+    torch.ops.load_library(core_library_path)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\study files\sih project\venv\Lib\site-packages\torch\_ops.py", line 1518, in load_library
+    raise OSError(f"Could not load this library: {path}") from e
+OSError: Could not load this library: C:\study files\sih project\venv\Lib\site-packages\torchcodec\libtorchcodec_core6.dll
+
+FFmpeg version 5:
+Traceback (most recent call last):
+  File "C:\study files\sih project\venv\Lib\site-packages\torch\_ops.py", line 1516, in load_library
+    ctypes.CDLL(path)
+    ~~~~~~~~~~~^^^^^^
+  File "C:\Python314\Lib\ctypes\__init__.py", line 433, in __init__
+    self._handle = self._load_library(name, mode, handle, winmode)
+                   ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\ctypes\__init__.py", line 451, in _load_library
+    return _LoadLibrary(self._name, winmode)
+FileNotFoundError: Could not find module 'C:\study files\sih project\venv\Lib\site-packages\torchcodec\libtorchcodec_core5.dll' (or one of its dependencies). Try using the full path with constructor syntax.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\study files\sih project\venv\Lib\site-packages\torchcodec\_internally_replaced_utils.py", line 132, in load_core_libraries
+    torch.ops.load_library(core_library_path)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\study files\sih project\venv\Lib\site-packages\torch\_ops.py", line 1518, in load_library
+    raise OSError(f"Could not load this library: {path}") from e
+OSError: Could not load this library: C:\study files\sih project\venv\Lib\site-packages\torchcodec\libtorchcodec_core5.dll
+
+FFmpeg version 4:
+Traceback (most recent call last):
+  File "C:\study files\sih project\venv\Lib\site-packages\torch\_ops.py", line 1516, in load_library
+    ctypes.CDLL(path)
+    ~~~~~~~~~~~^^^^^^
+  File "C:\Python314\Lib\ctypes\__init__.py", line 433, in __init__
+    self._handle = self._load_library(name, mode, handle, winmode)
+                   ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\ctypes\__init__.py", line 451, in _load_library
+    return _LoadLibrary(self._name, winmode)
+FileNotFoundError: Could not find module 'C:\study files\sih project\venv\Lib\site-packages\torchcodec\libtorchcodec_core4.dll' (or one of its dependencies). Try using the full path with constructor syntax.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\study files\sih project\venv\Lib\site-packages\torchcodec\_internally_replaced_utils.py", line 132, in load_core_libraries
+    torch.ops.load_library(core_library_path)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\study files\sih project\venv\Lib\site-packages\torch\_ops.py", line 1518, in load_library
+    raise OSError(f"Could not load this library: {path}") from e
+OSError: Could not load this library: C:\study files\sih project\venv\Lib\site-packages\torchcodec\libtorchcodec_core4.dll
+[end of libtorchcodec loading traceback].
+Traceback (most recent call last):
+  File "C:\study files\sih project\scripts\minimal_test2.py", line 14, in main
+    sample = next(ds_iter)
+  File "C:\study files\sih project\venv\Lib\site-packages\datasets\iterable_dataset.py", line 2840, in __iter__
+    for key, example in ex_iterable:
+                        ^^^^^^^^^^^
+  File "C:\study files\sih project\venv\Lib\site-packages\datasets\iterable_dataset.py", line 2374, in __iter__
+    batch = formatter.format_batch(pa_table)
+  File "C:\study files\sih project\venv\Lib\site-packages\datasets\formatting\formatting.py", line 488, in format_batch
+    batch = self.python_features_decoder.decode_batch(batch)
+  File "C:\study files\sih project\venv\Lib\site-packages\datasets\formatting\formatting.py", line 250, in decode_batch
+    return self.features.decode_batch(batch, token_per_repo_id=self.token_per_repo_id) if self.features else batch
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\study files\sih project\venv\Lib\site-packages\datasets\features\features.py", line 2273, in decode_batch
+    decode_nested_example(self[column_name], value, token_per_repo_id=token_per_repo_id)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\study files\sih project\venv\Lib\site-packages\datasets\features\features.py", line 1524, in decode_nested_example
+    return schema.decode_example(obj, token_per_repo_id=token_per_repo_id) if obj is not None else None
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\study files\sih project\venv\Lib\site-packages\datasets\features\audio.py", line 216, in decode_example
+    audio = AudioDecoder(
+        bytes, stream_index=self.stream_index, sample_rate=self.sampling_rate, num_channels=self.num_channels
+    )
+  File "C:\study files\sih project\venv\Lib\site-packages\torchcodec\decoders\_audio_decoder.py", line 73, in __init__
+    ) = create_audio_decoder(
+        ~~~~~~~~~~~~~~~~~~~~^
+        source=source,
+        ^^^^^^^^^^^^^^
+    ...<3 lines>...
+        num_channels=num_channels,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\study files\sih project\venv\Lib\site-packages\torchcodec\_core\_decoder_utils.py", line 81, in create_audio_decoder
+    decoder = create_decoder(source=source, seek_mode=seek_mode)
+  File "C:\study files\sih project\venv\Lib\site-packages\torchcodec\_core\_decoder_utils.py", line 46, in create_decoder
+    load_core_libraries()
+    ~~~~~~~~~~~~~~~~~~~^^
+  File "C:\study files\sih project\venv\Lib\site-packages\torchcodec\_internally_replaced_utils.py", line 145, in load_core_libraries
+    raise RuntimeError(
+    ...<16 lines>...
+    )
+RuntimeError: Could not load libtorchcodec. Likely causes:
+          1. FFmpeg is not properly installed in your environment. We support
+             versions 4, 5, 6, 7, 8, and 9, and we attempt to load libtorchcodec
+             for each of those versions. Errors for versions not installed on
+             your system are expected; only the error for your installed FFmpeg
+             version is relevant. On Windows, ensure you've installed the
+             "full-shared" version which ships DLLs.
+          2. The PyTorch version (2.13.0+cpu) is not compatible with
+             this version of TorchCodec. Refer to the version compatibility
+             table:
+             https://github.com/pytorch/torchcodec?tab=readme-ov-file#installing-torchcodec.
+          3. Another runtime dependency; see exceptions below.
+
+        The following exceptions were raised as we tried to load libtorchcodec:
+        
+[start of libtorchcodec loading traceback]
+FFmpeg version 9:
+Traceback (most recent call last):
+  File "C:\study files\sih project\venv\Lib\site-packages\torch\_ops.py", line 1516, in load_library
+    ctypes.CDLL(path)
+    ~~~~~~~~~~~^^^^^^
+  File "C:\Python314\Lib\ctypes\__init__.py", line 433, in __init__
+    self._handle = self._load_library(name, mode, handle, winmode)
+                   ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\ctypes\__init__.py", line 451, in _load_library
+    return _LoadLibrary(self._name, winmode)
+FileNotFoundError: Could not find module 'C:\study files\sih project\venv\Lib\site-packages\torchcodec\libtorchcodec_core9.dll' (or one of its dependencies). Try using the full path with constructor syntax.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\study files\sih project\venv\Lib\site-packages\torchcodec\_internally_replaced_utils.py", line 132, in load_core_libraries
+    torch.ops.load_library(core_library_path)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\study files\sih project\venv\Lib\site-packages\torch\_ops.py", line 1518, in load_library
+    raise OSError(f"Could not load this library: {path}") from e
+OSError: Could not load this library: C:\study files\sih project\venv\Lib\site-packages\torchcodec\libtorchcodec_core9.dll
+
+FFmpeg version 8:
+Traceback (most recent call last):
+  File "C:\study files\sih project\venv\Lib\site-packages\torch\_ops.py", line 1516, in load_library
+    ctypes.CDLL(path)
+    ~~~~~~~~~~~^^^^^^
+  File "C:\Python314\Lib\ctypes\__init__.py", line 433, in __init__
+    self._handle = self._load_library(name, mode, handle, winmode)
+                   ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\ctypes\__init__.py", line 451, in _load_library
+    return _LoadLibrary(self._name, winmode)
+FileNotFoundError: Could not find module 'C:\study files\sih project\venv\Lib\site-packages\torchcodec\libtorchcodec_core8.dll' (or one of its dependencies). Try using the full path with constructor syntax.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\study files\sih project\venv\Lib\site-packages\torchcodec\_internally_replaced_utils.py", line 132, in load_core_libraries
+    torch.ops.load_library(core_library_path)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\study files\sih project\venv\Lib\site-packages\torch\_ops.py", line 1518, in load_library
+    raise OSError(f"Could not load this library: {path}") from e
+OSError: Could not load this library: C:\study files\sih project\venv\Lib\site-packages\torchcodec\libtorchcodec_core8.dll
+
+FFmpeg version 7:
+Traceback (most recent call last):
+  File "C:\study files\sih project\venv\Lib\site-packages\torch\_ops.py", line 1516, in load_library
+    ctypes.CDLL(path)
+    ~~~~~~~~~~~^^^^^^
+  File "C:\Python314\Lib\ctypes\__init__.py", line 433, in __init__
+    self._handle = self._load_library(name, mode, handle, winmode)
+                   ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\ctypes\__init__.py", line 451, in _load_library
+    return _LoadLibrary(self._name, winmode)
+FileNotFoundError: Could not find module 'C:\study files\sih project\venv\Lib\site-packages\torchcodec\libtorchcodec_core7.dll' (or one of its dependencies). Try using the full path with constructor syntax.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\study files\sih project\venv\Lib\site-packages\torchcodec\_internally_replaced_utils.py", line 132, in load_core_libraries
+    torch.ops.load_library(core_library_path)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\study files\sih project\venv\Lib\site-packages\torch\_ops.py", line 1518, in load_library
+    raise OSError(f"Could not load this library: {path}") from e
+OSError: Could not load this library: C:\study files\sih project\venv\Lib\site-packages\torchcodec\libtorchcodec_core7.dll
+
+FFmpeg version 6:
+Traceback (most recent call last):
+  File "C:\study files\sih project\venv\Lib\site-packages\torch\_ops.py", line 1516, in load_library
+    ctypes.CDLL(path)
+    ~~~~~~~~~~~^^^^^^
+  File "C:\Python314\Lib\ctypes\__init__.py", line 433, in __init__
+    self._handle = self._load_library(name, mode, handle, winmode)
+                   ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\ctypes\__init__.py", line 451, in _load_library
+    return _LoadLibrary(self._name, winmode)
+FileNotFoundError: Could not find module 'C:\study files\sih project\venv\Lib\site-packages\torchcodec\libtorchcodec_core6.dll' (or one of its dependencies). Try using the full path with constructor syntax.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\study files\sih project\venv\Lib\site-packages\torchcodec\_internally_replaced_utils.py", line 132, in load_core_libraries
+    torch.ops.load_library(core_library_path)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\study files\sih project\venv\Lib\site-packages\torch\_ops.py", line 1518, in load_library
+    raise OSError(f"Could not load this library: {path}") from e
+OSError: Could not load this library: C:\study files\sih project\venv\Lib\site-packages\torchcodec\libtorchcodec_core6.dll
+
+FFmpeg version 5:
+Traceback (most recent call last):
+  File "C:\study files\sih project\venv\Lib\site-packages\torch\_ops.py", line 1516, in load_library
+    ctypes.CDLL(path)
+    ~~~~~~~~~~~^^^^^^
+  File "C:\Python314\Lib\ctypes\__init__.py", line 433, in __init__
+    self._handle = self._load_library(name, mode, handle, winmode)
+                   ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\ctypes\__init__.py", line 451, in _load_library
+    return _LoadLibrary(self._name, winmode)
+FileNotFoundError: Could not find module 'C:\study files\sih project\venv\Lib\site-packages\torchcodec\libtorchcodec_core5.dll' (or one of its dependencies). Try using the full path with constructor syntax.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\study files\sih project\venv\Lib\site-packages\torchcodec\_internally_replaced_utils.py", line 132, in load_core_libraries
+    torch.ops.load_library(core_library_path)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\study files\sih project\venv\Lib\site-packages\torch\_ops.py", line 1518, in load_library
+    raise OSError(f"Could not load this library: {path}") from e
+OSError: Could not load this library: C:\study files\sih project\venv\Lib\site-packages\torchcodec\libtorchcodec_core5.dll
+
+FFmpeg version 4:
+Traceback (most recent call last):
+  File "C:\study files\sih project\venv\Lib\site-packages\torch\_ops.py", line 1516, in load_library
+    ctypes.CDLL(path)
+    ~~~~~~~~~~~^^^^^^
+  File "C:\Python314\Lib\ctypes\__init__.py", line 433, in __init__
+    self._handle = self._load_library(name, mode, handle, winmode)
+                   ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\ctypes\__init__.py", line 451, in _load_library
+    return _LoadLibrary(self._name, winmode)
+FileNotFoundError: Could not find module 'C:\study files\sih project\venv\Lib\site-packages\torchcodec\libtorchcodec_core4.dll' (or one of its dependencies). Try using the full path with constructor syntax.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\study files\sih project\venv\Lib\site-packages\torchcodec\_internally_replaced_utils.py", line 132, in load_core_libraries
+    torch.ops.load_library(core_library_path)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\study files\sih project\venv\Lib\site-packages\torch\_ops.py", line 1518, in load_library
+    raise OSError(f"Could not load this library: {path}") from e
+OSError: Could not load this library: C:\study files\sih project\venv\Lib\site-packages\torchcodec\libtorchcodec_core4.dll
+[end of libtorchcodec loading traceback].

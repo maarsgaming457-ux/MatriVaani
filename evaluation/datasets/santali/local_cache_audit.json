@@ -1,0 +1,19 @@
+{
+  "num_samples": 11000,
+  "num_train": 10000,
+  "num_valid": 1000,
+  "total_duration_hrs": 20.368176406249997,
+  "min_duration": 0.2270625,
+  "max_duration": 29.816,
+  "mean_duration": 6.665948642045454,
+  "median_duration": 5.4400625,
+  "empty_transcript_count": 0,
+  "invalid_language_code_count": 0,
+  "script_distribution": {
+    "ol_chiki": 10974,
+    "devanagari": 0,
+    "latin": 305,
+    "mixed": 279
+  },
+  "invalid_audio_count": 0
+}

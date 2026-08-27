@@ -1,0 +1,37 @@
+[
+  {
+    "loss": 336.7591064453125,
+    "grad_norm": 321.4383850097656,
+    "learning_rate": 0.00027,
+    "epoch": 0.5,
+    "step": 10
+  },
+  {
+    "loss": 187.3546142578125,
+    "grad_norm": 186.5186309814453,
+    "learning_rate": 2.9999999999999997e-05,
+    "epoch": 1.0,
+    "step": 20
+  },
+  {
+    "eval_loss": 110.45240020751953,
+    "eval_wer": 1.0,
+    "eval_cer": 1.0,
+    "eval_empty_rate": 1.0,
+    "eval_mean_pred_len": 0.0,
+    "eval_runtime": 187.0841,
+    "eval_samples_per_second": 1.069,
+    "eval_steps_per_second": 0.134,
+    "epoch": 1.0,
+    "step": 20
+  },
+  {
+    "train_runtime": 1776.5362,
+    "train_samples_per_second": 0.18,
+    "train_steps_per_second": 0.011,
+    "total_flos": 3.181936458407429e+16,
+    "train_loss": 262.0568603515625,
+    "epoch": 1.0,
+    "step": 20
+  }
+]

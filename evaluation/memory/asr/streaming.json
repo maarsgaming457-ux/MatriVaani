@@ -1,0 +1,26 @@
+[
+    {
+        "type": "Normal FP32",
+        "data": {
+            "model": "facebook/mms-1b-all",
+            "quantize_int8": false,
+            "language": "sat",
+            "status": "VERIFIED",
+            "base_python_ram_mb": 339.43,
+            "model_load_ram_mb": 126.15,
+            "inference_spike_ram_mb": 3607.46,
+            "peak_total_ram_mb": 4073.04,
+            "post_inference_retention_ram_mb": 393.2,
+            "load_time_s": 7.16,
+            "inference_time_s": 3.67
+        }
+    },
+    {
+        "type": "Chunked FP32 (2s)",
+        "data": {
+            "transcription": "    ",
+            "total_time_s": 4.78,
+            "peak_chunking_ram_mb": 4119.71
+        }
+    }
+]

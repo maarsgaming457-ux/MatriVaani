@@ -1,0 +1,12 @@
+{
+    "status": "ACCESS UNAVAILABLE",
+    "reason": "Datasets (e.g. COILD-MT-Corpus) are gated and require manual token/authentication. No files exist locally.",
+    "total_records": 0,
+    "hindi_records": 0,
+    "santhali_records": 0,
+    "aligned_pairs": 0,
+    "duplicate_count": 0,
+    "malformed_records": 0,
+    "verified_records": 0,
+    "machine_generated_records": 0
+}

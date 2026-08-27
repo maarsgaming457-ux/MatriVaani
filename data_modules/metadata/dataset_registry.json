@@ -1,0 +1,44 @@
+{
+    "MATRIVAANI-ASR-SAT-v0.1": {
+        "dataset_id": "MATRIVAANI-ASR-SAT-v0.1",
+        "version": "0.1",
+        "source": "Common Voice (Pending Download)",
+        "license": "CC0",
+        "download_date": "Pending",
+        "preprocessing_version": "v1",
+        "sample_count": 0,
+        "duration": 0,
+        "script": "Pending",
+        "language": "sat",
+        "split": "train/val/test",
+        "checksum": "Pending"
+    },
+    "MATRIVAANI-NMT-HI-SAT-v0.1": {
+        "dataset_id": "MATRIVAANI-NMT-HI-SAT-v0.1",
+        "version": "0.1",
+        "source": "MatriVaani Manual Curation",
+        "license": "Custom Open",
+        "download_date": "Live",
+        "preprocessing_version": "v1",
+        "sample_count": 0,
+        "duration": 0,
+        "script": "Ol Chiki",
+        "language": "hi, sat",
+        "split": "train/val/test",
+        "checksum": "Pending"
+    },
+    "MATRIVAANI-TTS-SAT-v0.1": {
+        "dataset_id": "MATRIVAANI-TTS-SAT-v0.1",
+        "version": "0.1",
+        "source": "IndicVoices-R (Pending Token)",
+        "license": "CC-BY-NC 4.0",
+        "download_date": "Pending",
+        "preprocessing_version": "v1",
+        "sample_count": 0,
+        "duration": 0,
+        "script": "Pending",
+        "language": "sat",
+        "split": "train/val/test",
+        "checksum": "Pending"
+    }
+}

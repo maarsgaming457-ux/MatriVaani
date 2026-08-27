@@ -1,0 +1,10 @@
+{
+    "status": "INSUFFICIENT DATA",
+    "total_audio_files": 0,
+    "total_duration_hours": 0.0,
+    "santhali_hours": 0.0,
+    "ol_chiki_transcripts": 0,
+    "malformed_audio": 0,
+    "missing_transcripts": 0,
+    "speakers": 0
+}

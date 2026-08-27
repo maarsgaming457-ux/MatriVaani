@@ -1,0 +1,14 @@
+{
+    "dataset_type": "NMT",
+    "total_samples": 0,
+    "valid_samples": 0,
+    "invalid_samples": 0,
+    "duplicates": 0,
+    "duration_hours": 0,
+    "script_distribution": {},
+    "language_distribution": {},
+    "speaker_distribution": {},
+    "quality_failures": 0,
+    "license_status": "DATA_BLOCKED",
+    "final_usable_samples": 0
+}

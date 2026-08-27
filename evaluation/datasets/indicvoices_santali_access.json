@@ -1,0 +1,10 @@
+{
+    "dataset": "ai4bharat/IndicVoices",
+    "config": "santali",
+    "license": "CC-BY-NC 4.0",
+    "access_status": "HF_AUTH_REQUIRED",
+    "train_examples": "NOT MEASURED",
+    "validation_examples": "NOT MEASURED",
+    "features": "NOT MEASURED",
+    "retrieval_timestamp": "2026-08-26T12:34:37+05:30"
+}

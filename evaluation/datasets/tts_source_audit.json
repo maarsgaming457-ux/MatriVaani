@@ -1,0 +1,13 @@
+{
+    "tts_candidate_sources": [
+        {
+            "dataset": "ai4bharat/IndicVoices (santali)",
+            "license": "CC-BY-NC 4.0",
+            "audio_verified": "NOT MEASURED",
+            "transcript_verified": "NOT MEASURED",
+            "speaker_consistency": "NOT MEASURED",
+            "recording_quality": "NOT MEASURED",
+            "status": "DATA_BLOCKED"
+        }
+    ]
+}

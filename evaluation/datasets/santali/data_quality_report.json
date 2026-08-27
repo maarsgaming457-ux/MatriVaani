@@ -1,0 +1,19 @@
+{
+    "records_inspected": 1200,
+    "valid_audio": 1200,
+    "invalid_audio": 0,
+    "valid_transcripts": 1200,
+    "invalid_transcripts": 0,
+    "language_mismatch": 0,
+    "script_distribution": {
+        "ol_chiki": 1176,
+        "mixed": 22,
+        "latin": 2
+    },
+    "duration_statistics": {
+        "total_hours": 2.0863513368055546,
+        "min_seconds": 0.287,
+        "max_seconds": 29.641
+    },
+    "rejection_reasons": {}
+}

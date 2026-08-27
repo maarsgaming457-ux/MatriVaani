@@ -1,0 +1,129 @@
+{
+    "wer": 1.0,
+    "cer": 1.0,
+    "empty_prediction_rate": 1.0,
+    "average_predicted_character_count": 0.0,
+    "average_reference_character_count": 94.6,
+    "samples": [
+        {
+            "reference": "ᱟᱞᱮ ᱚᱲᱟᱜ ᱨᱮ ᱛᱮᱦᱤᱧ ᱤᱧ ᱵᱚᱭᱦᱟ ᱠᱩᱲᱤᱭᱟᱜ ᱡᱚᱱᱢᱚ ᱫᱤᱱ ᱢᱮᱱᱟᱜᱼᱟ ᱚᱱᱟ ᱠᱟᱨᱚᱱ ᱛᱮ ᱟᱢᱟᱜ ᱫᱚᱠᱟᱱ ᱠᱷᱚᱱ ᱠᱤᱪᱷᱩ ᱡᱤᱱᱤᱥ ᱤᱧ ᱡᱚᱢ ᱡᱤᱱᱤᱥ ᱤᱧ ᱤᱫᱤᱭᱟ",
+            "prediction": "",
+            "reference_length": 115,
+            "prediction_length": 0
+        },
+        {
+            "reference": "ᱟᱸᱡᱚᱢ ᱞᱤᱫᱟᱹᱧ ᱟᱢᱟᱜ ᱫᱚᱠᱟᱱ ᱨᱮ ᱵᱚᱞᱮ ᱟᱹᱰᱤ ᱵᱷᱟᱞᱮ ᱵᱷᱟᱞᱮ ᱡᱤᱱᱤᱥ ᱧᱟᱢᱚᱜ ᱠᱟᱱᱟ ᱟᱞᱮ ᱚᱲᱟᱜ ᱯᱷᱮᱰ ᱨᱮᱱ ᱢᱤᱫᱴᱮᱱ ᱫᱟᱫᱟᱭ ᱞᱟᱹᱭ ᱟᱫᱤᱧᱟ ᱡᱮ ᱱᱚᱸᱰᱮ ᱟᱭᱢᱟ ᱠᱤᱪᱷᱩ ᱢᱚᱡᱽ ᱡᱤᱱᱤᱥ ᱧᱟᱢᱚᱜ ᱠᱟᱱᱟ ᱚᱱᱟᱛᱮ ᱟᱢ ᱴᱷᱮᱱ ᱤᱧ ᱦᱮᱡ ᱮᱱᱟ",
+            "prediction": "",
+            "reference_length": 174,
+            "prediction_length": 0
+        },
+        {
+            "reference": "ᱛᱳ ᱤᱧ ᱠᱮᱠ ᱟᱨ ᱠᱤᱪᱷᱩ ᱵᱷᱟᱡᱟ ᱯᱳᱲᱟ ᱡᱤᱱᱤᱥ ᱡᱮᱢᱚᱱ ᱡᱮᱢᱚᱱ",
+            "prediction": "",
+            "reference_length": 47,
+            "prediction_length": 0
+        },
+        {
+            "reference": "ᱥᱤᱸᱜᱟᱲᱟ ᱵᱨᱮᱰ ᱪᱚᱯ ᱚᱱᱟᱠᱚᱜᱮ ᱵᱷᱟᱡᱟ ᱡᱤᱱᱤᱥ ᱤᱧ ᱤᱫᱤ ᱛᱟᱢᱟ ᱚᱱᱟ ᱥᱚᱸᱜᱮ ᱚᱱᱟ ᱠᱚ ᱡᱤᱱᱤᱥ ᱤᱧ ᱦᱟᱛᱟᱣ ᱞᱮᱠᱷᱟᱱ ᱤᱧ ᱥᱚᱥ ᱟᱨ ᱪᱟᱹᱴᱱᱤ ᱚᱱᱟ ᱠᱚ ᱯᱷᱨᱤᱧ ᱧᱟᱢ ᱟᱥᱮ ᱵᱟᱝ",
+            "prediction": "",
+            "reference_length": 129,
+            "prediction_length": 0
+        },
+        {
+            "reference": "ᱚᱱᱟᱛᱤᱧ ᱟᱸᱡᱚᱢᱮᱫᱟ ᱟᱢ ᱴᱷᱮᱱ ᱟᱨ ᱚᱱᱟ ᱞᱟᱹᱭ ᱞᱟᱹᱜᱤᱫ ᱤᱧ ᱦᱮᱡ ᱮᱱᱟ",
+            "prediction": "",
+            "reference_length": 53,
+            "prediction_length": 0
+        },
+        {
+            "reference": "ᱵᱷᱟᱨᱚᱛ ᱫᱤᱥᱚᱢ ᱨᱮᱫᱚ ᱯᱷᱩᱴᱵᱚᱞ ᱠᱚ ᱮᱱᱮᱡᱼᱟ ᱟᱨ ᱠᱨᱤᱠᱮᱴ ᱵᱷᱟᱞᱩᱠ ᱜᱩᱰᱩ ᱟᱨ ᱥᱚᱨᱮᱥ ᱮᱱᱮᱡ ᱠᱤᱱᱫᱚ ᱮᱸᱜ ᱥᱚᱪᱤᱱ ᱟᱨ ᱫᱷᱚᱱᱤ",
+            "prediction": "",
+            "reference_length": 96,
+            "prediction_length": 0
+        },
+        {
+            "reference": "ᱛᱩᱨᱩᱭ",
+            "prediction": "",
+            "reference_length": 5,
+            "prediction_length": 0
+        },
+        {
+            "reference": "ᱯᱚᱨᱟᱱ ᱱᱚᱢᱵᱚᱨ ᱛᱷᱨᱤ ᱱᱟᱭᱤᱱ ᱯᱷᱳᱨ ᱚᱣᱟᱱ ᱰᱚᱵᱚᱞ ᱯᱷᱟᱭᱤᱵᱷ ᱱᱟᱭᱤᱱ ᱥᱮᱵᱷᱮᱱ ᱯᱷᱟᱭᱤᱵᱷ ᱚᱣᱟᱱ ᱥᱤᱠᱥ ᱚᱣᱟᱱ ᱥᱟᱶ ᱤᱧᱟᱹᱜ ᱮ ᱯᱤ ᱮᱠᱟᱣᱩᱱᱴ ᱨᱮᱭᱟᱜ ᱞᱮᱱᱫᱮᱱ ᱨᱮᱭᱟᱜ ᱵᱚᱨᱱᱚᱱᱟ ᱩᱫᱩᱜ ᱟᱹᱧ ᱢᱮ",
+            "prediction": "",
+            "reference_length": 145,
+            "prediction_length": 0
+        },
+        {
+            "reference": "ᱛᱩᱨᱩᱭ ᱮᱭᱟᱭ ᱯᱮ ᱛᱩᱨᱩᱭ ᱮᱭᱟᱭ ᱢᱚᱬᱮ ᱤᱨᱟᱹᱞ ᱥᱩᱱ ᱢᱚᱬᱮ ᱤᱨᱟᱹᱞ ᱯᱮ ᱯᱷᱚᱱ ᱱᱚᱢᱵᱚᱨ ᱠᱚ ᱞᱟᱹᱜᱤᱫ ᱴᱷᱤᱠᱟᱹ ᱥᱤᱫᱽ ᱥᱟᱠᱟᱢ ᱰᱟᱣᱩᱱᱞᱳᱰ ᱞᱟᱹᱜᱤᱫ ᱫᱟᱭᱟ ᱠᱟᱛᱮᱫ ᱥᱩᱵᱤᱫᱷᱟ ᱧᱟᱢ ᱠᱚᱣᱟᱜ ᱧᱩᱛᱩᱢ ᱵᱟᱪᱷᱟᱣ ᱢᱮ",
+            "prediction": "",
+            "reference_length": 154,
+            "prediction_length": 0
+        },
+        {
+            "reference": "ᱦᱮᱞᱳ",
+            "prediction": "",
+            "reference_length": 4,
+            "prediction_length": 0
+        },
+        {
+            "reference": "ᱦᱮᱞᱳ ᱤᱧ ᱜᱮ ᱥᱩᱠᱩᱨᱢᱩᱱᱤ ᱢᱩᱨᱢᱩ ᱢᱮᱱᱮᱜᱼᱟᱹᱧ ᱤᱭᱟᱹ ᱞᱩᱠᱩᱭᱠᱟᱱᱟᱞᱤ ᱠᱷᱚᱱᱟᱜ ᱟᱢ ᱜᱮ ᱨᱟ ᱪᱤ ᱨᱤᱱᱤᱡ ᱥᱮᱬᱟ ᱰᱟᱠᱛᱟᱨ ᱫᱚ",
+            "prediction": "",
+            "reference_length": 93,
+            "prediction_length": 0
+        },
+        {
+            "reference": "ᱚ ᱦᱚᱸ ᱟᱫᱚ ᱤᱧ ᱢᱮᱱᱮᱫ ᱟᱹᱧ ᱦᱟᱯᱮ ᱥᱮ ᱤᱧ ᱦᱚᱸ ᱱᱤᱛᱳᱜ ᱯᱮᱥᱮᱱᱤᱧ ᱵᱮᱱᱟᱣ ᱠᱟᱱᱟᱹᱧ ᱟᱫᱚ ᱢᱮᱱᱮᱜᱼᱟᱹᱧ ᱦᱟᱯᱮᱥᱮᱧ ᱯᱷᱳᱱᱟᱭᱟ ᱞᱟᱹᱭᱮᱜᱼᱟᱹᱧ ᱚᱸᱰᱮ ᱢᱮᱱᱮᱫ ᱫᱚᱠᱚ ᱥᱮᱬᱟ ᱰᱟᱠᱛᱟᱨ ᱢᱮᱱᱟᱭᱟ ᱟᱫᱚ ᱪᱮᱫᱞᱮᱠᱟᱱ ᱨᱩᱜᱤ ᱠᱚᱢ ᱧᱮᱞ ᱠᱟᱣᱟ",
+            "prediction": "",
+            "reference_length": 171,
+            "prediction_length": 0
+        },
+        {
+            "reference": "<unintelligible>",
+            "prediction": "",
+            "reference_length": 16,
+            "prediction_length": 0
+        },
+        {
+            "reference": "ᱢᱟᱱᱮ",
+            "prediction": "",
+            "reference_length": 4,
+            "prediction_length": 0
+        },
+        {
+            "reference": "ᱦᱳᱭ ᱟᱫᱚ ᱚᱱᱟᱜᱤᱧ ᱢᱮᱱᱮᱫᱼᱟ ᱦᱟᱯᱮᱥᱮ ᱞᱟᱹᱭᱮᱜᱼᱟᱹᱧ ᱞᱟᱹᱭᱮᱫ ᱫᱚᱠᱚ ᱮᱱᱠᱷᱟᱱ ᱞᱟᱹᱭᱮᱫᱼᱟᱹᱧ ᱦᱟᱯᱮᱥᱮ ᱯᱷᱳᱱ ᱠᱟᱛᱮᱧ ᱵᱟᱲᱟᱭ ᱤᱭᱟᱹᱭᱟ ᱢᱟᱱᱮ ᱠᱟᱛᱷᱟᱧ ᱦᱟᱛᱟᱣᱟ ᱠᱤ ᱪᱮᱫᱞᱮᱠᱟᱱ ᱯᱮᱥᱮᱱ ᱠᱚ ᱧᱮᱞ ᱠᱚᱣᱟᱭ ᱮᱱᱠᱷᱟᱱ ᱫᱚ ᱪᱟᱞᱟᱜ ᱦᱩᱭᱩᱜᱼᱟ",
+            "prediction": "",
+            "reference_length": 175,
+            "prediction_length": 0
+        },
+        {
+            "reference": "ᱟᱫᱚ ᱡᱮᱛᱮᱞᱮᱠᱟᱱ ᱢᱟᱱᱮ ᱤᱭᱟᱹ ᱨᱩᱜᱤ ᱠᱚᱜᱮᱢ ᱧᱮᱞ ᱠᱚᱣᱟ ᱥᱮ",
+            "prediction": "",
+            "reference_length": 46,
+            "prediction_length": 0
+        },
+        {
+            "reference": "ᱦᱳᱭ ᱟᱫᱚ ᱚᱱᱟᱜᱮ ᱢᱮᱱᱮᱜᱼᱟ ᱞᱮ ᱟᱨ ᱛᱤᱥ ᱛᱤᱥ ᱠᱚ ᱛᱟᱦᱮᱱᱟ ᱚᱸᱰᱮ ᱫᱚ ᱥᱮ ᱟᱨᱦᱚᱸ ᱮᱴᱟᱜ ᱠᱚᱨᱮ ᱪᱮᱢᱵᱟᱨ ᱠᱚᱢ ᱠᱷᱩᱞᱟᱹᱣ ᱠᱟᱜᱼᱟ",
+            "prediction": "",
+            "reference_length": 97,
+            "prediction_length": 0
+        },
+        {
+            "reference": "ᱦᱳᱭᱛᱳ ᱟᱫᱚ ᱛᱤᱱ ᱠᱷᱚᱱ ᱢᱟᱱᱮ ᱴᱟᱭᱤᱢ ᱛᱤᱱ ᱨᱮ ᱛᱤᱱ ᱛᱤᱱᱮᱢ ᱫᱩᱲᱩᱵᱼᱟ ᱛᱤᱱᱟᱹᱜ ᱜᱷᱟᱹᱲᱤᱠ ᱠᱛᱮᱫ ᱮᱢ ᱫᱩᱲᱩᱵᱼᱟ ᱤᱱᱟᱹ ᱫᱚ ᱤᱱᱟᱹ ᱚᱠᱛᱚ ᱨᱮ",
+            "prediction": "",
+            "reference_length": 106,
+            "prediction_length": 0
+        },
+        {
+            "reference": "ᱚ ᱦᱚᱸ",
+            "prediction": "",
+            "reference_length": 5,
+            "prediction_length": 0
+        },
+        {
+            "reference": "ᱟᱫᱚ ᱚᱱᱟᱜᱤᱧ ᱢᱮᱱᱮᱜᱼᱟ ᱯᱟᱪᱮᱫ ᱟᱨᱦᱚᱸ ᱛᱤᱥ ᱛᱤᱥ ᱠᱚᱨᱮ ᱫᱩᱲᱩᱵᱼᱟᱭ ᱵᱟᱭ ᱵᱟᱭ ᱢᱮᱱᱚᱜᱚᱜᱼᱟ ᱟᱫᱚᱧ ᱢᱮᱱᱮᱜᱼᱟ ᱦᱟᱯᱮᱥᱮ ᱠᱩᱞᱤ ᱠᱟᱛᱮᱫ ᱜᱮᱵᱚᱱ ᱵᱟᱲᱟᱭ ᱧᱟᱢᱟ ᱠᱤ ᱛᱤᱥ ᱠᱚᱨᱮ ᱛᱤᱥ ᱛᱤᱥᱮ ᱫᱩᱲᱩᱵ ᱠᱟᱱᱟ ᱥᱮ ᱪᱷᱩᱴᱤ ᱠᱚ ᱢᱟᱱᱮ ᱟᱨᱦᱚᱸ ᱛᱤᱱᱟᱹᱜ ᱜᱟᱱ ᱤᱭᱟᱹ ᱠᱚ ᱢᱮᱱᱟᱜᱼᱟ ᱪᱮᱢᱵᱟᱨ ᱠᱚ ᱛᱟᱭ ᱢᱮᱱᱟᱜᱼᱟ ᱚᱱᱟ ᱠᱚᱨᱮ ᱫᱩᱲᱩᱵᱼᱟᱭ ᱯᱟᱪᱮᱫ ᱢᱮᱱᱮᱜᱼᱟ ᱞᱮ",
+            "prediction": "",
+            "reference_length": 257,
+            "prediction_length": 0
+        }
+    ]
+}

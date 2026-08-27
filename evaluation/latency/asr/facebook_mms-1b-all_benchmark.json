@@ -1,0 +1,18 @@
+{
+    "model": "facebook/mms-1b-all",
+    "version": "1.0",
+    "language": "hi",
+    "dataset": "PATH A (Hindi Sample)",
+    "dataset_version": "v1.0",
+    "samples": 1,
+    "wer": 1.0,
+    "cer": 1.0,
+    "latency_ms": 1609.26,
+    "cold_start_latency_ms": 1988.65,
+    "p95_latency_ms": 1835.29,
+    "load_time_ms": 7024.42,
+    "real_time_factor": 0.54,
+    "ram_mb": 479.14,
+    "peak_ram_mb": 4180.59,
+    "model_size_mb": 51.57
+}

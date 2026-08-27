@@ -1,0 +1,13 @@
+{
+    "name": "MatriVaani Foundational Literacy and Numeracy (FLN)",
+    "description": "Evaluation set for classroom terminology.",
+    "categories": {
+        "LITERACY": [],
+        "NUMERACY": [],
+        "CLASSROOM": [],
+        "LOCAL_CONTEXT": [],
+        "ASSESSMENT": []
+    },
+    "total_verified_pairs": 0,
+    "status": "Awaiting Human Curation"
+}

@@ -1,0 +1,8 @@
+{
+    "model": "MatriVaani-ASR-Santhali-v1",
+    "wer": "NOT MEASURED",
+    "cer": "NOT MEASURED",
+    "latency": "NOT MEASURED",
+    "memory": "NOT MEASURED",
+    "status": "TRAINING BLOCKED"
+}

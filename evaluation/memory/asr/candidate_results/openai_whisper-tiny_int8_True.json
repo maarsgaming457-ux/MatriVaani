@@ -1,0 +1,12 @@
+{
+    "model": "openai/whisper-tiny",
+    "quantize_int8": true,
+    "base_python_ram_mb": 205.08,
+    "post_load_ram_mb": 484.46,
+    "peak_quantization_ram_mb": 884.62,
+    "post_quantization_ram_mb": 759.47,
+    "peak_inference_ram_mb": 789.42,
+    "post_inference_ram_mb": 757.18,
+    "load_time_s": 11.89,
+    "inference_time_s": 0.41
+}

@@ -1,0 +1,29 @@
+{
+    "model_id": "facebook/wav2vec2-base-100k-voxpopuli",
+    "samples_tested": 200,
+    "average_wer": 1.0,
+    "average_cer": 1.410666666666667,
+    "latency_seconds": {
+        "preprocessing": {
+            "mean": 0.0006068062782287598,
+            "median": 0.00042176246643066406,
+            "p95": 0.0016674876213073715
+        },
+        "inference": {
+            "mean": 0.3513114333152771,
+            "median": 0.24734747409820557,
+            "p95": 1.1250504374504087
+        },
+        "total": {
+            "mean": 0.35191995978355406,
+            "median": 0.24768948554992676,
+            "p95": 1.1266963481903074
+        }
+    },
+    "memory_mb": {
+        "baseline": 474.18359375,
+        "model_load": 521.484375,
+        "peak_during_inference": 2059.109375,
+        "final_after_inference": 1964.203125
+    }
+}

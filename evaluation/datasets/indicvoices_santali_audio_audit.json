@@ -1,0 +1,11 @@
+{
+    "dataset": "ai4bharat/IndicVoices (santali)",
+    "sample_rate": "NOT MEASURED",
+    "channels": "NOT MEASURED",
+    "duration": "NOT MEASURED",
+    "silence": "NOT MEASURED",
+    "clipping": "NOT MEASURED",
+    "audio_corruption": "NOT MEASURED",
+    "snr": "NOT MEASURED",
+    "status": "DATA_BLOCKED"
+}

@@ -1,0 +1,8 @@
+{
+    "model": "MatriVaani-TTS-Santhali-v1",
+    "intelligibility": "NOT MEASURED",
+    "naturalness": "NOT MEASURED",
+    "latency": "NOT MEASURED",
+    "memory": "NOT MEASURED",
+    "status": "TRAINING BLOCKED"
+}

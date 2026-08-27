@@ -1,0 +1,9 @@
+{
+    "pipeline": "NMT",
+    "status": "BLOCKED_NO_DATA",
+    "total_files_checked": 0,
+    "corrupt_audio_found": 0,
+    "invalid_unicode": 0,
+    "script_mismatch": 0,
+    "reason": "Quality gate failed: Missing physical datasets."
+}

@@ -1,0 +1,25 @@
+{
+    "dataset": "COILD-MT-Corpus",
+    "access_status": "ACCESS UNAVAILABLE",
+    "reported_size": 20603,
+    "actual_size": 0,
+    "actual_hindi_santhali_pairs": 0,
+    "language_distribution": "NOT MEASURED",
+    "script_distribution": "NOT MEASURED",
+    "ol_chiki_count": 0,
+    "duplicate_count": 0,
+    "invalid_count": 0,
+    "quality_tiers": {
+        "TIER_A": 0,
+        "TIER_B": 0,
+        "TIER_C": 0,
+        "REJECTED": 0
+    },
+    "educational_data_count": 0,
+    "gold_candidate_count": 0,
+    "training_count": 0,
+    "validation_count": 0,
+    "test_count": 0,
+    "license_status": "LICENSE UNKNOWN",
+    "reason": "Dataset is gated and requires manual authentication. No file exists locally in datasets/nmt/raw/COILD-MT-Corpus."
+}

@@ -1,0 +1,18 @@
+{
+    "model": "openai/whisper-tiny",
+    "version": "1.0",
+    "language": "hi",
+    "dataset": "PATH A (Hindi Sample)",
+    "dataset_version": "v1.0",
+    "samples": 1,
+    "wer": 1.0,
+    "cer": 17.0,
+    "latency_ms": 8579.92,
+    "cold_start_latency_ms": 7922.79,
+    "p95_latency_ms": 8998.97,
+    "load_time_ms": 5561.42,
+    "real_time_factor": 2.86,
+    "ram_mb": 376.83,
+    "peak_ram_mb": 590.12,
+    "model_size_mb": 41.77
+}

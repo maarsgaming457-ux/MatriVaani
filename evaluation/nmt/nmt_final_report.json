@@ -1,0 +1,8 @@
+{
+    "model": "MatriVaani-NMT-HI-SAT-v1",
+    "bleu": "NOT MEASURED",
+    "chrf": "NOT MEASURED",
+    "latency": "NOT MEASURED",
+    "memory": "NOT MEASURED",
+    "status": "TRAINING BLOCKED"
+}

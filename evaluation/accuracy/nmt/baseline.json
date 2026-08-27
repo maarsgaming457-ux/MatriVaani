@@ -1,0 +1,8 @@
+{
+    "model": "AI4Bharat/IndicTrans2",
+    "status": "FAILED - INSUFFICIENT DATA",
+    "BLEU": "NOT MEASURED",
+    "chrF": "NOT MEASURED",
+    "latency": "NOT MEASURED",
+    "RAM": "NOT MEASURED"
+}

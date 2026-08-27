@@ -1,0 +1,12 @@
+{
+    "model": "facebook/wav2vec2-base-100k-voxpopuli",
+    "quantize_int8": false,
+    "base_python_ram_mb": 205.06,
+    "post_load_ram_mb": 485.27,
+    "peak_quantization_ram_mb": 485.27,
+    "post_quantization_ram_mb": 485.27,
+    "peak_inference_ram_mb": 845.83,
+    "post_inference_ram_mb": 868.34,
+    "load_time_s": 8.23,
+    "inference_time_s": 0.27
+}

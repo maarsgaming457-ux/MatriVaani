@@ -1,0 +1,28 @@
+[
+    {
+        "model": "facebook/mms-1b-all",
+        "quantize_int8": false,
+        "language": "sat",
+        "status": "VERIFIED",
+        "base_python_ram_mb": 337.43,
+        "model_load_ram_mb": 144.22,
+        "inference_spike_ram_mb": 3600.16,
+        "peak_total_ram_mb": 4081.8,
+        "post_inference_retention_ram_mb": 401.62,
+        "load_time_s": 10.14,
+        "inference_time_s": 1.67
+    },
+    {
+        "model": "facebook/mms-1b-all",
+        "quantize_int8": true,
+        "language": "sat",
+        "status": "VERIFIED",
+        "base_python_ram_mb": 401.62,
+        "model_load_ram_mb": 9268.95,
+        "inference_spike_ram_mb": 28.16,
+        "peak_total_ram_mb": 9698.73,
+        "post_inference_retention_ram_mb": 4746.44,
+        "load_time_s": 12.81,
+        "inference_time_s": 1.08
+    }
+]
