@@ -1,103 +1,53 @@
-# Byte-compiled / optimized / DLL files
+﻿# Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
 
-# C extensions
-*.so
-
-# Distribution / packaging
-.Python
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
-
-# PyInstaller
-*.manifest
-*.spec
-
-# Installer logs
-pip-log.txt
-pip-delete-this-directory.txt
-
-# Unit test / coverage reports
-htmlcov/
-.tox/
-.coverage
-.coverage.*
-.cache
-nosetests.xml
-coverage.xml
-*.cover
-.hypothesis/
-.pytest_cache/
-
-# Environments
-.env
-.env.*
-.venv/
-env/
+# Virtual environments
 venv/
+env/
 ENV/
+env.bak/
+venv.bak/
 
-# Secrets
-*.key
-*.pem
-credentials*
-secrets*
-.huggingface/
-huggingface/
-token*
+# Environment variables
+.env
+.env.local
 
-# Audio
-*.wav
-*.mp3
-*.flac
-*.ogg
-*.m4a
-
-# Datasets and models
-datasets/raw/
-datasets/processed/
-datasets/splits/
-datasets/cache/
-models/
-checkpoints/
-!datasets/**/.gitkeep
-ai/**/models/*
+# Large datasets, models, and audio files
+*.safetensors
+*.bin
 *.pt
 *.pth
-*.bin
-*.safetensors
-*.ckpt
-*.onnx
-*.tflite
-*.pb
+*.arrow
+*.wav
+*.mp3
+*.m4a
+*.ogg
+*.flac
+*.mp4
+*.pkl
+*.jsonl
 
-# Experiment caches
-runs/
-wandb/
-mlruns/
-.ipynb_checkpoints/
-tmp/
+# Checkpoints and logs
+models/
+checkpoints/
+logs/
+evaluation/
 temp/
+tmp/
+*.log
 
-# IDEs and OS
-.idea/
+# IDEs and Editors
 .vscode/
+.idea/
 *.swp
-*.swo
-.DS_Store
-Thumbs.db
+
+# SQLite / Database
+*.db
+*.sqlite3
+
+# Archives
+*.zip
+*.tar.gz
+*.gz
