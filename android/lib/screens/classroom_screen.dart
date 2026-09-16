@@ -8,20 +8,29 @@ import '../services/db_service.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'dart:async';
+import '../theme/app_theme.dart';
+import '../widgets/animated_button.dart';
 
 class ClassroomScreen extends StatefulWidget {
+  const ClassroomScreen({super.key});
+
   @override
-  _ClassroomScreenState createState() => _ClassroomScreenState();
+  State<ClassroomScreen> createState() => _ClassroomScreenState();
 }
 
 class _ClassroomScreenState extends State<ClassroomScreen> {
-  final AudioRecorder _audioRecorder = AudioRecorder();
+  int _step = 1;
+
+  String _status = 'Ready';
+  String _teacherPrompt = 'Amag ñutum ched?';
+  String _asrOutput = 'ᱢᱚᱡ ᱟᱨᱮ';
+  String _translation = 'Inyạg ñutum dɔ Sona Marandi.';
+  double _audioProgress = 0.35;
   bool _isRecording = false;
   String _transcript = "";
-  String _translation = "";
   String _ttsProvider = 'sarvam';
-  String _status = "Ready";
   final _ttsPlayer = TtsPlayerService();
+  final _audioRecorder = AudioRecorder();
 
   StreamSubscription<List<ConnectivityResult>>? _connectivitySubscription;
   bool _isOnline = false;
@@ -162,17 +171,43 @@ class _ClassroomScreenState extends State<ClassroomScreen> {
     }
   }
 
-  Future<void> _stopRecording() async {
-    if (!_isRecording) return;
+  Future<String?> _stopRecording() async {
+    if (!_isRecording) return null;
     
     String? path = await _audioRecorder.stop();
     print('DEBUG: recording stopped');
+    return path;
+  }
+
+  Future<void> _simulateSpeak() async {
+    setState(() {
+      _status = 'Listening…';
+    });
+    await Future.delayed(const Duration(milliseconds: 550));
     if (!mounted) return;
+
+    setState(() {
+      _status = 'Done';
+      _asrOutput = 'ᱫᱟᱨᱮ Dare';
+      _translation = 'Inyạg ñutum dɔ Sona Marandi.';
+    });
+  }
+
+  void _onRecordStart() {
+    setState(() {
+      _isRecording = true;
+      _status = 'Recording…';
+    });
+  }
+
+  void _onRecordStop() async {
     setState(() {
       _isRecording = false;
       _isProcessing = true;
       _status = "Processing...";
     });
+
+    String? path = await _stopRecording();
 
     if (path != null) {
       String? jobId;
@@ -242,6 +277,7 @@ class _ClassroomScreenState extends State<ClassroomScreen> {
         _targetLang = target;
         _transcript = transcript;
         _translation = translation;
+        _asrOutput = transcript.isNotEmpty ? transcript : _asrOutput;
         _status = "Processing...";
         _isProcessing = true;
       });
@@ -296,6 +332,7 @@ class _ClassroomScreenState extends State<ClassroomScreen> {
           });
           setState(() {
             _transcript = transcript;
+            _asrOutput = transcript;
             _status = "Translating...";
           });
           status = 'TRANSLATING';
@@ -402,6 +439,7 @@ class _ClassroomScreenState extends State<ClassroomScreen> {
     setState(() {
       _transcript = "";
       _translation = "";
+      _asrOutput = "";
       _status = "Ready";
       _isProcessing = false;
       _isRecording = false;
@@ -409,107 +447,341 @@ class _ClassroomScreenState extends State<ClassroomScreen> {
     });
   }
 
+  void _saveToSQLite() {
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: const Text('Saved to SQLite (simulated)'),
+        duration: const Duration(milliseconds: 700),
+        behavior: SnackBarBehavior.floating,
+        margin: const EdgeInsets.only(left: 16, right: 16, bottom: 80),
+      ),
+    );
+  }
+
+  void _clearFeed() {
+    _clear();
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: const Text('Feed cleared'),
+        duration: const Duration(milliseconds: 700),
+        behavior: SnackBarBehavior.floating,
+        margin: const EdgeInsets.only(left: 16, right: 16, bottom: 80),
+      ),
+    );
+  }
+
+  void _nextPhrase() {
+    setState(() {
+      _step = (_step % 3) + 1;
+      _teacherPrompt = _step == 1 ? 'Amag ñutum ched?' : 'Amag sutum ched?';
+      _asrOutput = _step == 1 ? 'ᱫᱟᱨᱮ Dare' : 'ᱥᱟᱨᱟᱹ';
+    });
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: const Text('Next phrase'),
+        duration: const Duration(milliseconds: 700),
+        behavior: SnackBarBehavior.floating,
+        margin: const EdgeInsets.only(left: 16, right: 16, bottom: 80),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text('Santali Voice Assistant')),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
+    return ListView(
+      padding: const EdgeInsets.fromLTRB(16, 10, 16, 24),
+      children: [
+        // Top server status
+        Row(
           children: [
-            const SizedBox(height: 10),
+            Expanded(
+              child: Container(
+                padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
+                decoration: BoxDecoration(
+                  color: MatriVaaniColors.forest2.withValues(alpha: 0.15),
+                  border: Border.all(color: MatriVaaniColors.forest2.withValues(alpha: 0.35)),
+                  borderRadius: BorderRadius.circular(999),
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: const [
+                    Icon(Icons.cloud_done_outlined, color: MatriVaaniColors.forest, size: 18),
+                    SizedBox(width: 8),
+                    Text('FastAPI ASR Engine', style: TextStyle(color: MatriVaaniColors.forest, fontWeight: FontWeight.w900, fontSize: 13)),
+                  ],
+                ),
+              ),
+            ),
+            const SizedBox(width: 10),
+            Container(
+              padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
+              decoration: BoxDecoration(
+                color: MatriVaaniColors.surface,
+                borderRadius: BorderRadius.circular(999),
+                border: Border.all(color: MatriVaaniColors.border),
+              ),
+              child: const Text('240ms', style: TextStyle(fontWeight: FontWeight.w900, color: MatriVaaniColors.primaryDark, fontSize: 12)),
+            ),
+            const SizedBox(width: 10),
+            Container(
+              padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
+              decoration: BoxDecoration(
+                color: MatriVaaniColors.forest.withValues(alpha: 0.25),
+                borderRadius: BorderRadius.circular(999),
+                border: Border.all(color: MatriVaaniColors.forest.withValues(alpha: 0.35)),
+              ),
+              child: const Text('16kHz Mono', style: TextStyle(fontWeight: FontWeight.w900, color: MatriVaaniColors.forest, fontSize: 12)),
+            ),
+          ],
+        ),
+
+        const SizedBox(height: 14),
+
+        // Controls
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
             Row(
-              mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text(_sourceLang == 'sat' ? "Santali" : "Hindi", style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+                Text(_sourceLang == 'sat' ? "Santali" : "Hindi", style: const TextStyle(fontWeight: FontWeight.bold)),
                 IconButton(
-                  icon: const Icon(Icons.swap_horiz, size: 32),
+                  icon: const Icon(Icons.swap_horiz, color: MatriVaaniColors.primaryDark),
                   onPressed: _swapLanguages,
                   tooltip: 'Swap languages',
                 ),
-                Text(_targetLang == 'sat' ? "Santali" : "Hindi", style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+                Text(_targetLang == 'sat' ? "Santali" : "Hindi", style: const TextStyle(fontWeight: FontWeight.bold)),
               ],
             ),
-            const SizedBox(height: 10),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                const Text('TTS Provider: '),
-                DropdownButton<String>(
-                  value: _ttsProvider,
-                  items: const [
-                    DropdownMenuItem(value: 'sarvam', child: Text('Sarvam')),
-                    DropdownMenuItem(value: 'bhashini', child: Text('Bhashini')),
-                    DropdownMenuItem(value: 'local', child: Text('Local')),
-                  ],
-                  onChanged: (val) {
-                    if (val != null) setState(() => _ttsProvider = val);
-                  },
-                ),
-              ],
-            ),
-            const SizedBox(height: 10),
-            Text("Status:\n$_status", textAlign: TextAlign.center, style: const TextStyle(fontWeight: FontWeight.bold, color: Colors.blue, fontSize: 16)),
-            const SizedBox(height: 20),
-            GestureDetector(
-              onTapDown: (_) => _startRecording(),
-              onTapUp: (_) => _stopRecording(),
-              child: CircleAvatar(
-                radius: 60,
-                backgroundColor: _isRecording ? Colors.red : Colors.green,
-                child: const Icon(Icons.mic, size: 50, color: Colors.white),
+            ElevatedButton(
+              onPressed: _isProcessing || _isRecording ? null : _retryLastFailedJob,
+              style: ElevatedButton.styleFrom(
+                backgroundColor: MatriVaaniColors.amber,
+                foregroundColor: MatriVaaniColors.primaryDark,
+                elevation: 0,
               ),
+              child: const Text("Retry Failed", style: TextStyle(fontWeight: FontWeight.bold)),
             ),
-            const SizedBox(height: 20),
-            Text(_isRecording ? "Release to Stop Recording" : "Hold to Start Recording", style: const TextStyle(color: Colors.grey)),
-            const SizedBox(height: 20),
-            Align(alignment: Alignment.centerLeft, child: Text("${_sourceLang == 'sat' ? 'Santali' : 'Hindi'} Transcription:", style: const TextStyle(fontWeight: FontWeight.bold))),
-            const SizedBox(height: 10),
+          ],
+        ),
+
+        const SizedBox(height: 14),
+
+        // Lesson step header
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
             Container(
-              width: double.infinity,
-              padding: const EdgeInsets.all(16.0),
+              padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
               decoration: BoxDecoration(
-                border: Border.all(color: Colors.grey),
-                borderRadius: BorderRadius.circular(8.0),
+                color: MatriVaaniColors.surface,
+                borderRadius: BorderRadius.circular(14),
+                border: Border.all(color: MatriVaaniColors.border),
               ),
-              child: Text(
-                _transcript.isEmpty ? "..." : _transcript,
-                style: const TextStyle(fontSize: 18),
-              ),
+              child: const Text('Lesson 02: Introduction', style: TextStyle(fontWeight: FontWeight.w900, color: MatriVaaniColors.primaryDark)),
             ),
-            const SizedBox(height: 20),
-            Align(alignment: Alignment.centerLeft, child: Text("${_targetLang == 'sat' ? 'Santali' : 'Hindi'} Translation:", style: const TextStyle(fontWeight: FontWeight.bold))),
-            const SizedBox(height: 10),
             Container(
-              width: double.infinity,
-              padding: const EdgeInsets.all(16.0),
+              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
               decoration: BoxDecoration(
-                border: Border.all(color: Colors.grey),
-                borderRadius: BorderRadius.circular(8.0),
+                color: MatriVaaniColors.amber.withValues(alpha: 0.15),
+                borderRadius: BorderRadius.circular(14),
+                border: Border.all(color: MatriVaaniColors.amber),
               ),
-              child: Text(
-                _translation.isEmpty ? "..." : _translation,
-                style: const TextStyle(fontSize: 18),
-              ),
-            ),
-            const SizedBox(height: 20),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                ElevatedButton(
-                  onPressed: _clear,
-                  child: const Text("Clear"),
-                ),
-                ElevatedButton(
-                  onPressed: _isProcessing || _isRecording ? null : _retryLastFailedJob,
-                  style: ElevatedButton.styleFrom(backgroundColor: Colors.orange),
-                  child: const Text("Retry Last Failed"),
-                ),
-              ],
+              child: Text('Step $_step/3', style: const TextStyle(fontWeight: FontWeight.w900, color: MatriVaaniColors.primaryDark)),
             )
           ],
         ),
-      ),
+
+        const SizedBox(height: 12),
+
+        // Teacher prompt
+        Card(
+          child: Padding(
+            padding: const EdgeInsets.all(16),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const Text('Teacher Prompt •', style: TextStyle(fontWeight: FontWeight.w900, color: MatriVaaniColors.primaryDark)),
+                const SizedBox(height: 10),
+                Row(
+                  children: [
+                    PressScale(
+                      key: const Key('classroom_btn_teacher_listen'),
+                      onTap: _simulateSpeak,
+                      child: Container(
+                        decoration: BoxDecoration(
+                          color: MatriVaaniColors.forest.withValues(alpha: 0.12),
+                          borderRadius: BorderRadius.circular(999),
+                          border: Border.all(color: MatriVaaniColors.forest.withValues(alpha: 0.25)),
+                        ),
+                        padding: const EdgeInsets.all(8),
+                        child: const Icon(
+                          Icons.play_circle_outline_rounded,
+                          color: MatriVaaniColors.forest,
+                          size: 34,
+                        ),
+                      ),
+                    ),
+                    const SizedBox(width: 12),
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const Text('ᱢᱚᱦᱟᱹ : ᱥᱟᱱᱟᱹ ᱢᱤᱟᱨ ?', style: TextStyle(fontSize: 16, fontWeight: FontWeight.w900, color: MatriVaaniColors.ink)),
+                          const SizedBox(height: 6),
+                          Text('Speak: "$_teacherPrompt" (What is your name?)', style: TextStyle(color: MatriVaaniColors.muted, fontWeight: FontWeight.w700)),
+                          const SizedBox(height: 8),
+                          Text('Status: $_status', style: TextStyle(color: MatriVaaniColors.primaryDark, fontWeight: FontWeight.w900, fontSize: 12)),
+                        ],
+                      ),
+                    ),
+                  ],
+                )
+              ],
+            ),
+          ),
+        ),
+
+        const SizedBox(height: 12),
+
+        // Your Santali Speech card
+        Card(
+          child: Padding(
+            padding: const EdgeInsets.all(16),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Row(
+                  children: [
+                    CircleAvatar(
+                      radius: 18,
+                      backgroundColor: MatriVaaniColors.forest.withValues(alpha: 0.16),
+                      child: const Icon(Icons.mic_none_rounded, color: MatriVaaniColors.forest),
+                    ),
+                    const SizedBox(width: 10),
+                    Text('Your Santali', style: const TextStyle(fontWeight: FontWeight.w900, color: MatriVaaniColors.primaryDark)),
+                    const Spacer(),
+                    Chip(
+                      label: const Text('98% Match', style: TextStyle(fontWeight: FontWeight.w900)),
+                      backgroundColor: MatriVaaniColors.forest.withValues(alpha: 0.14),
+                      side: BorderSide(color: MatriVaaniColors.forest.withValues(alpha: 0.35)),
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 10),
+                const Text('OL CHIKI ASR OUTPUT', style: TextStyle(color: MatriVaaniColors.primaryDark, fontWeight: FontWeight.w900, fontSize: 12)),
+                const SizedBox(height: 6),
+                Text(_asrOutput, style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w900)),
+                const SizedBox(height: 8),
+                Text('Auto-Punctuation: ON', style: TextStyle(color: MatriVaaniColors.muted, fontWeight: FontWeight.w700, fontSize: 12)),
+                const SizedBox(height: 10),
+                Row(
+                  children: [
+                    PressScale(
+                      key: const Key('classroom_btn_play_pause'),
+                      onTap: () {
+                        setState(() => _audioProgress = (_audioProgress < 1.0) ? 1.0 : 0.0);
+                      },
+                      child: const Padding(
+                        padding: EdgeInsets.all(8),
+                        child: Icon(Icons.play_circle_outline_rounded),
+                      ),
+                    ),
+                    Expanded(
+                      child: Slider(
+                        value: _audioProgress.clamp(0.0, 1.0),
+                        onChanged: (v) => setState(() => _audioProgress = v),
+                        activeColor: MatriVaaniColors.primary,
+                        inactiveColor: MatriVaaniColors.border,
+                      ),
+                    ),
+                    Text('${(_audioProgress * 3.2).toStringAsFixed(1)}s', style: const TextStyle(color: MatriVaaniColors.muted, fontWeight: FontWeight.w800)),
+                  ],
+                ),
+                const SizedBox(height: 8),
+                Text('"$_translation"', style: TextStyle(color: MatriVaaniColors.muted, fontWeight: FontWeight.w800)),
+              ],
+            ),
+          ),
+        ),
+
+        const SizedBox(height: 20),
+
+        // PTT Button Center
+        Center(
+          child: Column(
+            children: [
+              PttButton(
+                isRecording: _isRecording,
+                onRecordStart: _onRecordStart,
+                onRecordStop: _onRecordStop,
+              ),
+              const SizedBox(height: 12),
+              Text(
+                _isRecording ? 'Listening to Santali Speech...' : 'Hold to Speak Santali',
+                style: const TextStyle(
+                  color: MatriVaaniColors.muted,
+                  fontWeight: FontWeight.w700,
+                  fontSize: 14,
+                ),
+              ),
+            ],
+          ),
+        ),
+
+        const SizedBox(height: 24),
+
+        // Actions: Save / Clear / Next
+        Row(
+          children: [
+            Expanded(
+              child: AnimatedButton.outlined(
+                key: const Key('classroom_btn_save_sqlite'),
+                onPressed: _saveToSQLite,
+                child: const Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Icon(Icons.save_alt_rounded, size: 18),
+                    SizedBox(width: 6),
+                    Text('Save to SQLite'),
+                  ],
+                ),
+              ),
+            ),
+            const SizedBox(width: 8),
+            Expanded(
+              child: AnimatedButton.outlined(
+                key: const Key('classroom_btn_clear_feed'),
+                onPressed: _clearFeed,
+                borderColor: MatriVaaniColors.muted,
+                foregroundColor: MatriVaaniColors.muted,
+                child: const Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Icon(Icons.delete_outline_rounded, size: 18),
+                    SizedBox(width: 6),
+                    Text('Clear Feed'),
+                  ],
+                ),
+              ),
+            ),
+          ],
+        ),
+
+        const SizedBox(height: 12),
+
+        AnimatedButton.elevated(
+          key: const Key('classroom_btn_next_phrase'),
+          onPressed: _nextPhrase,
+          child: const Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text('Next phrase'),
+              SizedBox(width: 6),
+              Icon(Icons.arrow_forward_rounded, size: 18),
+            ],
+          ),
+        ),
+      ],
     );
   }
 }
