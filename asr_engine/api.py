@@ -5,6 +5,9 @@ import os
 import subprocess
 import soundfile as sf
 import time
+from dotenv import load_dotenv
+load_dotenv()
+
 from .transcriber import SantaliASR, MODEL_PATH, PROCESSOR_PATH
 
 app = FastAPI(title="MatriVaani Santali ASR API", version="1.0.0")
@@ -90,3 +93,4 @@ async def transcribe_audio(file: UploadFile = File(...)):
         
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+

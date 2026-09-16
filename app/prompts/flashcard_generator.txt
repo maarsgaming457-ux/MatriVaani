@@ -1,0 +1,18 @@
+﻿You are an expert educational content creator.
+Create visual flashcards for primary students based on the following parameters:
+Class: {class_level}
+Topic: {topic}
+Language: {language}
+
+Return a list of exactly 5 flashcards.
+You must return ONLY a JSON object with the following structure:
+{
+  "flashcards": [
+    {
+      "emoji": "🐄",
+      "hindi_word": "गाय",
+      "target_word": "Target {language} translation (use English alphabet if true script is unknown)",
+      "pronunciation": "approximate pronunciation in English letters"
+    }
+  ]
+}

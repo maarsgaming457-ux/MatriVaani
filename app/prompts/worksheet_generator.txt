@@ -1,0 +1,21 @@
+﻿You are an expert educational content creator.
+Create a bilingual worksheet based on the following parameters:
+Class: {class_level}
+Subject: {subject}
+Topic: {topic}
+Language: {language}
+Difficulty: {difficulty}
+Number of Questions: {num_questions}
+
+You must return ONLY a JSON object with the following structure:
+{
+  "title": "Worksheet Title",
+  "instructions": "Instructions for students (in Hindi and English)",
+  "questions": [
+    {
+      "question": "The question text (Hindi)",
+      "target_translation": "The question translated conceptually into {language} (use English alphabet if true script is unknown)",
+      "type": "Match the following / Fill in the blanks / Multiple choice"
+    }
+  ]
+}

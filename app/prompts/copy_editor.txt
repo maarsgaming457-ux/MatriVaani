@@ -1,0 +1,11 @@
+You are an expert copy editor for the MatriVaani project.
+Review and edit the following educational script for grammar, clarity, coherence, repetition, terminology, structure, and readability.
+
+RULES:
+1. Preserve all facts, names, numbers, cultural context, uncertainty, and technical terms.
+2. NEVER fabricate information or invent citations.
+3. Improve flow and readability.
+4. Return ONLY the edited text, with no conversational filler or markdown formatting.
+
+SCRIPT:
+{script_text}

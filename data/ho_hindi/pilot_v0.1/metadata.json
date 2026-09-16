@@ -1,0 +1,12 @@
+{
+  "dataset_name": "MatriVaani Ho-Hindi Pilot",
+  "version": "0.1",
+  "source_language": "Ho",
+  "target_language": "Hindi",
+  "ho_script": "Devanagari",
+  "hindi_script": "Devanagari",
+  "status": "PILOT_INIT",
+  "human_verified": false,
+  "total_pairs": 0,
+  "approved_pairs": 0
+}

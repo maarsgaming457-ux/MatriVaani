@@ -1,16 +1,33 @@
-﻿import os
+import os
 import torch
 import numpy as np
 import soundfile as sf
 import librosa
 from transformers import Wav2Vec2Processor, Wav2Vec2ForCTC
 import time
+from dotenv import load_dotenv
 
-MODEL_PATH = os.environ.get("ASR_MODEL_PATH", "/content/drive/MyDrive/MatriVaani_ASR/checkpoints/checkpoint-1500/")
-PROCESSOR_PATH = os.environ.get("ASR_PROCESSOR_PATH", "/content/drive/MyDrive/MatriVaani_ASR/processor/")
+load_dotenv()
+
+def _resolve_path(env_var, default):
+    p = os.environ.get(env_var, default)
+    if p and p.startswith("./"):
+        root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+        return os.path.normpath(os.path.join(root, p[2:]))
+    return p
+
+MODEL_PATH = _resolve_path("ASR_MODEL_PATH", "/content/drive/MyDrive/MatriVaani_ASR/checkpoints/checkpoint-1500/")
+PROCESSOR_PATH = _resolve_path("ASR_PROCESSOR_PATH", "/content/drive/MyDrive/MatriVaani_ASR/processor/")
 
 class SantaliASR:
     def __init__(self):
+        if not os.path.exists(PROCESSOR_PATH):
+            raise RuntimeError(f"Processor directory missing: {PROCESSOR_PATH}")
+        if not os.path.exists(MODEL_PATH):
+            raise RuntimeError(f"Model directory missing: {MODEL_PATH}")
+        if not os.path.exists(os.path.join(MODEL_PATH, "model.safetensors")):
+            raise RuntimeError(f"model.safetensors missing in: {MODEL_PATH}")
+            
         print(f"Loading processor from {PROCESSOR_PATH}...")
         self.processor = Wav2Vec2Processor.from_pretrained(PROCESSOR_PATH)
         print(f"Loading model from {MODEL_PATH}...")

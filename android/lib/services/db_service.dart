@@ -1,4 +1,4 @@
-﻿import 'package:sqflite/sqflite.dart';
+import 'package:sqflite/sqflite.dart';
 import 'package:path/path.dart';
 import 'dart:convert';
 import 'package:uuid/uuid.dart';
@@ -18,7 +18,12 @@ class DatabaseService {
   Future<Database> _initDB(String filePath) async {
     final dbPath = await getDatabasesPath();
     final path = join(dbPath, filePath);
-    return await openDatabase(path, version: 1, onCreate: _createDB);
+    return await openDatabase(
+      path, 
+      version: 2, 
+      onCreate: _createDB,
+      onUpgrade: _upgradeDB,
+    );
   }
 
   Future _createDB(Database db, int version) async {
@@ -35,7 +40,113 @@ CREATE TABLE content (
   dirty INTEGER DEFAULT 0
 )
 ''');
+    if (version >= 2) {
+      await _createClassroomJobsTable(db);
+    }
   }
+
+  Future _upgradeDB(Database db, int oldVersion, int newVersion) async {
+    if (oldVersion < 2) {
+      await _createClassroomJobsTable(db);
+    }
+  }
+
+  Future _createClassroomJobsTable(Database db) async {
+    await db.execute('''
+CREATE TABLE classroom_jobs (
+  id TEXT PRIMARY KEY,
+  created_at TEXT NOT NULL,
+  updated_at TEXT NOT NULL,
+  source_lang TEXT NOT NULL,
+  target_lang TEXT NOT NULL,
+  audio_path TEXT NOT NULL,
+  transcription TEXT,
+  translation TEXT,
+  status TEXT NOT NULL,
+  retry_count INTEGER DEFAULT 0,
+  last_error TEXT
+)
+''');
+  }
+
+  // ClassroomJob CRUD Methods
+
+  Future<String> createClassroomJob({
+    required String sourceLang,
+    required String targetLang,
+    required String audioPath,
+  }) async {
+    final db = await instance.database;
+    final id = const Uuid().v4();
+    final now = DateTime.now().toIso8601String();
+    await db.insert('classroom_jobs', {
+      'id': id,
+      'created_at': now,
+      'updated_at': now,
+      'source_lang': sourceLang,
+      'target_lang': targetLang,
+      'audio_path': audioPath,
+      'status': 'RECORDED',
+      'retry_count': 0,
+    });
+    return id;
+  }
+
+  Future<void> updateClassroomJob(String id, Map<String, dynamic> updates) async {
+    final db = await instance.database;
+    updates['updated_at'] = DateTime.now().toIso8601String();
+    await db.update('classroom_jobs', updates, where: 'id = ?', whereArgs: [id]);
+  }
+
+  Future<Map<String, dynamic>?> getClassroomJob(String id) async {
+    final db = await instance.database;
+    final results = await db.query('classroom_jobs', where: 'id = ?', whereArgs: [id]);
+    if (results.isNotEmpty) {
+      return results.first;
+    }
+    return null;
+  }
+
+  Future<List<Map<String, dynamic>>> getAllIncompleteJobs() async {
+    final db = await instance.database;
+    return await db.query(
+      'classroom_jobs',
+      where: 'status != ?',
+      whereArgs: ['COMPLETED'],
+      orderBy: 'created_at ASC',
+    );
+  }
+
+  Future<Map<String, dynamic>?> getLatestIncompleteJob() async {
+    final db = await instance.database;
+    final results = await db.query(
+      'classroom_jobs',
+      where: 'status != ?',
+      whereArgs: ['COMPLETED'],
+      orderBy: 'created_at DESC',
+      limit: 1,
+    );
+    if (results.isNotEmpty) {
+      return results.first;
+    }
+    return null;
+  }
+
+  Future<List<Map<String, dynamic>>> getExpiredCompletedJobs(DateTime cutoffDate) async {
+    final db = await instance.database;
+    return await db.query(
+      'classroom_jobs',
+      where: 'status = ? AND updated_at < ?',
+      whereArgs: ['COMPLETED', cutoffDate.toIso8601String()],
+    );
+  }
+
+  Future<void> deleteClassroomJob(String id) async {
+    final db = await instance.database;
+    await db.delete('classroom_jobs', where: 'id = ?', whereArgs: [id]);
+  }
+
+  // Content Methods (Existing)
 
   Future<List<Map<String, dynamic>>> getDirtyRecords() async {
     final db = await instance.database;
@@ -69,7 +180,7 @@ CREATE TABLE content (
 
   Future<String> createContentOffline(String type, String topic, String language, Map<String, dynamic> data) async {
     final db = await instance.database;
-    final id = Uuid().v4();
+    final id = const Uuid().v4();
     final now = DateTime.now().toIso8601String();
     await db.insert('content', {
       'id': id,

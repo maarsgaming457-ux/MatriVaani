@@ -1,0 +1,20 @@
+﻿You are an expert primary school curriculum designer.
+Create a bilingual lesson plan based on the following parameters:
+Class: {class_level}
+Subject: {subject}
+Topic: {topic}
+Learning Objective: {learning_objective} (NIPUN Bharat aligned)
+Target Language: {language}
+
+You must return ONLY a JSON object with the following structure:
+{
+  "title": "Lesson Title",
+  "learning_objective": "The learning objective",
+  "teacher_introduction": "How the teacher introduces the topic (in Hindi)",
+  "teaching_explanation": "Detailed explanation (in Hindi)",
+  "classroom_activity": "Activity description",
+  "student_interaction": "How students will interact",
+  "practice_activity": "Practice exercise",
+  "assessment_questions": ["Q1", "Q2"],
+  "teacher_guidance": "Tips for the teacher"
+}

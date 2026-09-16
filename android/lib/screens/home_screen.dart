@@ -1,6 +1,7 @@
-﻿import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import '../services/sync_service.dart';
 import 'classroom_screen.dart';
+import 'translator_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -44,6 +45,9 @@ class _HomeScreenState extends State<HomeScreen> {
         children: [
           _buildCard("Classroom (Voice)", Icons.mic, () {
             Navigator.push(context, MaterialPageRoute(builder: (_) => ClassroomScreen()));
+          }),
+          _buildCard("Translator", Icons.translate, () {
+            Navigator.push(context, MaterialPageRoute(builder: (_) => TranslatorScreen()));
           }),
           _buildCard("Lessons", Icons.book, () {}),
           _buildCard("Worksheets", Icons.assignment, () {}),

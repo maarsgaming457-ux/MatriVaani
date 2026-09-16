@@ -1,0 +1,14 @@
+{
+  "DATASET_SIZE": 0,
+  "DATA_SOURCES": ["Pending Human Annotators"],
+  "LICENSES": "Custom Open (Pending)",
+  "SCRIPT": "Devanagari (Ho & Hindi)",
+  "CATEGORIES": {},
+  "QUALITY_CHECKS": "Passed structural checks, awaiting data",
+  "SPLIT": {"train": 0, "validation": 0, "test": 0},
+  "DUPLICATES": 0,
+  "PROBLEMATIC_EXAMPLES": 0,
+  "HUMAN_VERIFICATION_STATUS": "NO HUMAN VERIFIED PAIRS AVAILABLE",
+  "KNOWN_LIMITATIONS": ["Dataset is currently empty pending actual human bilingual translators. Machine translation cannot be trusted for Ho."],
+  "RECOMMENDATION": "DO NOT PROCEED TO PHASE 6F. MUST PROCURE BILINGUAL HUMAN TRANSLATORS FIRST."
+}
