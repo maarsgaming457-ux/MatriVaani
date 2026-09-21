@@ -32,11 +32,7 @@ def startup_event():
 
 @app.get("/health")
 def health_check():
-    return {
-        "status": "ok",
-        "model_loaded": asr_engine is not None and not getattr(asr_engine, 'placeholder_mode', True),
-        "placeholder_mode": getattr(asr_engine, 'placeholder_mode', True)
-    }
+    return {"status": "ok", "model_loaded": asr_engine is not None}
 
 @app.get("/model-info")
 def model_info():
