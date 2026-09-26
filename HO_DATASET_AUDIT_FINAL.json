@@ -1,0 +1,13 @@
+{
+  "datasets_audited": [
+    "project-boli/ho",
+    "karya/endangered-recipes-translated-500",
+    "google/smol"
+  ],
+  "total_unique_asr_hours_after_deduplication": 0.07905,
+  "total_valid_ho_hindi_pairs": 0,
+  "total_ho_tts_hours": 0.0,
+  "training_gate_asr": "NOT READY - INSUFFICIENT VERIFIED DATA",
+  "training_gate_translation": "NOT READY - INSUFFICIENT VERIFIED DATA",
+  "training_gate_tts": "NOT READY - INSUFFICIENT VERIFIED DATA"
+}

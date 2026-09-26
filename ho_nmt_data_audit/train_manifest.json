@@ -1,0 +1,1040 @@
+[
+  {
+    "source": "वेद संस्कृत में लिखे गए थे।",
+    "target": "𑢷𑣈𑣔𑣉 𑣞𑣀𑣞𑣌𑣃𑣜𑣃𑣕 𑣗𑣙𑣁𑣞𑣁𑣕𑣈 𑣉𑣚𑣚𑣈𑣓𑣁.",
+    "direction": "hin_Deva2hoc_Wara",
+    "script_class": "WARANG_CITI"
+  },
+  {
+    "source": "पिताजी कहाँ हैं?",
+    "target": "𑢷𑣁𑣘𑣁 𑣉𑣌𑣉𑣓𑣕𑣂𑣄𑣈?",
+    "direction": "hin_Deva2hoc_Wara",
+    "script_class": "WARANG_CITI"
+  },
+  {
+    "source": "पुरा किजिए",
+    "target": "𑢳𑣈𑣓𑣁 𑢸𑣃𑣜𑣁𑣆𑣘𑣈.",
+    "direction": "hin_Deva2hoc_Wara",
+    "script_class": "WARANG_CITI"
+  },
+  {
+    "source": "फूल खिलते हैं।",
+    "target": "𑢸𑣃𑣒𑣁𑣇 𑣗𑣁𑣛𑣁.",
+    "direction": "hin_Deva2hoc_Wara",
+    "script_class": "WARANG_CITI"
+  },
+  {
+    "source": "नहीं।",
+    "target": "Kaa.",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "नहीं।",
+    "target": "𑢬𑣁.",
+    "direction": "hin_Deva2hoc_Wara",
+    "script_class": "WARANG_CITI"
+  },
+  {
+    "source": "नहीं।",
+    "target": "Kaa ge.",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "गाँव में सीधे जाते रहिए।",
+    "target": "𑢾𑣂𑣔𑣈 𑣙𑣁𑣕𑣃 𑣕𑣁𑣚𑣁𑣈𑣕𑣈 𑣞𑣈𑣓𑣉𑣄𑣘𑣈.",
+    "direction": "hin_Deva2hoc_Wara",
+    "script_class": "WARANG_CITI"
+  },
+  {
+    "source": "हैलो?",
+    "target": "𑢮𑣉𑣙𑣁𑣜?",
+    "direction": "hin_Deva2hoc_Wara",
+    "script_class": "WARANG_CITI"
+  },
+  {
+    "source": "टॉम मेरी उमर का है।",
+    "target": "𑢲𑣉𑣖 𑣁𑣍𑣁𑣄 𑣇𑣖𑣈𑣜 𑣜𑣂𑣓𑣂𑣆 𑣌𑣁𑣓𑣁𑣄.",
+    "direction": "hin_Deva2hoc_Wara",
+    "script_class": "WARANG_CITI"
+  },
+  {
+    "source": "सुप्रभात!",
+    "target": "Setaḱ Siṅgi joar!",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "सुप्रभात!",
+    "target": "𑢾𑣁𑣋𑣃𑣓 𑣞𑣂𑣕𑣁𑣄!",
+    "direction": "hin_Deva2hoc_Wara",
+    "script_class": "WARANG_CITI"
+  },
+  {
+    "source": "हेलो, टॉम।",
+    "target": "𑢮𑣉𑣙𑣁𑣜, 𑢲𑣉𑣖.",
+    "direction": "hin_Deva2hoc_Wara",
+    "script_class": "WARANG_CITI"
+  },
+  {
+    "source": "सलाम, टॉम।",
+    "target": "𑢮𑣉𑣙𑣁𑣜, 𑢲𑣉𑣖.",
+    "direction": "hin_Deva2hoc_Wara",
+    "script_class": "WARANG_CITI"
+  },
+  {
+    "source": "नमस्कार, टॉम।",
+    "target": "𑢮𑣉𑣙𑣁𑣜, 𑢲𑣉𑣖.",
+    "direction": "hin_Deva2hoc_Wara",
+    "script_class": "WARANG_CITI"
+  },
+  {
+    "source": "नमस्ते, टॉम।",
+    "target": "𑢮𑣉𑣙𑣁𑣜, 𑢲𑣉𑣖.",
+    "direction": "hin_Deva2hoc_Wara",
+    "script_class": "WARANG_CITI"
+  },
+  {
+    "source": "तू भागता है।",
+    "target": "𑢡𑣖 𑣓𑣂𑣜𑣈𑣖𑣈.",
+    "direction": "hin_Deva2hoc_Wara",
+    "script_class": "WARANG_CITI"
+  },
+  {
+    "source": "पुलिस!",
+    "target": "𑢸𑣉𑣚𑣂𑣞!",
+    "direction": "hin_Deva2hoc_Wara",
+    "script_class": "WARANG_CITI"
+  },
+  {
+    "source": "आलूओं को काटो।",
+    "target": "𑢡𑣚𑣃 𑣌𑣉 𑣋𑣈𑣑𑣚𑣈𑣖.",
+    "direction": "hin_Deva2hoc_Wara",
+    "script_class": "WARANG_CITI"
+  },
+  {
+    "source": "अभी क्या समय हो रहा है?",
+    "target": "𑢳𑣁𑣄 𑣏𑣂𑣖𑣂𑣓 𑣞𑣉𑣖𑣉𑣈 𑣙𑣉𑣗𑣁 𑣌𑣁𑣓𑣁?",
+    "direction": "hin_Deva2hoc_Wara",
+    "script_class": "WARANG_CITI"
+  },
+  {
+    "source": "अभी कितने बजे हैं?",
+    "target": "𑢳𑣁𑣄 𑣏𑣂𑣖𑣂𑣓 𑣞𑣉𑣖𑣉𑣈 𑣙𑣉𑣗𑣁 𑣌𑣁𑣓𑣁?",
+    "direction": "hin_Deva2hoc_Wara",
+    "script_class": "WARANG_CITI"
+  },
+  {
+    "source": "तुम्हारा नाम क्या है?",
+    "target": "𑢡𑣖𑣁𑣄 𑣓𑣃𑣕𑣃𑣖 𑣏𑣈𑣓𑣁𑣄?",
+    "direction": "hin_Deva2hoc_Wara",
+    "script_class": "WARANG_CITI"
+  },
+  {
+    "source": "आपका नाम क्या है?",
+    "target": "𑢡𑣖𑣁𑣄 𑣓𑣃𑣕𑣃𑣖 𑣏𑣈𑣓𑣁𑣄?",
+    "direction": "hin_Deva2hoc_Wara",
+    "script_class": "WARANG_CITI"
+  },
+  {
+    "source": "तुम्हारा नाम क्या है?",
+    "target": "Amaḱ Nutum chenaḱa?",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "तुम्हारा नाम क्या है?",
+    "target": "Abenaḱ Nutum chenaḱa?",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "तुम्हारा नाम क्या है?",
+    "target": "Amaḱ Nutum do?",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "आपका नाम क्या है?",
+    "target": "Amaḱ Nutum chenaḱa?",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "आपका नाम क्या है?",
+    "target": "Abenaḱ Nutum chenaḱa?",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "आपका नाम क्या है?",
+    "target": "Amaḱ Nutum do?",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "और एक बार!",
+    "target": "𑢩𑣓𑣑𑣉𑣄 𑣖𑣂𑣞𑣈!",
+    "direction": "hin_Deva2hoc_Wara",
+    "script_class": "WARANG_CITI"
+  },
+  {
+    "source": "फिर एक बार!",
+    "target": "𑢩𑣓𑣑𑣉𑣄 𑣖𑣂𑣞𑣈!",
+    "direction": "hin_Deva2hoc_Wara",
+    "script_class": "WARANG_CITI"
+  },
+  {
+    "source": "फिर से!",
+    "target": "𑢩𑣓𑣑𑣉𑣄 𑣖𑣂𑣞𑣈!",
+    "direction": "hin_Deva2hoc_Wara",
+    "script_class": "WARANG_CITI"
+  },
+  {
+    "source": "फिर!",
+    "target": "𑢩𑣓𑣑𑣉𑣄 𑣖𑣂𑣞𑣈!",
+    "direction": "hin_Deva2hoc_Wara",
+    "script_class": "WARANG_CITI"
+  },
+  {
+    "source": "हाँ!",
+    "target": "𑢨𑣅𑣁!",
+    "direction": "hin_Deva2hoc_Wara",
+    "script_class": "WARANG_CITI"
+  },
+  {
+    "source": "जी!",
+    "target": "𑢨𑣅𑣁!",
+    "direction": "hin_Deva2hoc_Wara",
+    "script_class": "WARANG_CITI"
+  },
+  {
+    "source": "जी हाँ!",
+    "target": "𑢨𑣅𑣁!",
+    "direction": "hin_Deva2hoc_Wara",
+    "script_class": "WARANG_CITI"
+  },
+  {
+    "source": "हैलो।",
+    "target": "𑢮𑣉𑣙𑣁𑣜!",
+    "direction": "hin_Deva2hoc_Wara",
+    "script_class": "WARANG_CITI"
+  },
+  {
+    "source": "हैलो।",
+    "target": "Chia!",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "हैलो।",
+    "target": "Chige!",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "नमस्कार।",
+    "target": "𑢮𑣉𑣙𑣁𑣜!",
+    "direction": "hin_Deva2hoc_Wara",
+    "script_class": "WARANG_CITI"
+  },
+  {
+    "source": "नमस्ते।",
+    "target": "𑢮𑣉𑣙𑣁𑣜!",
+    "direction": "hin_Deva2hoc_Wara",
+    "script_class": "WARANG_CITI"
+  },
+  {
+    "source": "नमस्कार।",
+    "target": "Chia!",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "नमस्कार।",
+    "target": "Chige!",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "नमस्ते।",
+    "target": "Chia!",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "नमस्ते।",
+    "target": "Chige!",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "हाँ।",
+    "target": "Ia.",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "हाँ।",
+    "target": "Ea.",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "हाँ।",
+    "target": "𑢨𑣅𑣁.",
+    "direction": "hin_Deva2hoc_Wara",
+    "script_class": "WARANG_CITI"
+  },
+  {
+    "source": "आपकी आयु क्या है ?",
+    "target": "𑢡𑣖𑣁𑣄 𑣇𑣖𑣈𑣜 𑣏𑣂𑣖𑣂𑣓?",
+    "direction": "hin_Deva2hoc_Wara",
+    "script_class": "WARANG_CITI"
+  },
+  {
+    "source": "तुम्हारी उम्र क्या है?",
+    "target": "𑢡𑣖𑣁𑣄 𑣇𑣖𑣈𑣜 𑣏𑣂𑣖𑣂𑣓?",
+    "direction": "hin_Deva2hoc_Wara",
+    "script_class": "WARANG_CITI"
+  },
+  {
+    "source": "प्याला सोने का बना है।",
+    "target": "𑢳𑣈𑣓𑣁 𑣌𑣉𑣘 𑣞𑣉𑣓𑣁 𑣜𑣈 𑣗𑣁𑣆𑣅𑣁 𑣌𑣁𑣓𑣁.",
+    "direction": "hin_Deva2hoc_Wara",
+    "script_class": "WARANG_CITI"
+  },
+  {
+    "source": "हमारी पाठशाला इस गाँव में है।",
+    "target": "Ale School nen Hatu rea.",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "हमारी पाठशाला इस गाँव में है।",
+    "target": "𑢡𑣚𑣈𑣅𑣁𑣄 𑣆𑣞𑣌𑣃𑣚 𑣓𑣈𑣓 𑣙𑣁𑣕𑣃𑣜𑣈 𑣖𑣈𑣓𑣁𑣄.",
+    "direction": "hin_Deva2hoc_Wara",
+    "script_class": "WARANG_CITI"
+  },
+  {
+    "source": "हमारी पाठशाला इस गाँव में है।",
+    "target": "School tale nen Hatu rea.",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "भला.",
+    "target": "𑣗𑣃𑣋𑣂.",
+    "direction": "hin_Deva2hoc_Wara",
+    "script_class": "WARANG_CITI"
+  },
+  {
+    "source": "अच्छा.",
+    "target": "𑣗𑣃𑣋𑣂.",
+    "direction": "hin_Deva2hoc_Wara",
+    "script_class": "WARANG_CITI"
+  },
+  {
+    "source": "शुक्रिया!",
+    "target": "𑢷𑣂𑣕𑣂𑣈𑣖!",
+    "direction": "hin_Deva2hoc_Wara",
+    "script_class": "WARANG_CITI"
+  },
+  {
+    "source": "धन्यवाद!",
+    "target": "𑢷𑣂𑣕𑣂𑣈𑣖!",
+    "direction": "hin_Deva2hoc_Wara",
+    "script_class": "WARANG_CITI"
+  },
+  {
+    "source": "शुक्रिया!",
+    "target": "Bithiyem!",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "धन्यवाद!",
+    "target": "Bithiyem!",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "छलांग.",
+    "target": "Ućenn.",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "कूदो.",
+    "target": "Ućenn.",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "उछलो.",
+    "target": "Ućenn.",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "वही तो!",
+    "target": "Ena geda!",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "बिलकुल!",
+    "target": "Ena geda!",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "मैं थक गया हूँ।",
+    "target": "Laga yenań.",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "मैं आपसे प्यार करती हूँ।",
+    "target": "Amań sukua tana.",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "मैं आपसे प्यार करती हूँ।",
+    "target": "Abeneń sukua tana.",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "मैं आपसे प्यार करता हूँ।",
+    "target": "Amań sukua tana.",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "मैं आपसे प्यार करता हूँ।",
+    "target": "Abeneń sukua tana.",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "मैं तुमसे प्यार करता हूँ।",
+    "target": "Amań sukua tana.",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "मैं तुमसे प्यार करता हूँ।",
+    "target": "Abeneń sukua tana.",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "मैं तुमसे प्यार करती हूँ।",
+    "target": "Amań sukua tana.",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "मैं तुमसे प्यार करती हूँ।",
+    "target": "Abeneń sukua tana.",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "मुझे तुमसे प्यार है।",
+    "target": "Amań sukua tana.",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "मुझे तुमसे प्यार है।",
+    "target": "Abeneń sukua tana.",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "मैं समझता हूँ।",
+    "target": "Somjaooḱ tanań.",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "चीन जापान से बड़ा है।",
+    "target": "China do, Japan aete maraṅa.",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "बचाइए!",
+    "target": "Mar á!",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "बचाइए!",
+    "target": "Mar á dengań pe!",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "बचाओ!",
+    "target": "Mar á!",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "बचाओ!",
+    "target": "Mar á dengań pe!",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "देखो!",
+    "target": "Nelê pe!",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "देखो!",
+    "target": "Nelê ben!",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "देखो!",
+    "target": "Nelê me!",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "देखो!",
+    "target": "Haneè!",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "देखिए!",
+    "target": "Nelê pe!",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "देखिए!",
+    "target": "Nelê ben!",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "देखिए!",
+    "target": "Nelê me!",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "देखिए!",
+    "target": "Haneè!",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "देख!",
+    "target": "Nelê pe!",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "देख!",
+    "target": "Nelê ben!",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "देख!",
+    "target": "Nelê me!",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "देख!",
+    "target": "Haneè!",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "ख़ुदा हाफ़िज़।",
+    "target": "Bugi te senoḱ ben!",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "ख़ुदा हाफ़िज़।",
+    "target": "Bugite senoḱ pe!",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "अलविदा!",
+    "target": "Mar endo!",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "अलविदा!",
+    "target": "Bugi te senoḱ me!",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "अलविदा!",
+    "target": "Bugi te senoḱ ben!",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "अलविदा!",
+    "target": "Bugite senoḱ pe!",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "ख़ुदा हाफ़िज़।",
+    "target": "Mar endo!",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "ख़ुदा हाफ़िज़।",
+    "target": "Bugi te senoḱ me!",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "मुसकुराइए।",
+    "target": "Landaê pe.",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "मुसकुराओ।",
+    "target": "Landaê me.",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "मुसकुराओ।",
+    "target": "Landaê ben.",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "मुसकुराओ।",
+    "target": "Landaê pe.",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "मुसकुराइए।",
+    "target": "Landaê me.",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "मुसकुराइए।",
+    "target": "Landaê ben.",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "मुझे सिरदर्द हो रहा है।",
+    "target": "Bohḱ hasuń tana.",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "मेरे सिर में दर्द हो रहा है।",
+    "target": "Bohḱ hasuń tana.",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "मैं स्कुल जाना नहीं चाहता हूँ।",
+    "target": "School kaa sen sukuń tana.",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "आपसे मिलकर खुशी हुई।",
+    "target": "Am loḱ napamań raȧsa jana.",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "आपसे मिलकर खुशी हुई।",
+    "target": "Aben loḱ napameń rãasa yena.",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "आप कहाँ जा रहे हैं?",
+    "target": "Okon tem sen tana?",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "आप कहाँ जा रहे हैं?",
+    "target": "Okon teben sen tana?",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "आप कहाँ जा रहे हैं?",
+    "target": "Okotn tepe sen tana?",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "आप कहाँ जा रहे हैं?",
+    "target": "Okon tepea?",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "आप कहाँ जा रहे हैं?",
+    "target": "Okon tema?",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "आप कहाँ जा रहे हैं?",
+    "target": "Okon tebena?",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "तुम कहाँ जा रहे हो?",
+    "target": "Okon tem sen tana?",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "तुम कहाँ जा रहे हो?",
+    "target": "Okon teben sen tana?",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "तुम कहाँ जा रहे हो?",
+    "target": "Okotn tepe sen tana?",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "तुम कहाँ जा रहे हो?",
+    "target": "Okon tepea?",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "तुम कहाँ जा रहे हो?",
+    "target": "Okon tema?",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "तुम कहाँ जा रहे हो?",
+    "target": "Okon tebena?",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "मुझे भूख लगी है।",
+    "target": "Rengećń tana!",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "मुझे भूख लगी है!",
+    "target": "Rengećń tana!",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "अविश्वसनीय!",
+    "target": "Kań sarioḱa!",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "तुम घर पे हो क्या?",
+    "target": "Oaḱ remea chi?",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "तुम घर पे हो क्या?",
+    "target": "Oaḱ re menaḱmea chi?",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "मुझे पेट में दर्द हो रहा है।",
+    "target": "Láć hasuń tana.",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "मेरे पास एक गाड़ी है।",
+    "target": "Ań taḱ Car menaḱa.",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "मेरे पास एक गाड़ी है।",
+    "target": "Ań taḱ miat́ Car menaḱa.",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "वे जागे हैं।",
+    "target": "Evn akanać.",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "तू मेरे रास्ते में आ रहा है।",
+    "target": "Ańaḱ Hora remea.",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "तू मेरे रास्ते में आ रहा है।",
+    "target": "Ańaḱ Hora re menaḱmea.",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "जल्दी करो!",
+    "target": "Anjaann me.",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "क्या तुम्हारे पास एक गाड़ी है?",
+    "target": "Am taḱ Car menaḱa?",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "क्या तुम्हारे पास एक गाड़ी है?",
+    "target": "Aben taḱ Car menaḱa?",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "क्या तुम्हारे पास एक गाड़ी है?",
+    "target": "Ape taḱ Car menaḱa?",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "क्या आपके पास एक गाड़ी है?",
+    "target": "Am taḱ Car menaḱa?",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "क्या आपके पास एक गाड़ी है?",
+    "target": "Aben taḱ Car menaḱa?",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "क्या आपके पास एक गाड़ी है?",
+    "target": "Ape taḱ Car menaḱa?",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "उसने खुशी से मुस्कुराया।",
+    "target": "Rạ̃asa teć landa ket́a.",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "मुझे चाय पसंद है।",
+    "target": "Tea nú sukuńa.",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "मुझे नहीं पता मैं क्या कहूँ।",
+    "target": "Kajiê teaḱ kań ada renáê tana.",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "थक गए हो क्या?",
+    "target": "Laga yenam?",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "थक गए हो क्या?",
+    "target": "Laga yenaben?",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "थक गए हो क्या?",
+    "target": "Laga yenape?",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "पासवर्ड \"Muriel\" है।",
+    "target": "Password do \"Muiriel\".",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "कूटशब्द \"Muriel\" है।",
+    "target": "Password do \"Muiriel\".",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "मुझे कुत्ते अच्छे लगते हैं।",
+    "target": "Seta koń sukuaà.",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "अभी तक बुर्ज खलीफा दुनिया की सबसे लम्बी इमारत है।",
+    "target": "Nahḱ re do Burj Kalifa ge Otesai saben aete salangi Jaḱsirmabanai.",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "अभी तक बुर्ज खलीफा दुनिया की सबसे लम्बी इमारत है।",
+    "target": "Currently, Burj Khalifa ge Otesai ren salangiùtar Skyscraper.",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "चलो चलें!",
+    "target": "Dola!",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "चलो चलें!",
+    "target": "Dolaṅ!",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "चलो चलें!",
+    "target": "Dolabu!",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "तुम मेरा दोस्त हो।",
+    "target": "Am ge ańaḱ Juḍi.",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "तुम मेरा दोस्त हो।",
+    "target": "Aben ge ańaḱ Juḍi kin.",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "तुम मेरा दोस्त हो।",
+    "target": "Ape ge ańaḱ Juḍi ko.",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "मैंने उसे नहीं बुलाया ।",
+    "target": "Kań dili ket́ića.",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "मैंने उसे निमंत्रण नहीं दिया।",
+    "target": "Kań dili ket́ića.",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "मैंने उसे आमंत्रित नहीं किया।",
+    "target": "Kań dili ket́ića.",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "वे उसकी मदद कर रहीं हैं।",
+    "target": "Enić do aćeć denga tana.",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "वह उनकी मदद कर रही है।",
+    "target": "Enić do aćeć denga tana.",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "वह उसकी मदद कर रही है।",
+    "target": "Enić do aćeć denga tana.",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "तुम्हारे पिता कहाँ हैं?",
+    "target": "Amaaḱ Baṅ okon rića?",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "तुम्हारे पिता कहाँ हैं?",
+    "target": "Amaḱ Baba okon rića?",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "तुम्हारे पिता कहाँ हैं?",
+    "target": "Abenaḱ Baṅ tekin okon rekina?",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "मैं अपनी माँ का इंतेज़ार कर रहा हूँ।",
+    "target": "Engańeń tangi tana.",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "मैं रोज़ दौड़ने जाता हूँ।",
+    "target": "Dimsiń nirêa.",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "मैं घर पर हूँ।",
+    "target": "Oaḱ reńa.",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "मैं घर पर हूँ।",
+    "target": "Oaḱ re menaḱńa.",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  }
+]

@@ -1,0 +1,1002 @@
+[
+  {
+    "sample_id": "valid_0",
+    "reference_text": "ᱟᱞᱮ ᱚᱲᱟᱜ ᱨᱮ ᱛᱮᱦᱤᱧ ᱤᱧ ᱵᱚᱭᱦᱟ ᱠᱩᱲᱤᱭᱟᱜ ᱡᱚᱱᱢᱚ ᱫᱤᱱ ᱢᱮᱱᱟᱜᱼᱟ ᱚᱱᱟ ᱠᱟᱨᱚᱱ ᱛᱮ ᱟᱢᱟᱜ ᱫᱚᱠᱟᱱ ᱠᱷᱚᱱ ᱠᱤᱪᱷᱩ ᱡᱤᱱᱤᱥ ᱤᱧ ᱡᱚᱢ ᱡᱤᱱᱤᱥ ᱤᱧ ᱤᱫᱤᱭᱟ",
+    "predicted_text": "ᱟᱞᱮ ᱚᱲᱟᱜᱨᱮ ᱛᱷᱦᱤᱧ ᱤᱧ ᱵᱟᱭᱦᱟᱠ ᱠᱩᱲᱤᱭᱟ ᱡᱚᱞᱢᱚᱫᱤᱱ ᱢᱮᱱᱟᱜᱼᱟ ᱚᱱᱟ ᱠᱨᱚᱱᱛᱮ ᱟᱢᱟᱜ ᱫᱚᱠᱷᱟᱱ ᱠᱷᱚᱧ ᱠᱤᱛᱷᱨᱟᱹ ᱡᱤᱱᱤᱥᱤᱧ ᱡᱚᱢ ᱡᱤᱱᱤᱥᱤᱧ ᱧᱤᱫᱤᱭᱟ",
+    "WER": 0.7391304347826086,
+    "CER": 0.1565217391304348,
+    "status": "SUCCESS",
+    "error": "",
+    "inference_time": 1.88840913772583
+  },
+  {
+    "sample_id": "valid_1",
+    "reference_text": "ᱟᱸᱡᱚᱢ ᱞᱤᱫᱟᱹᱧ ᱟᱢᱟᱜ ᱫᱚᱠᱟᱱ ᱨᱮ ᱵᱚᱞᱮ ᱟᱹᱰᱤ ᱵᱷᱟᱞᱮ ᱵᱷᱟᱞᱮ ᱡᱤᱱᱤᱥ ᱧᱟᱢᱚᱜ ᱠᱟᱱᱟ ᱟᱞᱮ ᱚᱲᱟᱜ ᱯᱷᱮᱰ ᱨᱮᱱ ᱢᱤᱫᱴᱮᱱ ᱫᱟᱫᱟᱭ ᱞᱟᱹᱭ ᱟᱫᱤᱧᱟ ᱡᱮ ᱱᱚᱸᱰᱮ ᱟᱭᱢᱟ ᱠᱤᱪᱷᱩ ᱢᱚᱡᱽ ᱡᱤᱱᱤᱥ ᱧᱟᱢᱚᱜ ᱠᱟᱱᱟ ᱚᱱᱟᱛᱮ ᱟᱢ ᱴᱷᱮᱱ ᱤᱧ ᱦᱮᱡ ᱮᱱᱟ",
+    "predicted_text": "ᱟᱡᱚᱢ ᱰᱤᱫᱚ ᱧᱟᱢᱟᱜ ᱫᱚᱠᱟᱨᱮᱱᱮ ᱵᱚᱞᱮ ᱹᱰᱤ ᱵᱷᱟᱞᱮ ᱵᱮᱞᱮ ᱡᱤᱱᱤᱥ ᱧᱟᱢᱚᱜ ᱠᱟᱱᱟ ᱟᱞᱮ ᱚᱲᱟᱜ ᱯᱷᱮᱴᱮᱱ ᱢᱤᱫᱴᱮᱱ ᱫᱟᱫᱟᱭ ᱞᱟᱹᱭᱫᱤᱧᱟᱹ ᱡᱮ ᱱᱚᱸᱰᱮ ᱟᱭᱢᱟ ᱠᱤᱪᱷᱩ ᱢᱚᱡᱽ ᱡᱤᱰᱤᱥ ᱧᱟᱢᱚᱜ ᱠᱟᱱᱟ ᱚᱱᱟ ᱛᱷᱮ ᱟᱢᱴᱷᱮ ᱤᱧ ᱦᱮᱸᱨᱮᱱᱟ",
+    "WER": 0.5,
+    "CER": 0.13793103448275862,
+    "status": "SUCCESS",
+    "error": "",
+    "inference_time": 2.1691739559173584
+  },
+  {
+    "sample_id": "valid_2",
+    "reference_text": "ᱛᱳ ᱤᱧ ᱠᱮᱠ ᱟᱨ ᱠᱤᱪᱷᱩ ᱵᱷᱟᱡᱟ ᱯᱳᱲᱟ ᱡᱤᱱᱤᱥ ᱡᱮᱢᱚᱱ ᱡᱮᱢᱚᱱ",
+    "predicted_text": "ᱛᱚ ᱤᱧ ᱠᱮᱠ ᱟᱨ ᱠᱤᱪᱷᱩ ᱵᱷᱟᱡᱟ ᱯᱚᱰᱟ ᱡᱤᱱᱤᱥ ᱡᱮᱢᱚᱱ ᱯᱚᱨᱡᱮᱢᱚᱱ",
+    "WER": 0.3,
+    "CER": 0.1276595744680851,
+    "status": "SUCCESS",
+    "error": "",
+    "inference_time": 1.063950777053833
+  },
+  {
+    "sample_id": "valid_3",
+    "reference_text": "ᱥᱤᱸᱜᱟᱲᱟ ᱵᱨᱮᱰ ᱪᱚᱯ ᱚᱱᱟᱠᱚᱜᱮ ᱵᱷᱟᱡᱟ ᱡᱤᱱᱤᱥ ᱤᱧ ᱤᱫᱤ ᱛᱟᱢᱟ ᱚᱱᱟ ᱥᱚᱸᱜᱮ ᱚᱱᱟ ᱠᱚ ᱡᱤᱱᱤᱥ ᱤᱧ ᱦᱟᱛᱟᱣ ᱞᱮᱠᱷᱟᱱ ᱤᱧ ᱥᱚᱥ ᱟᱨ ᱪᱟᱹᱴᱱᱤ ᱚᱱᱟ ᱠᱚ ᱯᱷᱨᱤᱧ ᱧᱟᱢ ᱟᱥᱮ ᱵᱟᱝ",
+    "predicted_text": "ᱥᱤᱜᱟᱲᱟ ᱵᱨᱮᱴ ᱪᱷᱚ ᱚᱰᱟ ᱠᱚᱲᱮᱜᱮ ᱵᱷᱟᱡᱟ ᱡᱤᱱᱤᱥᱥᱤᱧ ᱤᱫᱤᱫᱟᱢᱟ ᱚᱱᱟ ᱥᱚᱸᱜᱟ ᱱᱟᱹ ᱠᱚ ᱡᱤᱱᱤᱥᱤᱧ ᱦᱟᱛᱟᱣ ᱞᱮᱠᱷᱟ ᱛᱚ ᱤᱧ ᱥᱚᱥ ᱟᱨ ᱪᱟᱹᱴᱱᱤ ᱚᱱᱟ ᱠᱚᱫᱚ ᱠᱷᱨᱤᱧ ᱧᱟᱢᱟ ᱥᱮ ᱵᱟᱝ",
+    "WER": 0.7037037037037037,
+    "CER": 0.17829457364341086,
+    "status": "SUCCESS",
+    "error": "",
+    "inference_time": 2.4068520069122314
+  },
+  {
+    "sample_id": "valid_4",
+    "reference_text": "ᱚᱱᱟᱛᱤᱧ ᱟᱸᱡᱚᱢᱮᱫᱟ ᱟᱢ ᱴᱷᱮᱱ ᱟᱨ ᱚᱱᱟ ᱞᱟᱹᱭ ᱞᱟᱹᱜᱤᱫ ᱤᱧ ᱦᱮᱡ ᱮᱱᱟ",
+    "predicted_text": "ᱚᱱᱟᱛᱮᱧ ᱦᱟᱸᱡᱚᱝ ᱫᱟ ᱴᱮ ᱨ ᱚᱱᱟ ᱱᱟᱭ ᱞᱟᱹᱜᱤᱫᱟᱧ ᱧᱟᱦᱟᱸ ᱟᱱᱟ",
+    "WER": 0.9090909090909091,
+    "CER": 0.3584905660377358,
+    "status": "SUCCESS",
+    "error": "",
+    "inference_time": 0.7654764652252197
+  },
+  {
+    "sample_id": "valid_5",
+    "reference_text": "ᱵᱷᱟᱨᱚᱛ ᱫᱤᱥᱚᱢ ᱨᱮᱫᱚ ᱯᱷᱩᱴᱵᱚᱞ ᱠᱚ ᱮᱱᱮᱡᱼᱟ ᱟᱨ ᱠᱨᱤᱠᱮᱴ ᱵᱷᱟᱞᱩᱠ ᱜᱩᱰᱩ ᱟᱨ ᱥᱚᱨᱮᱥ ᱮᱱᱮᱡ ᱠᱤᱱᱫᱚ ᱮᱸᱜ ᱥᱚᱪᱤᱱ ᱟᱨ ᱫᱷᱚᱱᱤ",
+    "predicted_text": "ᱵᱷᱟᱨᱚᱛ ᱫᱤᱥᱮᱢ ᱨᱮᱫᱚ ᱯᱷᱩᱴᱵᱚᱞ ᱠᱚ ᱮᱱᱮᱡᱼᱟ ᱟᱨ ᱠᱨᱠᱮᱰ ᱵᱷᱟᱞᱩᱜᱩᱰᱩ ᱟᱨ ᱥᱚᱨᱮᱥ ᱮᱱᱮᱡ ᱠᱤᱱ ᱫᱚ ᱥᱩᱪᱤᱱ ᱟᱨ ᱫᱷᱚᱱᱤ",
+    "WER": 0.3888888888888889,
+    "CER": 0.11458333333333333,
+    "status": "SUCCESS",
+    "error": "",
+    "inference_time": 2.259340763092041
+  },
+  {
+    "sample_id": "valid_6",
+    "reference_text": "ᱛᱩᱨᱩᱭ",
+    "predicted_text": "ᱠᱚ ᱛᱟᱜᱮᱟ ᱨᱮᱟ ᱛᱩᱨᱩᱭ",
+    "WER": 3.0,
+    "CER": 2.6,
+    "status": "SUCCESS",
+    "error": "",
+    "inference_time": 0.28644847869873047
+  },
+  {
+    "sample_id": "valid_7",
+    "reference_text": "ᱯᱚᱨᱟᱱ ᱱᱚᱢᱵᱚᱨ ᱛᱷᱨᱤ ᱱᱟᱭᱤᱱ ᱯᱷᱳᱨ ᱚᱣᱟᱱ ᱰᱚᱵᱚᱞ ᱯᱷᱟᱭᱤᱵᱷ ᱱᱟᱭᱤᱱ ᱥᱮᱵᱷᱮᱱ ᱯᱷᱟᱭᱤᱵᱷ ᱚᱣᱟᱱ ᱥᱤᱠᱥ ᱚᱣᱟᱱ ᱥᱟᱶ ᱤᱧᱟᱹᱜ ᱮ ᱯᱤ ᱮᱠᱟᱣᱩᱱᱴ ᱨᱮᱭᱟᱜ ᱞᱮᱱᱫᱮᱱ ᱨᱮᱭᱟᱜ ᱵᱚᱨᱱᱚᱱᱟ ᱩᱫᱩᱜ ᱟᱹᱧ ᱢᱮ",
+    "predicted_text": "ᱯᱩᱨᱟᱱ ᱱᱟᱢᱵᱚᱨ ᱛᱷᱨᱤ ᱱᱟᱭᱤᱱ ᱯᱩᱨ ᱩᱣᱟᱱ ᱰᱚᱵᱚᱞ ᱯᱷᱟᱭᱤᱯ ᱱᱟᱭᱤᱱ ᱥᱮᱵᱮᱱ ᱯᱟᱭᱤᱵ ᱩᱣᱟᱱ ᱪᱤᱠᱥ ᱣᱟᱱ ᱥᱟᱣ ᱤᱧᱟᱹᱜᱠ ᱮᱯᱤ ᱮᱠᱟᱩᱱᱴ ᱨᱮᱭᱟᱜ ᱞᱮᱱᱫᱤᱱᱨᱮᱭᱟᱜ ᱵᱚᱱᱚᱱᱟ ᱩᱰᱩᱠ ᱟᱹᱧ ᱢᱮ",
+    "WER": 0.7307692307692307,
+    "CER": 0.15172413793103448,
+    "status": "SUCCESS",
+    "error": "",
+    "inference_time": 2.732069492340088
+  },
+  {
+    "sample_id": "valid_8",
+    "reference_text": "ᱛᱩᱨᱩᱭ ᱮᱭᱟᱭ ᱯᱮ ᱛᱩᱨᱩᱭ ᱮᱭᱟᱭ ᱢᱚᱬᱮ ᱤᱨᱟᱹᱞ ᱥᱩᱱ ᱢᱚᱬᱮ ᱤᱨᱟᱹᱞ ᱯᱮ ᱯᱷᱚᱱ ᱱᱚᱢᱵᱚᱨ ᱠᱚ ᱞᱟᱹᱜᱤᱫ ᱴᱷᱤᱠᱟᱹ ᱥᱤᱫᱽ ᱥᱟᱠᱟᱢ ᱰᱟᱣᱩᱱᱞᱳᱰ ᱞᱟᱹᱜᱤᱫ ᱫᱟᱭᱟ ᱠᱟᱛᱮᱫ ᱥᱩᱵᱤᱫᱷᱟ ᱧᱟᱢ ᱠᱚᱣᱟᱜ ᱧᱩᱛᱩᱢ ᱵᱟᱪᱷᱟᱣ ᱢᱮ",
+    "predicted_text": "ᱛᱨᱩᱭ ᱮᱭᱟᱭ ᱯᱮ ᱛᱩᱨᱩᱭ ᱮᱭᱟᱭ ᱢᱚᱲᱮ ᱤᱨᱟᱹᱞ ᱥᱩᱝ ᱢᱚᱲᱮ ᱤᱨᱟᱹᱞ ᱯᱮ ᱯᱷᱚᱱ ᱱᱟᱢᱵᱟᱨ ᱠᱚ ᱞᱟᱹᱜᱤᱫ ᱴᱷᱤᱠᱟᱹ ᱥᱤᱫ ᱥᱟᱠᱟᱢ ᱰᱟᱣᱩᱱᱰᱚᱰ ᱞᱟᱹᱜᱤᱫ ᱫᱟᱭᱟ ᱠᱟᱛᱮᱫ ᱥᱩᱵᱷᱤᱫᱟ ᱧᱟᱢ ᱠᱚᱣᱟᱜ ᱧᱩᱛᱩᱢ ᱵᱟᱪᱷᱟᱣ ᱢᱮ",
+    "WER": 0.2857142857142857,
+    "CER": 0.07142857142857142,
+    "status": "SUCCESS",
+    "error": "",
+    "inference_time": 3.3296985626220703
+  },
+  {
+    "sample_id": "valid_9",
+    "reference_text": "ᱦᱮᱞᱳ",
+    "predicted_text": "ᱦᱮᱞᱳ",
+    "WER": 0.0,
+    "CER": 0.0,
+    "status": "SUCCESS",
+    "error": "",
+    "inference_time": 0.18138718605041504
+  },
+  {
+    "sample_id": "valid_10",
+    "reference_text": "ᱦᱮᱞᱳ ᱤᱧ ᱜᱮ ᱥᱩᱠᱩᱨᱢᱩᱱᱤ ᱢᱩᱨᱢᱩ ᱢᱮᱱᱮᱜᱼᱟᱹᱧ ᱤᱭᱟᱹ ᱞᱩᱠᱩᱭᱠᱟᱱᱟᱞᱤ ᱠᱷᱚᱱᱟᱜ ᱟᱢ ᱜᱮ ᱨᱟ ᱪᱤ ᱨᱤᱱᱤᱡ ᱥᱮᱬᱟ ᱰᱟᱠᱛᱟᱨ ᱫᱚ",
+    "predicted_text": "ᱢᱮᱱᱮᱧ ᱤᱧᱜᱮ ᱥᱩᱠᱨᱢᱚᱱᱤ ᱢᱩᱨᱢᱚ ᱢᱮᱱᱮᱡᱼᱭᱟᱧ ᱤᱭᱟᱹ ᱞᱩᱠᱨᱩᱭ ᱠᱟᱱᱟᱜ ᱟᱞᱤᱭ ᱠᱷᱚᱱᱟᱝ ᱟᱢᱜᱮ ᱨᱟᱪᱤᱨ ᱢᱤᱫ ᱥᱮᱲᱟ ᱰᱟᱠᱛᱟᱜ ᱫᱚ",
+    "WER": 0.8823529411764706,
+    "CER": 0.27956989247311825,
+    "status": "SUCCESS",
+    "error": "",
+    "inference_time": 1.0338830947875977
+  },
+  {
+    "sample_id": "valid_11",
+    "reference_text": "ᱚ ᱦᱚᱸ ᱟᱫᱚ ᱤᱧ ᱢᱮᱱᱮᱫ ᱟᱹᱧ ᱦᱟᱯᱮ ᱥᱮ ᱤᱧ ᱦᱚᱸ ᱱᱤᱛᱳᱜ ᱯᱮᱥᱮᱱᱤᱧ ᱵᱮᱱᱟᱣ ᱠᱟᱱᱟᱹᱧ ᱟᱫᱚ ᱢᱮᱱᱮᱜᱼᱟᱹᱧ ᱦᱟᱯᱮᱥᱮᱧ ᱯᱷᱳᱱᱟᱭᱟ ᱞᱟᱹᱭᱮᱜᱼᱟᱹᱧ ᱚᱸᱰᱮ ᱢᱮᱱᱮᱫ ᱫᱚᱠᱚ ᱥᱮᱬᱟ ᱰᱟᱠᱛᱟᱨ ᱢᱮᱱᱟᱭᱟ ᱟᱫᱚ ᱪᱮᱫᱞᱮᱠᱟᱱ ᱨᱩᱜᱤ ᱠᱚᱢ ᱧᱮᱞ ᱠᱟᱣᱟ",
+    "predicted_text": "ᱚᱸ ᱦᱚᱸ ᱟᱫᱚ ᱤᱧ ᱢᱮᱱᱮ ᱤᱧ ᱦᱟᱯᱮ ᱥᱮ ᱤᱧᱦᱚᱸ ᱱᱤᱛᱚᱜ ᱯᱮᱥᱮᱱᱰ ᱵᱮᱱᱟᱣ ᱠᱟᱱᱟᱹᱤᱧ ᱟᱫᱚ ᱢᱮᱱᱫᱤᱧ ᱦᱟᱯᱮᱥᱤᱧ ᱠᱷᱚᱱᱟᱭᱟᱞᱮᱡ ᱮ ᱚᱸᱰᱮ ᱢᱮᱱᱮᱡ ᱫᱚᱠᱚ ᱥᱮᱸᱦᱟ ᱰᱟᱠᱛᱟᱨ ᱢᱮᱱᱟᱭᱟ ᱟᱫᱚ ᱪᱮᱫ ᱞᱮᱠᱟᱱ ᱨᱩᱜᱮ ᱠᱚᱢ ᱧᱮᱞ ᱠᱷᱚᱣᱟ",
+    "WER": 0.5806451612903226,
+    "CER": 0.19298245614035087,
+    "status": "SUCCESS",
+    "error": "",
+    "inference_time": 1.8811700344085693
+  },
+  {
+    "sample_id": "valid_12",
+    "reference_text": "<unintelligible>",
+    "predicted_text": "ᱮᱦᱮ",
+    "WER": 1.0,
+    "CER": 1.0,
+    "status": "SUCCESS",
+    "error": "",
+    "inference_time": 0.26877498626708984
+  },
+  {
+    "sample_id": "valid_13",
+    "reference_text": "ᱢᱟᱱᱮ",
+    "predicted_text": "ᱢᱟᱞᱮ",
+    "WER": 1.0,
+    "CER": 0.25,
+    "status": "SUCCESS",
+    "error": "",
+    "inference_time": 0.25801515579223633
+  },
+  {
+    "sample_id": "valid_14",
+    "reference_text": "ᱦᱳᱭ ᱟᱫᱚ ᱚᱱᱟᱜᱤᱧ ᱢᱮᱱᱮᱫᱼᱟ ᱦᱟᱯᱮᱥᱮ ᱞᱟᱹᱭᱮᱜᱼᱟᱹᱧ ᱞᱟᱹᱭᱮᱫ ᱫᱚᱠᱚ ᱮᱱᱠᱷᱟᱱ ᱞᱟᱹᱭᱮᱫᱼᱟᱹᱧ ᱦᱟᱯᱮᱥᱮ ᱯᱷᱳᱱ ᱠᱟᱛᱮᱧ ᱵᱟᱲᱟᱭ ᱤᱭᱟᱹᱭᱟ ᱢᱟᱱᱮ ᱠᱟᱛᱷᱟᱧ ᱦᱟᱛᱟᱣᱟ ᱠᱤ ᱪᱮᱫᱞᱮᱠᱟᱱ ᱯᱮᱥᱮᱱ ᱠᱚ ᱧᱮᱞ ᱠᱚᱣᱟᱭ ᱮᱱᱠᱷᱟᱱ ᱫᱚ ᱪᱟᱞᱟᱜ ᱦᱩᱭᱩᱜᱼᱟ",
+    "predicted_text": "ᱦᱳᱭ ᱟᱫᱚ ᱚᱱᱟᱜᱮᱧ ᱢᱮᱱᱮᱫᱼ ᱦᱟᱯᱮ ᱥᱮᱞᱮ ᱤᱧᱞᱟᱹᱭᱤᱫ ᱫᱚᱠᱚ ᱮᱱᱠᱷᱟᱱ ᱫᱮ ᱤᱧ ᱦᱟᱯᱮ ᱥᱮ ᱯᱷᱚᱱ ᱠᱟᱹᱛᱤᱧ ᱵᱟᱲᱟᱭ ᱤᱭᱟᱹᱭᱟ ᱢᱟᱱᱮ ᱠᱟᱛᱷᱟᱦᱤᱧ ᱦᱟᱛᱟᱣᱟ ᱠᱤ ᱪᱮᱫ ᱞᱮᱠᱟᱱ ᱯᱮᱪᱮᱨᱮᱱ ᱠᱚ ᱧᱮᱞ ᱠᱚᱣᱟᱭᱮᱱᱠᱷᱟᱱ ᱫᱚ ᱪᱟᱞᱟᱜ ᱦᱩᱭᱩᱜᱼᱟ",
+    "WER": 0.6071428571428571,
+    "CER": 0.18285714285714286,
+    "status": "SUCCESS",
+    "error": "",
+    "inference_time": 2.0933713912963867
+  },
+  {
+    "sample_id": "valid_15",
+    "reference_text": "ᱟᱫᱚ ᱡᱮᱛᱮᱞᱮᱠᱟᱱ ᱢᱟᱱᱮ ᱤᱭᱟᱹ ᱨᱩᱜᱤ ᱠᱚᱜᱮᱢ ᱧᱮᱞ ᱠᱚᱣᱟ ᱥᱮ",
+    "predicted_text": "ᱟᱫᱚ ᱡᱮᱛᱤᱨ ᱞᱮᱠᱟᱱ ᱢᱟᱱᱮ ᱤᱭᱟᱹ ᱨᱩᱵᱤ ᱠᱚᱜᱮᱢ ᱧᱮᱞ ᱠᱚᱣᱟ ᱥᱮ",
+    "WER": 0.3333333333333333,
+    "CER": 0.08695652173913043,
+    "status": "SUCCESS",
+    "error": "",
+    "inference_time": 0.7122151851654053
+  },
+  {
+    "sample_id": "valid_16",
+    "reference_text": "ᱦᱳᱭ ᱟᱫᱚ ᱚᱱᱟᱜᱮ ᱢᱮᱱᱮᱜᱼᱟ ᱞᱮ ᱟᱨ ᱛᱤᱥ ᱛᱤᱥ ᱠᱚ ᱛᱟᱦᱮᱱᱟ ᱚᱸᱰᱮ ᱫᱚ ᱥᱮ ᱟᱨᱦᱚᱸ ᱮᱴᱟᱜ ᱠᱚᱨᱮ ᱪᱮᱢᱵᱟᱨ ᱠᱚᱢ ᱠᱷᱩᱞᱟᱹᱣ ᱠᱟᱜᱼᱟ",
+    "predicted_text": "ᱦᱳᱭ ᱟᱫᱚ ᱚᱱᱟᱜᱮ ᱢᱮᱱᱮᱫᱼᱟᱞᱮ ᱟᱨ ᱭ ᱴᱤᱥᱛᱤᱥᱠᱚᱢ ᱛᱟᱦᱮᱱᱟ ᱚᱸᱰᱮ ᱫᱚ ᱥᱮ ᱟᱨ ᱦᱚᱸ ᱮᱴᱟᱜ ᱠᱷᱚᱨᱮ ᱪᱮᱢᱵᱟ ᱨᱚᱠᱚᱢ ᱠᱷᱩᱞᱟᱹᱣ ᱠᱟᱜᱼᱟ",
+    "WER": 0.5,
+    "CER": 0.12371134020618557,
+    "status": "SUCCESS",
+    "error": "",
+    "inference_time": 1.2256953716278076
+  },
+  {
+    "sample_id": "valid_17",
+    "reference_text": "ᱦᱳᱭᱛᱳ ᱟᱫᱚ ᱛᱤᱱ ᱠᱷᱚᱱ ᱢᱟᱱᱮ ᱴᱟᱭᱤᱢ ᱛᱤᱱ ᱨᱮ ᱛᱤᱱ ᱛᱤᱱᱮᱢ ᱫᱩᱲᱩᱵᱼᱟ ᱛᱤᱱᱟᱹᱜ ᱜᱷᱟᱹᱲᱤᱠ ᱠᱛᱮᱫ ᱮᱢ ᱫᱩᱲᱩᱵᱼᱟ ᱤᱱᱟᱹ ᱫᱚ ᱤᱱᱟᱹ ᱚᱠᱛᱚ ᱨᱮ",
+    "predicted_text": "ᱦᱳᱭᱛᱚ ᱟᱫᱚ ᱛᱤᱱ ᱠᱷᱚᱱᱮ ᱢᱟᱱᱮ ᱴᱟᱭᱤᱢ ᱛᱤᱱ ᱨᱮ ᱛᱤᱱᱛᱤᱱᱮᱢ ᱫᱩᱲᱩᱵᱼᱟ ᱛᱤᱨᱱᱟᱹᱜ ᱜᱷᱟᱲᱤᱡ ᱠᱟᱛᱮᱱ ᱫᱩᱨᱩᱵ ᱼᱟᱝ ᱤᱱᱹ ᱫᱚ ᱤᱱᱟᱹ ᱚᱠᱛᱚᱨ ᱨᱮ",
+    "WER": 0.5238095238095238,
+    "CER": 0.1509433962264151,
+    "status": "SUCCESS",
+    "error": "",
+    "inference_time": 1.342644453048706
+  },
+  {
+    "sample_id": "valid_18",
+    "reference_text": "ᱚ ᱦᱚᱸ",
+    "predicted_text": "ᱮ ᱦᱚᱸ",
+    "WER": 0.5,
+    "CER": 0.2,
+    "status": "SUCCESS",
+    "error": "",
+    "inference_time": 0.2527444362640381
+  },
+  {
+    "sample_id": "valid_19",
+    "reference_text": "ᱟᱫᱚ ᱚᱱᱟᱜᱤᱧ ᱢᱮᱱᱮᱜᱼᱟ ᱯᱟᱪᱮᱫ ᱟᱨᱦᱚᱸ ᱛᱤᱥ ᱛᱤᱥ ᱠᱚᱨᱮ ᱫᱩᱲᱩᱵᱼᱟᱭ ᱵᱟᱭ ᱵᱟᱭ ᱢᱮᱱᱚᱜᱚᱜᱼᱟ ᱟᱫᱚᱧ ᱢᱮᱱᱮᱜᱼᱟ ᱦᱟᱯᱮᱥᱮ ᱠᱩᱞᱤ ᱠᱟᱛᱮᱫ ᱜᱮᱵᱚᱱ ᱵᱟᱲᱟᱭ ᱧᱟᱢᱟ ᱠᱤ ᱛᱤᱥ ᱠᱚᱨᱮ ᱛᱤᱥ ᱛᱤᱥᱮ ᱫᱩᱲᱩᱵ ᱠᱟᱱᱟ ᱥᱮ ᱪᱷᱩᱴᱤ ᱠᱚ ᱢᱟᱱᱮ ᱟᱨᱦᱚᱸ ᱛᱤᱱᱟᱹᱜ ᱜᱟᱱ ᱤᱭᱟᱹ ᱠᱚ ᱢᱮᱱᱟᱜᱼᱟ ᱪᱮᱢᱵᱟᱨ ᱠᱚ ᱛᱟᱭ ᱢᱮᱱᱟᱜᱼᱟ ᱚᱱᱟ ᱠᱚᱨᱮ ᱫᱩᱲᱩᱵᱼᱟᱭ ᱯᱟᱪᱮᱫ ᱢᱮᱱᱮᱜᱼᱟ ᱞᱮ",
+    "predicted_text": "ᱟᱫᱚ ᱚᱱᱟᱜᱮᱧ ᱢᱮᱱᱮᱫᱜᱼᱟ ᱯᱮᱪᱷᱮᱫ ᱟᱨᱦᱚᱸ ᱛᱴᱤᱥ ᱯᱤᱥ ᱠᱚᱨᱮ ᱫᱩᱲᱩᱵ ᱟᱭ ᱵᱟᱭᱵᱟᱭ ᱢᱮᱱᱚᱜᱚᱜᱼᱟ ᱟᱹᱫᱤᱧ ᱢᱮᱱᱮᱜ ᱦᱟᱯᱮ ᱥᱮ ᱠᱩᱞᱤ ᱠᱟᱛᱮᱫ ᱜᱮᱵᱚᱱ ᱵᱟᱲᱟᱭ ᱧᱟᱢᱟ ᱠᱤ ᱯᱤᱥ ᱠᱚᱨᱮ ᱯᱤᱥᱛᱤᱥᱮ ᱫᱩᱲᱩᱵ ᱠᱟᱱᱟ ᱥᱮ ᱥᱩᱯᱤ ᱠᱚ ᱢᱟᱱᱮ ᱟᱨᱦᱚᱸ ᱛᱤᱱᱟᱹᱜ ᱜᱟᱱ ᱤᱭᱟᱹ ᱠᱚ ᱢᱮᱱᱟᱜᱼᱟ ᱪᱮᱢᱵᱟᱨ ᱠᱚ ᱛᱟᱭ ᱢᱮᱱᱟᱜᱼ ᱚᱱᱟ ᱠᱚᱨᱮ ᱫᱩᱲᱩᱵᱯ ᱟᱭ ᱯᱟᱪᱷᱮᱫ ᱢᱮᱱᱮᱜᱼᱟᱞᱮ",
+    "WER": 0.44680851063829785,
+    "CER": 0.0933852140077821,
+    "status": "SUCCESS",
+    "error": "",
+    "inference_time": 2.4397687911987305
+  },
+  {
+    "sample_id": "valid_20",
+    "reference_text": "ᱦᱳᱭ ᱮᱱᱠᱷᱟᱱ ᱟᱞᱮ ᱪᱟᱞᱟᱜᱼᱟᱞᱮ ᱦᱟᱸᱜ ᱟᱞᱮ ᱦᱚᱸ ᱢᱟᱱᱮ ᱤᱭᱟᱹ ᱥᱳᱞᱳ ᱥᱚᱛᱨᱚ ᱛᱟᱹᱨᱤᱠᱷ ᱫᱚ ᱢᱟᱱᱮ ᱥᱟᱺᱜᱤᱧ ᱜᱮᱭᱟ ᱥᱮ ᱮᱱᱠᱷᱟᱱ ᱫᱚ ᱚᱱᱟ ᱠᱷᱟᱹᱛᱤᱨ ᱢᱮᱱᱮᱜᱼᱟ ᱞᱮ ᱫᱳ ᱫᱤᱱ ᱤᱭᱟ ᱫᱳ ᱫᱤᱱ ᱵᱟᱨ ᱦᱳᱭ ᱞᱟᱜᱟᱜᱼᱟ ᱟᱫᱚ ᱥᱮᱴᱮᱨᱚᱜ ᱯᱮ ᱨᱩᱣᱟᱹᱜ ᱦᱚᱲ ᱦᱤᱥᱟᱹᱵᱽ ᱛᱮᱫᱚ ᱢᱟᱱᱮ ᱩᱱᱟᱹᱜ ᱤᱥᱯᱤᱰ ᱵᱟᱢ ᱤᱫᱤᱭᱮᱭᱟ ᱥᱮ ᱮᱱᱠᱷᱟᱱ ᱫᱚ ᱞᱟᱜᱟᱜ ᱜᱮᱭᱟ ᱟᱫᱚ ᱚᱱᱟ ᱪᱮᱠᱟ ᱫᱳ ᱫᱤᱱᱤᱧ ᱞᱟᱹᱭ ᱠᱮᱜᱼᱟ",
+    "predicted_text": "ᱦᱳᱭ ᱮᱱᱠᱷᱟ ᱟᱞᱮ ᱪᱟᱞᱟᱜ ᱟᱞᱮᱦᱟᱸᱜ ᱟᱞᱮ ᱦᱚᱸ ᱢᱟᱱᱮ ᱤᱱᱟᱹ ᱥᱩᱞᱟ ᱥᱚᱛᱨᱟ ᱛᱟᱨᱤᱠ ᱫᱚ ᱢᱟᱱᱮ ᱥᱟᱸᱜᱤᱧ ᱜᱮᱭᱟ ᱥᱮ ᱮᱱᱠᱷᱟᱱ ᱫᱚ ᱚᱱᱟ ᱠᱷᱟᱹᱛᱤᱨ ᱨᱮᱛᱮ ᱢᱮᱱᱮᱜᱼᱟᱞᱮ ᱫᱚᱫᱤᱱ ᱤᱭᱟᱹ ᱫᱚᱫᱤᱱ ᱵᱟᱭᱞᱦᱚᱭ ᱞᱟᱜᱟᱜᱼᱟ ᱟᱵᱚ ᱥᱮᱴᱮᱨᱚᱜ ᱛᱮ ᱨᱩᱣᱟᱹᱜ ᱦᱚᱲ ᱦᱤᱥᱚᱯ ᱛᱮᱫᱚ ᱢᱟᱱᱮ ᱩᱱᱟᱹ ᱤᱥᱯᱤᱴᱷᱚᱸ ᱵᱟᱢ ᱤᱫᱤᱜᱮᱭᱟ ᱥᱮ ᱮᱱᱠᱷᱟᱱ ᱫᱚᱞᱟᱜᱟᱜ ᱜᱮᱭᱟ ᱫᱚᱱᱟ ᱪ ᱫᱚᱫᱤᱱᱤᱧ ᱞᱟᱹᱭ ᱠᱮᱫᱼᱟ",
+    "WER": 0.5636363636363636,
+    "CER": 0.16370106761565836,
+    "status": "SUCCESS",
+    "error": "",
+    "inference_time": 2.9474923610687256
+  },
+  {
+    "sample_id": "valid_21",
+    "reference_text": "ᱟᱪᱪᱷᱟ ᱴᱷᱤᱠ ᱜᱮᱭᱟ ᱛᱚᱵᱮ ᱱᱟᱜ ᱟᱞᱮ ᱪᱟᱞᱟᱜ ᱠᱟᱱᱟᱞᱮ",
+    "predicted_text": "ᱟᱥᱮ ᱴᱷᱤᱠ ᱜᱮᱭᱟ ᱛᱚᱵᱮᱱᱦᱟᱸ ᱟᱞᱮ ᱪᱟᱞᱟᱜ ᱠᱟᱱᱟᱞᱮ",
+    "WER": 0.375,
+    "CER": 0.17073170731707318,
+    "status": "SUCCESS",
+    "error": "",
+    "inference_time": 0.4087028503417969
+  },
+  {
+    "sample_id": "valid_22",
+    "reference_text": "ᱦᱮᱸᱻ",
+    "predicted_text": "ᱦᱮᱸ",
+    "WER": 1.0,
+    "CER": 0.25,
+    "status": "SUCCESS",
+    "error": "",
+    "inference_time": 0.21027350425720215
+  },
+  {
+    "sample_id": "valid_23",
+    "reference_text": "ᱦᱮᱸ ᱦᱮᱸ ᱰᱟᱠᱛᱟᱨ ᱤᱭᱟᱹ ᱱᱩᱠᱩ ᱤᱭᱟᱹ ᱠᱟᱹᱴᱤᱡ ᱩᱱᱠᱩ ᱯᱩᱱᱭᱟ ᱠᱟᱴᱟ ᱜᱟᱹᱭ ᱰᱟᱝᱨᱟ ᱠᱚᱨᱮᱱ ᱨᱟᱱ ᱮᱢᱚᱜ ᱤᱡ ᱠᱟᱱ ᱜᱤᱭᱟᱹᱧ",
+    "predicted_text": "ᱦᱮᱸ ᱦᱮᱸ ᱴᱟᱠᱴᱟᱨ ᱮᱭᱟ ᱱᱩᱝᱠᱩ ᱤᱭᱟᱹ ᱠᱟᱹᱴᱤᱡ ᱩᱱᱠᱩ ᱯᱱᱤᱭᱟ ᱠᱟᱴᱟ ᱜᱟᱭ ᱰᱟᱝᱨᱟ ᱠᱚᱨᱮᱱ ᱨᱟᱱ ᱮᱢᱚᱜ ᱭᱩᱜ ᱠᱟᱱ ᱜᱮᱭᱟ",
+    "WER": 0.3888888888888889,
+    "CER": 0.15217391304347827,
+    "status": "SUCCESS",
+    "error": "",
+    "inference_time": 1.1215922832489014
+  },
+  {
+    "sample_id": "valid_24",
+    "reference_text": "ᱦᱮᱸᱻ",
+    "predicted_text": "ᱦᱮᱸ ᱵᱮᱱᱟ",
+    "WER": 2.0,
+    "CER": 1.25,
+    "status": "SUCCESS",
+    "error": "",
+    "inference_time": 0.17686820030212402
+  },
+  {
+    "sample_id": "valid_25",
+    "reference_text": "ᱦᱮᱸ ᱦᱮᱸ ᱪᱮᱫ ᱪᱮᱫ",
+    "predicted_text": "ᱦᱮᱸᱮ  ᱪᱮ ᱪᱮ",
+    "WER": 1.0,
+    "CER": 0.3333333333333333,
+    "status": "SUCCESS",
+    "error": "",
+    "inference_time": 0.36035799980163574
+  },
+  {
+    "sample_id": "valid_26",
+    "reference_text": "ᱵᱟᱹᱠᱤᱱ ᱠᱞᱤᱭᱟᱨ ᱠᱟᱱᱟ ᱱᱚᱣᱟ <unintelligible>",
+    "predicted_text": "ᱮᱢᱵᱟ ᱠᱤᱱ ᱥᱤᱨᱮᱭᱟᱨᱮᱠᱟᱫᱱᱟᱦ",
+    "WER": 1.0,
+    "CER": 0.75,
+    "status": "SUCCESS",
+    "error": "",
+    "inference_time": 0.3346562385559082
+  },
+  {
+    "sample_id": "valid_27",
+    "reference_text": "ᱟᱫᱚ ᱳᱭᱻᱫᱚ ᱚᱲᱮᱡ ᱨᱟᱱ ᱨᱟᱱ ᱢᱟᱠᱤᱱ ᱡᱚᱢ ᱠᱟᱜᱼᱟ ᱵᱟᱠᱤᱱ ᱴᱷᱤᱠ ᱩᱛᱟᱹᱨ ᱠᱟᱱᱟ ᱦᱮᱸ ᱤᱱᱟᱹ ᱜᱮᱛᱚ ᱟᱫᱚ",
+    "predicted_text": "ᱟᱫᱚ ᱚᱭ ᱫᱚ ᱮᱲᱮ ᱨᱟᱱ ᱨᱟᱱ ᱢᱟᱠᱤᱱ ᱡᱚᱢ ᱠᱟᱜᱼᱟ  ᱵᱟᱸᱠᱤᱱ ᱴᱷᱤᱠᱯᱮᱨ ᱠᱟᱱᱟ ᱦᱮᱸ ᱮᱱᱮᱡ ᱜᱮ ᱛᱚ ᱟᱫᱚ",
+    "WER": 0.5625,
+    "CER": 0.19230769230769232,
+    "status": "SUCCESS",
+    "error": "",
+    "inference_time": 1.3682236671447754
+  },
+  {
+    "sample_id": "valid_28",
+    "reference_text": "ᱟᱫᱚ ᱱᱤᱛ ᱱᱤᱛᱚᱜ ᱚᱱᱟ ᱦᱚᱭᱛᱚ ᱨᱩᱪᱤ ᱵᱟᱝ ᱦᱩᱭᱩᱜ ᱠᱟᱱ ᱛᱟᱠᱤᱱᱟ ᱱᱚᱝᱠᱟ ᱤᱭᱟᱹ ᱛᱟᱦᱚᱞᱮ ᱫᱚ ᱢᱚᱡᱽ ᱥᱟᱵᱟᱜ ᱚᱱᱟ ᱤᱭᱟᱹ",
+    "predicted_text": "ᱟᱫᱚ ᱱᱮᱤᱭᱹᱨ ᱱᱤᱛᱚᱜ ᱚᱱᱟ ᱦᱭᱛᱚ ᱨᱩᱪᱤ ᱵᱟᱝ ᱦᱩᱭᱩᱜ ᱠᱟᱱ ᱛᱟᱠᱮᱱᱟ ᱱᱚᱝᱠᱟᱱᱟᱜ  ᱛᱟᱦᱚᱞᱮ ᱫᱚ ᱢᱟᱭᱥᱛᱷᱟᱵᱟ ᱚᱱᱟᱜ ᱤᱭᱟᱹ",
+    "WER": 0.4444444444444444,
+    "CER": 0.2,
+    "status": "SUCCESS",
+    "error": "",
+    "inference_time": 1.3883156776428223
+  },
+  {
+    "sample_id": "valid_29",
+    "reference_text": "ᱴᱟᱴᱠᱟ ᱢᱟᱪᱷᱟᱣᱟᱜ ᱯᱟᱞ ᱯᱟᱛ ᱯᱟᱞᱦᱟ ᱮᱢ ᱠᱟᱛᱮᱫ ᱨᱩᱪᱤ ᱨᱩᱣᱟᱹᱲᱚᱜ ᱛᱟᱹᱠᱤᱱᱟ ᱦᱟᱸᱜ ᱱᱚᱝᱠᱟᱱᱟᱜ ᱡᱚᱢᱟ ᱦᱟᱛᱟ <unintelligible> ᱞᱮ ᱠᱤᱱ ᱦᱩᱭᱩᱜᱼᱟ ᱟᱨ ᱵᱟᱠᱤ ᱫᱚ",
+    "predicted_text": "ᱨᱟ ᱴᱠᱟ ᱢᱟᱭᱛᱷᱟᱣᱟᱜ ᱯᱟᱨᱯᱟᱛ ᱯᱟᱞᱦᱟ ᱮᱢ ᱠᱟᱛᱮᱫ ᱨᱩᱛᱤ ᱡᱚᱲᱚᱜ ᱮᱱᱟᱦᱟᱸ ᱱᱚᱝᱠᱟᱱᱟᱜ ᱡᱚᱢᱟᱛᱟ ᱤᱠᱤ ᱠᱤᱱ ᱦᱩᱭᱩᱜᱼᱟ ᱟᱨ ᱯᱟᱠᱛᱮᱚ",
+    "WER": 0.6666666666666666,
+    "CER": 0.35714285714285715,
+    "status": "SUCCESS",
+    "error": "",
+    "inference_time": 1.3788211345672607
+  },
+  {
+    "sample_id": "valid_30",
+    "reference_text": "ᱜᱟᱯᱟ ᱛᱮᱦᱮᱧ ᱢᱟ ᱠᱤᱱᱡᱚᱢ ᱤᱭᱟᱹᱭᱮᱫᱟ ᱡᱩᱫᱤ ᱵᱟᱠᱤᱱ ᱤᱭᱟᱹᱜ ᱠᱷᱟᱡ ᱜᱟᱯᱟ ᱦᱟᱸᱜ ᱤᱧ ᱪᱟᱞᱟᱜᱼᱟ",
+    "predicted_text": "ᱜᱟᱯᱟ ᱮᱴᱷᱤᱧ ᱢᱟ ᱴᱤᱧ ᱡᱚᱢ ᱭᱟᱹᱣᱮᱫᱟ ᱡᱩᱫᱤ ᱵᱟᱠᱤᱧ ᱤᱭᱟᱹ ᱠᱷᱟ ᱜᱟᱯᱟ ᱦᱟᱸᱧ ᱪᱟᱞᱟᱜ",
+    "WER": 0.7692307692307693,
+    "CER": 0.2361111111111111,
+    "status": "SUCCESS",
+    "error": "",
+    "inference_time": 0.724259614944458
+  },
+  {
+    "sample_id": "valid_31",
+    "reference_text": "ᱦᱮᱸ ᱦᱮᱸ ᱦᱮᱸ ᱦᱮᱸ",
+    "predicted_text": "ᱦᱮᱸ ᱞᱮᱮᱦᱮ",
+    "WER": 0.75,
+    "CER": 0.4666666666666667,
+    "status": "SUCCESS",
+    "error": "",
+    "inference_time": 0.5341536998748779
+  },
+  {
+    "sample_id": "valid_32",
+    "reference_text": "ᱦᱮᱸ ᱟᱫᱚ ᱚᱱᱮ ᱤᱱᱟᱹᱠᱤᱱ ᱡᱚᱢ ᱠᱟᱜᱼᱟ ᱛᱚ ᱟᱪᱪᱷᱟ ᱱᱚᱣᱟ ᱱᱚᱣᱟ ᱠᱨᱤᱭᱟ ᱯᱨᱚᱛᱤ ᱠᱨᱤᱭᱟ ᱧᱮᱞ ᱤᱭᱟᱹᱞᱮᱱᱜᱮ ᱟᱨ ᱵᱟᱠᱷᱟᱡ ᱫᱚ ᱦᱟᱸᱜ ᱱᱮᱠᱥ ᱛᱮ ᱤᱧ ᱪᱟᱞᱟᱜ ᱠᱟᱱᱟ ᱩᱱᱡᱚᱠᱷᱟᱡ ᱯᱟᱞᱴᱟᱣ ᱦᱩᱭᱩᱜᱼᱟ ᱮᱭ ᱦᱟᱸ ᱦᱮᱸ ᱟᱨ ᱮᱴᱟᱜ ᱠᱚᱣᱟᱜ",
+    "predicted_text": "ᱦᱮᱸ ᱟᱫᱚ  ᱤᱱᱟᱹᱜᱤᱧ ᱡᱚᱢ ᱠᱟᱜᱼᱟᱛᱚ ᱟᱪᱪᱷᱟ ᱱᱚᱣᱟ ᱱᱚᱣᱟᱱᱟᱜ ᱠᱨᱮᱭᱟ ᱯᱨᱛᱤᱠᱨᱮᱭᱟ ᱧᱮᱞ ᱭᱮᱞᱮᱱ ᱜᱮ ᱟᱨ ᱵᱟᱠᱟᱡ ᱮᱫᱚ ᱦᱟᱸᱜ ᱱᱮᱠᱥᱮ ᱟᱧ ᱪᱟᱞᱟᱜ ᱠᱟᱱᱟ ᱩᱱᱡᱚᱠᱷᱟᱜ ᱯᱟᱞᱛᱟᱣ ᱦᱩᱭᱩᱜᱼᱟ ᱪᱮᱹᱭᱟᱟᱦ ᱟᱨ ᱴᱮᱛᱟᱜ ᱠᱚᱣᱟᱜ",
+    "WER": 0.6363636363636364,
+    "CER": 0.20118343195266272,
+    "status": "SUCCESS",
+    "error": "",
+    "inference_time": 1.9808337688446045
+  },
+  {
+    "sample_id": "valid_33",
+    "reference_text": "ᱦᱮᱸ ᱦᱮᱸ",
+    "predicted_text": "ᱮ ᱱᱟᱜ",
+    "WER": 1.0,
+    "CER": 0.7142857142857143,
+    "status": "SUCCESS",
+    "error": "",
+    "inference_time": 0.2355349063873291
+  },
+  {
+    "sample_id": "valid_34",
+    "reference_text": "ᱦᱮᱸ <unintelligible>",
+    "predicted_text": "ᱢᱮᱱᱟ",
+    "WER": 1.0,
+    "CER": 0.95,
+    "status": "SUCCESS",
+    "error": "",
+    "inference_time": 0.19095921516418457
+  },
+  {
+    "sample_id": "valid_35",
+    "reference_text": "ᱦᱮᱸ ᱦᱮᱸ ᱦᱮᱸ ᱦᱮᱸ",
+    "predicted_text": "ᱦᱮᱸ ᱦᱮᱸ ᱦᱮᱸ",
+    "WER": 0.25,
+    "CER": 0.26666666666666666,
+    "status": "SUCCESS",
+    "error": "",
+    "inference_time": 0.4885826110839844
+  },
+  {
+    "sample_id": "valid_36",
+    "reference_text": "ᱦᱮᱸ ᱦᱮᱸ ᱦᱮᱸ ᱦᱮᱸ ᱤᱭᱟᱹ ᱤᱭᱟᱹ ᱟᱫᱚ ᱟᱫᱚ ᱚᱱᱟ ᱨᱟᱱ ᱨᱮᱱᱟᱜ ᱮᱠᱥᱮᱱ ᱩᱱᱠᱩ ᱯᱩᱨᱟᱹ ᱠᱟᱹᱢᱤ ᱮᱢ ᱞᱮᱛᱟ ᱠᱚ ᱠᱷᱟᱡ ᱫᱚ ᱯᱩᱨᱟᱹ ᱦᱟᱸᱜ ᱨᱮᱡᱟᱞᱴ ᱫᱚ ᱧᱮᱞᱚᱜᱼᱟ ᱱᱤᱛᱚᱜ ᱫᱚ ᱩᱱᱟᱹᱜ ᱫᱚ ᱵᱟᱠᱚ ᱤᱭᱟᱹ ᱵᱟᱠᱚ ᱵᱟᱠᱚ ᱥᱟᱨᱟᱣ ᱩᱛᱟᱹᱨ ᱠᱟᱜᱼᱟ ᱡᱚᱛᱚ ᱤᱭᱟᱹ ᱫᱚ",
+    "predicted_text": "ᱦᱮᱸᱮᱸᱦᱮᱸ ᱤᱭᱟᱹᱜ ᱤᱭᱫᱚ ᱟᱛᱮ ᱚᱱᱟ ᱨᱟᱱ ᱨᱮᱱᱟᱜ ᱮᱠᱛᱮᱱ ᱩᱱᱠᱩ ᱯᱩᱨᱟᱠ ᱠᱟᱹᱢᱤ ᱮᱢ ᱞᱮᱛᱟ ᱠᱚᱠᱷᱟ ᱫᱚ ᱯᱩᱨᱟ ᱦᱟᱸᱜ ᱨᱮᱡᱟᱫᱚ ᱧᱮᱞᱚᱜᱼᱟ ᱱᱤᱛᱚᱜ ᱫᱚ ᱩᱱᱟᱹᱫᱚ ᱵᱟᱠᱩ ᱠᱤᱭᱟᱹ ᱵᱟᱠᱩ ᱵᱟᱠᱚ ᱥᱟᱲᱟᱣ ᱩᱥᱮᱨᱮᱠᱟᱜᱫᱼᱟ ᱡᱚᱛᱚᱜ ᱛᱤᱠᱮ ᱫᱚ ᱦᱟᱭᱩᱜᱼ",
+    "WER": 0.6666666666666666,
+    "CER": 0.24064171122994651,
+    "status": "SUCCESS",
+    "error": "",
+    "inference_time": 2.803697347640991
+  },
+  {
+    "sample_id": "valid_37",
+    "reference_text": "ᱦᱮᱸ",
+    "predicted_text": "ᱦᱮᱸ",
+    "WER": 0.0,
+    "CER": 0.0,
+    "status": "SUCCESS",
+    "error": "",
+    "inference_time": 0.1923203468322754
+  },
+  {
+    "sample_id": "valid_38",
+    "reference_text": "ᱦᱮᱸ ᱦᱮᱸ ᱦᱮᱸ ᱦᱮᱸ ᱟᱫᱚ ᱱᱮᱥ ᱦᱟᱸᱜ ᱪᱟᱞᱟᱣ ᱠᱟᱛᱮ ᱚᱱᱟ ᱤᱭᱟᱹ ᱠᱚᱫᱚ ᱯᱟᱞᱴᱟᱣ",
+    "predicted_text": "ᱦᱮᱸ ᱦᱮᱸ ᱦᱮᱸ ᱦᱮᱸ  ᱟᱫᱚ ᱱᱮᱠᱦᱟᱸᱜ ᱪᱟᱞᱟᱣ ᱠᱟᱛᱮᱫ ᱚᱱᱟ ᱤᱭᱟᱹ ᱠᱚᱫᱚ ᱯᱟᱞᱛᱟᱣ",
+    "WER": 0.3076923076923077,
+    "CER": 0.08333333333333333,
+    "status": "SUCCESS",
+    "error": "",
+    "inference_time": 0.7860734462738037
+  },
+  {
+    "sample_id": "valid_39",
+    "reference_text": "ᱛᱤᱱᱟᱹᱜ ᱜᱟᱱ ᱤᱭᱟᱹᱜ ᱠᱟᱱ ᱠᱷᱟᱡ ᱫᱚ ᱯᱟᱞᱴᱟᱣ ᱦᱩᱭᱩᱜᱼᱟ ᱟᱨᱵᱟᱠᱷᱟᱡ ᱫᱚ ᱱᱤᱭᱟᱹ ᱨᱮᱱᱟᱜ ᱛᱮᱜᱮ ᱢᱟᱱᱮ ᱯᱨᱚᱛᱷᱚᱢ ᱯᱨᱟᱛᱷᱚᱢᱤᱠ ᱮᱢ ᱫᱚᱧ ᱮᱢᱠᱟᱣᱟᱫ ᱦᱮᱸ",
+    "predicted_text": "ᱯᱤᱱᱟᱹᱜᱜᱟᱱ ᱛᱮᱭᱮᱜ ᱠᱟᱱ ᱠᱷᱟᱡ ᱫᱚ ᱥᱩᱯᱟᱞᱴᱟᱣ ᱦᱩᱭᱩᱜᱼᱟ ᱟᱨ ᱵᱟᱠᱷᱟᱡ ᱫᱚ ᱱᱤᱟᱹ ᱨᱮᱱᱟᱜ ᱛᱮᱠᱜᱮ ᱢᱟᱱᱮ ᱯᱨᱥᱚᱢ ᱯᱨᱟᱥᱚᱢᱤᱠᱮ ᱮᱢᱫᱚᱧ ᱮᱢ ᱠᱚᱮᱸ",
+    "WER": 0.7,
+    "CER": 0.21929824561403508,
+    "status": "SUCCESS",
+    "error": "",
+    "inference_time": 1.6007671356201172
+  },
+  {
+    "sample_id": "valid_40",
+    "reference_text": "ᱦᱮᱸᱻ ᱦᱮᱸ ᱠᱩᱯᱤ ᱫᱚ ᱩᱱᱠᱩ ᱦᱚᱸ ᱱᱤᱭᱟᱹ ᱤᱭᱟᱹ ᱡᱚᱠᱷᱟᱡ ᱢᱟ ᱚᱱᱮ ᱚᱱᱠᱟ ᱟᱹᱰᱤ ᱠᱟᱡᱟᱠ ᱦᱚᱴᱟᱛ ᱢᱮᱱᱛᱮ ᱨᱩᱣᱟᱹ ᱦᱚᱸ ᱧᱟᱢᱮᱫ ᱧᱟᱢ ᱵᱟᱲᱟ ᱧᱟᱢ ᱠᱚᱜᱮ ᱟᱨ ᱩᱱᱠᱩ ᱵᱟᱠᱩ ᱡᱚᱢ ᱧᱚᱜᱟ ᱚᱠᱟ ᱜᱷᱟᱹᱲᱤᱡ ᱫᱚ ᱟᱫᱚ ᱚᱱᱮ ᱚᱱᱠᱟ ᱛᱷᱚᱲᱟ ᱜᱚᱨᱚᱢ ᱢᱟᱪᱷᱟ ᱫᱟᱜᱢᱟᱹᱰᱤ",
+    "predicted_text": "ᱦᱮᱸ ᱦᱮᱸ ᱦᱮᱸ ᱛᱩᱯᱤᱫᱚ ᱩᱱᱠᱩ ᱦᱚᱸ ᱱᱤᱭᱟᱹ ᱤᱭᱟᱹ ᱡᱚᱠᱷᱟᱡ ᱨᱮᱢᱟ ᱚᱱ ᱚᱝᱠᱟ ᱟᱹᱰᱤ ᱠᱟᱭᱟ ᱦᱚᱸᱛᱟᱞᱢᱮᱱᱛᱮ ᱨᱩᱣᱟᱹ ᱦᱚᱸ ᱧᱟᱢᱮ ᱧᱟᱢ ᱵᱟᱲᱟ ᱵᱯᱟᱲᱟ ᱧᱟᱢ ᱛᱚᱜᱮ ᱟᱨ ᱠᱚ ᱨᱟ ᱠᱩ ᱵᱟᱠᱩ ᱡᱚᱢ ᱧᱚᱸᱜᱟ ᱚᱠᱟ ᱜᱟᱹᱲᱤᱫ ᱛᱟ ᱟᱫᱚ ᱚᱱᱮ ᱚᱱᱠᱟ ᱯᱞᱟ ᱜᱚᱨᱚᱢ ᱢᱟᱥᱟ ᱟᱹᱲᱤᱫ ᱫᱟᱜ ᱢᱟᱹᱸᱰᱤ",
+    "WER": 0.6052631578947368,
+    "CER": 0.25396825396825395,
+    "status": "SUCCESS",
+    "error": "",
+    "inference_time": 2.7733824253082275
+  },
+  {
+    "sample_id": "valid_41",
+    "reference_text": "ᱩᱱᱠᱩ <unintelligible> ᱤᱭᱟᱹ ᱢᱮᱨᱟ ᱛᱷᱚᱲᱟ ᱢᱮᱥᱟᱞ ᱠᱟᱛᱮ ᱮᱢᱟᱣ ᱠᱚ ᱠᱷᱟᱡ ᱟᱸᱡᱚᱢ ᱵᱩᱪ <unintelligible>",
+    "predicted_text": "ᱠᱩ ᱛᱚᱦᱚᱮᱸ ᱤᱭᱹ ᱢᱮᱨᱟ ᱟᱨᱯᱟᱲᱟ ᱢᱮᱥᱟᱨ ᱠᱟᱛᱮᱫ ᱮᱢᱟ ᱩᱠᱩ ᱠᱷᱟᱛᱚ ᱡᱚᱢ ᱵᱩᱭᱛᱤ ᱩᱱᱛᱩᱨᱚᱸ",
+    "WER": 0.9230769230769231,
+    "CER": 0.5681818181818182,
+    "status": "SUCCESS",
+    "error": "",
+    "inference_time": 0.7388725280761719
+  },
+  {
+    "sample_id": "valid_42",
+    "reference_text": "ᱱᱤᱭᱟᱹ ᱠᱚ ᱦᱮᱸ ᱦᱮᱸ ᱦᱮᱸ",
+    "predicted_text": "ᱱᱤᱭᱟᱹ ᱦᱮᱸ ᱦᱮᱸᱨ ᱟᱨ",
+    "WER": 0.6,
+    "CER": 0.35,
+    "status": "SUCCESS",
+    "error": "",
+    "inference_time": 0.45137763023376465
+  },
+  {
+    "sample_id": "valid_43",
+    "reference_text": "ᱦᱮᱸ ᱦᱮᱸ ᱟᱪᱪᱷᱟ ᱛᱟᱦᱚᱞᱮ ᱱᱮᱥ ᱢᱟ ᱦᱟᱸᱜ ᱤᱧ ᱪᱟᱞᱟᱜ ᱠᱟᱱᱟ ᱦᱮᱸ",
+    "predicted_text": "ᱦᱮᱸ ᱦᱮᱸ ᱛᱟᱦᱚᱞᱮᱱᱟᱹᱠᱥᱤ ᱢᱟᱦᱮᱧ ᱪᱟᱞᱟᱜ ᱠᱟᱱᱟ ᱦᱮᱸ",
+    "WER": 0.5454545454545454,
+    "CER": 0.34,
+    "status": "SUCCESS",
+    "error": "",
+    "inference_time": 0.565554141998291
+  },
+  {
+    "sample_id": "valid_44",
+    "reference_text": "ᱟᱫᱚ ᱦᱟᱸᱜ <unintelligible> ᱯᱟᱞᱴᱟᱣ ᱠᱷᱟᱡ ᱫᱚ ᱨᱟᱱ ᱠᱚ ᱯᱟᱞᱴᱟᱣ ᱮᱢᱟᱱ",
+    "predicted_text": "ᱟ ᱦᱟᱸᱜ ᱤᱚ ᱯᱟᱞᱛᱟᱣ ᱦᱟᱡ ᱫᱚ ᱨᱟᱱᱠᱩ ᱯᱟᱞᱛᱟᱣ ᱢᱟᱱ",
+    "WER": 0.8,
+    "CER": 0.423728813559322,
+    "status": "SUCCESS",
+    "error": "",
+    "inference_time": 0.7034194469451904
+  },
+  {
+    "sample_id": "valid_45",
+    "reference_text": "ᱦᱮᱞᱳ ᱦᱮᱞᱳ",
+    "predicted_text": "ᱦᱮᱞᱳ ᱦᱮᱞᱳ",
+    "WER": 0.0,
+    "CER": 0.0,
+    "status": "SUCCESS",
+    "error": "",
+    "inference_time": 0.24793314933776855
+  },
+  {
+    "sample_id": "valid_46",
+    "reference_text": "ᱦᱮᱸ ᱡᱚᱦᱟᱨ ᱡᱚᱦᱟᱨ ᱟᱪᱪᱷᱟ ᱟᱞᱤᱧ ᱢᱤᱫ ᱥᱩᱥᱟᱹᱨᱤᱭᱟᱹ ᱢᱤᱫ ᱥᱩᱥᱟᱹᱨᱤᱭᱟᱹ ᱟᱞᱤᱧᱞᱤᱧ ᱨᱚᱲ ᱠᱟᱱᱟ ᱡᱮ ᱟᱵᱤᱱ ᱫᱚ ᱩᱲᱤᱥᱥᱟ ᱯᱚᱱᱚᱛ ᱨᱤᱱ ᱠᱟᱱᱟᱵᱤᱱ",
+    "predicted_text": "ᱦᱚᱸ ᱡᱚᱦᱟᱨ ᱡᱚᱦᱟᱨ ᱡᱚᱦᱟ ᱟᱪᱪᱷᱟ ᱟᱹᱞᱤᱧ ᱢᱤᱫᱷᱩᱥᱟᱨᱤᱭᱟᱹ ᱢᱤᱫᱯᱩᱥᱟᱹᱨᱤᱭᱟᱹ ᱟᱹᱞᱤᱧᱞᱤᱧ ᱨᱚᱲ ᱠᱟᱱᱟ ᱡᱮ ᱟᱭᱵᱤᱱ ᱫᱚ ᱟᱹᱰᱤᱥᱟᱯᱚᱱᱚᱛ ᱨᱤᱧ ᱠᱟᱱᱟ ᱵᱤᱱ",
+    "WER": 0.6842105263157895,
+    "CER": 0.1926605504587156,
+    "status": "SUCCESS",
+    "error": "",
+    "inference_time": 1.83174729347229
+  },
+  {
+    "sample_id": "valid_47",
+    "reference_text": "ᱪᱮᱫ ᱞᱮᱠᱟ ᱪᱟᱥᱵᱟᱥ ᱠᱚᱯᱮ ᱪᱟᱥ ᱵᱟᱲᱟᱭᱮᱫᱼᱟ ᱚᱱᱟ ᱠᱚᱨᱮᱱᱟᱜ ᱠᱟᱹᱡ ᱟᱞᱤᱧᱵᱤᱱ ᱵᱟᱲᱟᱭ ᱚᱪᱚ ᱞᱤᱧᱟ",
+    "predicted_text": "ᱪᱮᱫ ᱞᱮᱠᱟ ᱪᱟᱥᱵᱟᱥ ᱠᱟᱯᱤ ᱪᱟᱥ ᱵᱟᱲᱟᱭᱜᱼᱟ ᱚᱱᱟᱠᱚ ᱨᱮᱱᱟᱜ ᱠᱟᱡ ᱟᱹᱞᱤᱧ ᱵᱤᱱ ᱵᱟᱲᱟᱭ ᱮᱪᱚ ᱞᱤᱧᱟᱜᱼᱟ",
+    "WER": 0.6923076923076923,
+    "CER": 0.17567567567567569,
+    "status": "SUCCESS",
+    "error": "",
+    "inference_time": 0.7461304664611816
+  },
+  {
+    "sample_id": "valid_48",
+    "reference_text": "ᱦᱳᱭᱜᱮ",
+    "predicted_text": "ᱟᱸᱜᱮᱭᱟᱜ",
+    "WER": 1.0,
+    "CER": 1.2,
+    "status": "SUCCESS",
+    "error": "",
+    "inference_time": 0.19089031219482422
+  },
+  {
+    "sample_id": "valid_49",
+    "reference_text": "ᱟᱪᱪᱷᱟ",
+    "predicted_text": "ᱟᱪᱪᱷᱟ",
+    "WER": 0.0,
+    "CER": 0.0,
+    "status": "SUCCESS",
+    "error": "",
+    "inference_time": 0.1818230152130127
+  },
+  {
+    "sample_id": "valid_50",
+    "reference_text": "ᱪᱟᱥᱟᱞᱮ ᱠᱚᱢᱥᱚᱢᱞᱮ ᱪᱟᱥᱟ ᱟᱫᱚ ᱦᱩᱲᱩ ᱪᱷᱟᱲᱟ ᱠᱟᱛᱮᱫ ᱟᱨᱚ ᱮᱴᱟᱜᱟᱜ ᱠᱚ",
+    "predicted_text": "ᱪᱟᱥᱟᱞᱮ ᱠᱚᱢᱥᱚᱢᱞᱮ ᱪᱟᱥᱟᱱ ᱟᱫᱚ ᱦᱩᱲᱩ ᱪᱷᱟᱰᱟ ᱠᱟᱛᱮᱫ ᱟᱨᱮ ᱮᱴᱟᱜᱟᱜ ᱠᱚ",
+    "WER": 0.3,
+    "CER": 0.05454545454545454,
+    "status": "SUCCESS",
+    "error": "",
+    "inference_time": 0.8067665100097656
+  },
+  {
+    "sample_id": "valid_51",
+    "reference_text": "ᱦᱚᱸᱵᱤᱱ ᱞᱟᱹᱭ ᱧᱚᱜᱟ ᱱᱟᱦᱟᱜ",
+    "predicted_text": "ᱦᱚᱸᱟ ᱸᱵᱤᱱᱞᱟᱹᱭᱤᱧ ᱧᱚᱜᱟᱱ ᱦᱟᱸ",
+    "WER": 1.0,
+    "CER": 0.4090909090909091,
+    "status": "SUCCESS",
+    "error": "",
+    "inference_time": 0.3182682991027832
+  },
+  {
+    "sample_id": "valid_52",
+    "reference_text": "ᱴᱷᱤᱠ ᱜᱮᱭᱟ",
+    "predicted_text": "ᱴ ᱜᱮᱫᱼᱟ",
+    "WER": 1.0,
+    "CER": 0.5555555555555556,
+    "status": "SUCCESS",
+    "error": "",
+    "inference_time": 0.2012317180633545
+  },
+  {
+    "sample_id": "valid_53",
+    "reference_text": "ᱦᱚᱭ",
+    "predicted_text": "ᱦᱳᱭ",
+    "WER": 1.0,
+    "CER": 0.3333333333333333,
+    "status": "SUCCESS",
+    "error": "",
+    "inference_time": 0.17629408836364746
+  },
+  {
+    "sample_id": "valid_54",
+    "reference_text": "ᱦᱚᱭ",
+    "predicted_text": "ᱦᱳᱭ",
+    "WER": 1.0,
+    "CER": 0.3333333333333333,
+    "status": "SUCCESS",
+    "error": "",
+    "inference_time": 0.1813068389892578
+  },
+  {
+    "sample_id": "valid_55",
+    "reference_text": "ᱦᱚᱸ ᱟᱪᱪᱷᱟ",
+    "predicted_text": "ᱦᱮᱸ ᱟᱪᱪᱷᱟ",
+    "WER": 0.5,
+    "CER": 0.1111111111111111,
+    "status": "SUCCESS",
+    "error": "",
+    "inference_time": 0.3475658893585205
+  },
+  {
+    "sample_id": "valid_56",
+    "reference_text": "ᱦᱚᱭ",
+    "predicted_text": "ᱦᱳᱭ",
+    "WER": 1.0,
+    "CER": 0.3333333333333333,
+    "status": "SUCCESS",
+    "error": "",
+    "inference_time": 0.16531872749328613
+  },
+  {
+    "sample_id": "valid_57",
+    "reference_text": "ᱟᱪᱪᱷᱟ",
+    "predicted_text": "ᱟᱪᱪᱷᱟ",
+    "WER": 0.0,
+    "CER": 0.0,
+    "status": "SUCCESS",
+    "error": "",
+    "inference_time": 0.20546293258666992
+  },
+  {
+    "sample_id": "valid_58",
+    "reference_text": "ᱟᱪᱪᱷᱟ ᱦᱚᱭ",
+    "predicted_text": "ᱟᱪᱷᱟᱳᱭ",
+    "WER": 1.0,
+    "CER": 0.4444444444444444,
+    "status": "SUCCESS",
+    "error": "",
+    "inference_time": 0.21572637557983398
+  },
+  {
+    "sample_id": "valid_59",
+    "reference_text": "ᱦᱚᱭ",
+    "predicted_text": "ᱦᱳᱭ",
+    "WER": 1.0,
+    "CER": 0.3333333333333333,
+    "status": "SUCCESS",
+    "error": "",
+    "inference_time": 0.1731703281402588
+  },
+  {
+    "sample_id": "valid_60",
+    "reference_text": "ᱦᱮᱸ ᱦᱮᱸ ᱦᱮᱸ ᱦᱮᱸ ᱴᱷᱤᱠ",
+    "predicted_text": "ᱱᱟᱟᱦᱟᱸ ᱦᱟᱸ ᱯᱮ",
+    "WER": 1.0,
+    "CER": 0.65,
+    "status": "SUCCESS",
+    "error": "",
+    "inference_time": 0.41095733642578125
+  },
+  {
+    "sample_id": "valid_61",
+    "reference_text": "ᱦᱳᱭ",
+    "predicted_text": "ᱦᱳᱭ",
+    "WER": 0.0,
+    "CER": 0.0,
+    "status": "SUCCESS",
+    "error": "",
+    "inference_time": 0.20537543296813965
+  },
+  {
+    "sample_id": "valid_62",
+    "reference_text": "ᱟᱥᱟ ᱦᱳᱭ ᱦᱳᱭ",
+    "predicted_text": "ᱦᱟᱥᱟ ᱦᱚᱭ ᱟ",
+    "WER": 1.0,
+    "CER": 0.45454545454545453,
+    "status": "SUCCESS",
+    "error": "",
+    "inference_time": 0.34638118743896484
+  },
+  {
+    "sample_id": "valid_63",
+    "reference_text": "ᱦᱳᱭ",
+    "predicted_text": "ᱦᱳᱭ",
+    "WER": 0.0,
+    "CER": 0.0,
+    "status": "SUCCESS",
+    "error": "",
+    "inference_time": 0.1800246238708496
+  },
+  {
+    "sample_id": "valid_64",
+    "reference_text": "ᱟᱪᱪᱷᱟ",
+    "predicted_text": "ᱟᱪᱚᱢᱟ",
+    "WER": 1.0,
+    "CER": 0.4,
+    "status": "SUCCESS",
+    "error": "",
+    "inference_time": 0.19964289665222168
+  },
+  {
+    "sample_id": "valid_65",
+    "reference_text": "ᱦᱮᱸ ᱟᱪᱪᱷᱟ",
+    "predicted_text": "ᱦᱮ ᱟᱪᱪᱷᱟ",
+    "WER": 0.5,
+    "CER": 0.1111111111111111,
+    "status": "SUCCESS",
+    "error": "",
+    "inference_time": 0.334484338760376
+  },
+  {
+    "sample_id": "valid_66",
+    "reference_text": "ᱟᱪᱪᱷᱟ",
+    "predicted_text": "ᱟᱪᱪᱷᱟ",
+    "WER": 0.0,
+    "CER": 0.0,
+    "status": "SUCCESS",
+    "error": "",
+    "inference_time": 0.20459961891174316
+  },
+  {
+    "sample_id": "valid_67",
+    "reference_text": "ᱟᱪᱪᱷᱟ",
+    "predicted_text": "ᱟᱪᱪᱷᱟ",
+    "WER": 0.0,
+    "CER": 0.0,
+    "status": "SUCCESS",
+    "error": "",
+    "inference_time": 0.19132661819458008
+  },
+  {
+    "sample_id": "valid_68",
+    "reference_text": "ᱦᱳᱭ",
+    "predicted_text": "ᱦᱳᱭ",
+    "WER": 0.0,
+    "CER": 0.0,
+    "status": "SUCCESS",
+    "error": "",
+    "inference_time": 0.1607670783996582
+  },
+  {
+    "sample_id": "valid_69",
+    "reference_text": "ᱟᱪᱪᱷᱟ",
+    "predicted_text": "ᱟᱪᱪᱷᱟ",
+    "WER": 0.0,
+    "CER": 0.0,
+    "status": "SUCCESS",
+    "error": "",
+    "inference_time": 0.18032360076904297
+  },
+  {
+    "sample_id": "valid_70",
+    "reference_text": "ᱟᱫᱚ ᱱᱚᱣᱟ ᱠᱚᱫᱚ ᱫᱤᱱ ᱦᱤᱞᱳᱜ ᱪᱟᱥᱚᱜ ᱠᱟᱱᱟ ᱪᱮ ᱚᱱᱟ ᱫᱚ ᱥᱤᱡᱤᱱ ᱤᱫᱤ ᱠᱟᱛᱮᱫ ᱪᱟᱥᱚᱜᱚᱜ ᱠᱟᱱᱟ",
+    "predicted_text": "ᱟᱫᱚ ᱱᱚᱣᱟ ᱠᱚᱫᱚ ᱫᱤᱱ ᱦᱤᱞᱚᱜ ᱪᱟᱥᱚᱜ ᱠᱟᱱᱟ ᱪᱮ ᱚᱱᱟᱫᱚ ᱥᱤᱡᱮᱱ ᱤᱫᱤ ᱠᱟᱛᱮ ᱪᱟᱥᱚᱜᱚᱜ ᱠᱟᱫᱟ",
+    "WER": 0.4,
+    "CER": 0.0684931506849315,
+    "status": "SUCCESS",
+    "error": "",
+    "inference_time": 0.6706452369689941
+  },
+  {
+    "sample_id": "valid_71",
+    "reference_text": "ᱦᱚᱭ",
+    "predicted_text": "ᱦᱳᱭ",
+    "WER": 1.0,
+    "CER": 0.3333333333333333,
+    "status": "SUCCESS",
+    "error": "",
+    "inference_time": 0.20039129257202148
+  },
+  {
+    "sample_id": "valid_72",
+    "reference_text": "ᱦᱚᱭ ᱦᱚᱭ ᱦᱚᱭ",
+    "predicted_text": "ᱦᱳᱭ ᱦᱭ ᱦᱳᱭ",
+    "WER": 1.0,
+    "CER": 0.2727272727272727,
+    "status": "SUCCESS",
+    "error": "",
+    "inference_time": 0.2168116569519043
+  },
+  {
+    "sample_id": "valid_73",
+    "reference_text": "ᱟᱫᱚ ᱱᱚᱣᱟ ᱫᱚᱻ ᱜᱚᱴᱟ ᱟᱲᱮᱯᱟᱥᱮ ᱴᱚᱞᱟ ᱠᱚᱨᱮᱱ ᱯᱮ ᱤᱭᱟᱹᱜᱼᱟ ᱪᱮ ᱚᱱᱠᱟ ᱩᱛᱟᱹᱨ ᱫᱚ ᱪᱟᱥ ᱫᱚ ᱵᱟᱝᱜᱮ",
+    "predicted_text": "ᱟᱫᱚ ᱱᱚᱣᱟᱫᱚ ᱜᱷᱚᱴᱟᱜ ᱟᱰᱮ ᱯᱟᱥᱮ ᱴᱚᱞᱟ ᱠᱷᱨᱮᱱ ᱛᱮᱭᱮᱜᱼᱟᱪᱮ ᱚᱱᱠᱟ ᱩᱛᱟᱹᱨ ᱫᱚ ᱪᱟᱥ ᱫᱚ ᱵᱟᱝᱜᱮ",
+    "WER": 0.5,
+    "CER": 0.16883116883116883,
+    "status": "SUCCESS",
+    "error": "",
+    "inference_time": 0.9709146022796631
+  },
+  {
+    "sample_id": "valid_74",
+    "reference_text": "ᱟᱪᱪᱷᱟ ᱟᱪᱪᱷᱟ ᱟᱪᱪᱷᱟ",
+    "predicted_text": "ᱟᱪᱟ ᱟᱪᱪᱷᱟ ᱦᱟᱷᱟ",
+    "WER": 0.6666666666666666,
+    "CER": 0.29411764705882354,
+    "status": "SUCCESS",
+    "error": "",
+    "inference_time": 0.2745554447174072
+  },
+  {
+    "sample_id": "valid_75",
+    "reference_text": "ᱱᱟᱯᱟᱭ ᱠᱟᱛᱷᱟ ᱱᱟᱯᱟᱭ",
+    "predicted_text": "ᱱᱟᱯᱟᱭ ᱡᱟᱛᱷᱟ ᱚᱱᱟᱯᱜᱮ",
+    "WER": 0.6666666666666666,
+    "CER": 0.23529411764705882,
+    "status": "SUCCESS",
+    "error": "",
+    "inference_time": 0.282073974609375
+  },
+  {
+    "sample_id": "valid_76",
+    "reference_text": "ᱦᱳᱭ",
+    "predicted_text": "ᱦᱳᱭ",
+    "WER": 0.0,
+    "CER": 0.0,
+    "status": "SUCCESS",
+    "error": "",
+    "inference_time": 0.20296025276184082
+  },
+  {
+    "sample_id": "valid_77",
+    "reference_text": "ᱟᱹᱰᱤ ᱟᱹᱰᱤ ᱥᱟᱨᱦᱟᱣ ᱡᱟᱦᱳ ᱟᱹᱰᱤᱜᱟᱱ ᱫᱤᱥᱦᱩᱫᱤᱥᱵᱤᱱ ᱮᱢᱟᱫ ᱞᱤᱧᱟ ᱱᱚᱣᱟ ᱠᱷᱟᱹᱛᱤᱨ ᱟᱵᱤᱱ ᱥᱟᱭ ᱥᱟᱭ ᱥᱟᱨᱦᱟᱣ ᱠᱮᱫ ᱵᱤᱱᱟ",
+    "predicted_text": "ᱟᱹᱲᱰ ᱟᱹᱰᱤ ᱥᱟᱨᱦᱟᱣ ᱡᱟᱦᱚᱸ ᱟᱹᱰᱤᱜᱟᱱ ᱤ ᱥᱩᱫᱤᱥᱵᱤᱱ ᱮᱢᱟᱫ ᱞᱤᱧᱟ ᱱᱚᱣᱟ ᱠᱷᱟᱛᱮᱫ ᱟᱵᱤᱱ ᱥᱟᱭ ᱥᱟᱭᱞᱤᱧ ᱥᱟᱨᱦᱟᱣ ᱠᱮᱫ ᱵᱮᱫᱟ",
+    "WER": 0.4375,
+    "CER": 0.16129032258064516,
+    "status": "SUCCESS",
+    "error": "",
+    "inference_time": 0.6987617015838623
+  },
+  {
+    "sample_id": "valid_78",
+    "reference_text": "ᱦᱮᱸ ᱢᱟ ᱡᱚᱦᱟᱨ",
+    "predicted_text": "ᱢᱟ ᱡᱟᱦᱟᱸ",
+    "WER": 0.6666666666666666,
+    "CER": 0.5,
+    "status": "SUCCESS",
+    "error": "",
+    "inference_time": 0.25741028785705566
+  },
+  {
+    "sample_id": "valid_79",
+    "reference_text": "ᱦᱮᱞᱳ ᱦᱩᱸ ᱦᱟᱞᱳ",
+    "predicted_text": "ᱦᱮᱞᱳ ᱦᱮᱸ ᱦᱮᱞᱳ",
+    "WER": 0.6666666666666666,
+    "CER": 0.15384615384615385,
+    "status": "SUCCESS",
+    "error": "",
+    "inference_time": 0.7337191104888916
+  },
+  {
+    "sample_id": "valid_80",
+    "reference_text": "ᱦᱩᱸ",
+    "predicted_text": "ᱮᱦᱮ",
+    "WER": 1.0,
+    "CER": 1.0,
+    "status": "SUCCESS",
+    "error": "",
+    "inference_time": 0.31847238540649414
+  },
+  {
+    "sample_id": "valid_81",
+    "reference_text": "ᱦᱩᱸ ᱚᱠᱚᱭ ᱰᱚᱠᱴᱚᱨ ᱵᱟᱵᱩᱢ ᱢᱮᱱ ᱫᱟᱥᱮ",
+    "predicted_text": "ᱚ ᱠᱚ ᱫᱟᱴᱚᱨᱚᱵᱚᱱ ᱵᱮᱱ ᱫᱟᱥᱮᱭᱟᱭ",
+    "WER": 1.0,
+    "CER": 0.5666666666666667,
+    "status": "SUCCESS",
+    "error": "",
+    "inference_time": 0.6582608222961426
+  },
+  {
+    "sample_id": "valid_82",
+    "reference_text": "ᱦᱮᱸ ᱦᱮᱸ",
+    "predicted_text": "ᱚᱦᱮᱸ",
+    "WER": 1.0,
+    "CER": 0.5714285714285714,
+    "status": "SUCCESS",
+    "error": "",
+    "inference_time": 0.5454230308532715
+  },
+  {
+    "sample_id": "valid_83",
+    "reference_text": "ᱦᱩᱸ ᱫᱮᱞᱟᱣᱟᱭ ᱢᱮ ᱫᱩᱲᱩᱵ ᱢᱮ",
+    "predicted_text": "ᱚ ᱵᱟᱞᱟᱣᱟᱭᱢᱮ ᱡᱟᱦᱮᱸ",
+    "WER": 1.0,
+    "CER": 0.6086956521739131,
+    "status": "SUCCESS",
+    "error": "",
+    "inference_time": 0.6266238689422607
+  },
+  {
+    "sample_id": "valid_84",
+    "reference_text": "ᱧᱩᱛᱩᱢ ᱫᱚ ᱜᱚᱢᱚᱛᱤ ᱢᱩᱨᱢᱩ",
+    "predicted_text": "ᱱᱤᱛᱟᱹᱢ ᱫᱚ ᱜᱢᱟᱛᱮ ᱢᱟᱨᱢᱟ",
+    "WER": 0.75,
+    "CER": 0.42857142857142855,
+    "status": "SUCCESS",
+    "error": "",
+    "inference_time": 0.6453251838684082
+  },
+  {
+    "sample_id": "valid_85",
+    "reference_text": "ᱦᱩᱸ",
+    "predicted_text": "ᱦᱚ",
+    "WER": 1.0,
+    "CER": 0.6666666666666666,
+    "status": "SUCCESS",
+    "error": "",
+    "inference_time": 0.7522068023681641
+  },
+  {
+    "sample_id": "valid_86",
+    "reference_text": "ᱵᱚᱭᱮᱥ ᱫᱚ ᱛᱮᱯᱟᱱᱱᱚ",
+    "predicted_text": "ᱵᱟᱥ ᱫᱚ ᱛᱮᱯᱟᱱᱱᱚ",
+    "WER": 0.3333333333333333,
+    "CER": 0.1875,
+    "status": "SUCCESS",
+    "error": "",
+    "inference_time": 0.6024367809295654
+  },
+  {
+    "sample_id": "valid_87",
+    "reference_text": "ᱦᱩᱸ",
+    "predicted_text": "ᱩᱦᱚᱸᱮ",
+    "WER": 1.0,
+    "CER": 1.0,
+    "status": "SUCCESS",
+    "error": "",
+    "inference_time": 0.7933909893035889
+  },
+  {
+    "sample_id": "valid_88",
+    "reference_text": "ᱚ ᱤᱭᱟᱹ ᱠᱷᱩᱜ ᱤᱫᱟᱹᱧ ᱵᱩᱜᱤᱛᱮ ᱟᱨ ᱤᱭᱟᱹ ᱢᱟᱫᱟᱭᱤᱫᱤᱧᱟ ᱦᱩᱸ ᱟᱨ ᱦᱚᱲᱢᱚ ᱠᱚ ᱦᱟᱥᱩᱭᱤᱫᱤᱧ ᱠᱟᱱᱟ ᱵᱚᱦᱚᱜ ᱠᱚ",
+    "predicted_text": "ᱱᱚᱣᱟ ᱤᱭᱟᱹ ᱠᱷᱚᱜ ᱵᱟᱧ ᱵᱟᱹᱜᱤᱛᱮ ᱢᱟᱱᱫᱟᱭᱞᱤᱧᱟᱹ ᱵᱚᱦᱚᱜ ᱠᱚᱦᱟᱸᱥᱚᱭᱤᱞᱤᱧ ᱠᱟᱱᱟ ᱦᱚᱲᱢᱚ ᱠᱚ",
+    "WER": 0.8125,
+    "CER": 0.4578313253012048,
+    "status": "SUCCESS",
+    "error": "",
+    "inference_time": 1.2109620571136475
+  },
+  {
+    "sample_id": "valid_89",
+    "reference_text": "ᱠᱷᱩᱜ ᱢᱟᱫᱟ ᱦᱮᱸ ᱢᱟᱫᱟᱭᱤᱫᱤᱧᱟ",
+    "predicted_text": "ᱠᱚᱜ ᱢᱟᱱᱰᱟ ᱦᱮᱸ ᱢᱟᱸᱫᱟᱭᱞᱤᱧ",
+    "WER": 0.75,
+    "CER": 0.3333333333333333,
+    "status": "SUCCESS",
+    "error": "",
+    "inference_time": 1.886634111404419
+  },
+  {
+    "sample_id": "valid_90",
+    "reference_text": "ᱦᱩᱸ",
+    "predicted_text": "ᱦᱮᱸ",
+    "WER": 1.0,
+    "CER": 0.3333333333333333,
+    "status": "SUCCESS",
+    "error": "",
+    "inference_time": 0.533550500869751
+  },
+  {
+    "sample_id": "valid_91",
+    "reference_text": "ᱦᱩᱸ ᱦᱮᱸ",
+    "predicted_text": "ᱦᱮᱸ ᱦᱮᱸ",
+    "WER": 0.5,
+    "CER": 0.14285714285714285,
+    "status": "SUCCESS",
+    "error": "",
+    "inference_time": 1.1941518783569336
+  },
+  {
+    "sample_id": "valid_92",
+    "reference_text": "ᱦᱮᱸ",
+    "predicted_text": "ᱦᱮᱸᱮᱦᱮ ᱟᱟᱚ ᱢᱮᱱᱮᱴ",
+    "WER": 3.0,
+    "CER": 4.333333333333333,
+    "status": "SUCCESS",
+    "error": "",
+    "inference_time": 1.4599974155426025
+  },
+  {
+    "sample_id": "valid_93",
+    "reference_text": "ᱦᱩᱸ",
+    "predicted_text": "ᱨᱮᱟ",
+    "WER": 1.0,
+    "CER": 1.0,
+    "status": "SUCCESS",
+    "error": "",
+    "inference_time": 3.525857448577881
+  },
+  {
+    "sample_id": "valid_94",
+    "reference_text": "ᱦᱩᱸ",
+    "predicted_text": "ᱦᱮᱸᱟᱤ",
+    "WER": 1.0,
+    "CER": 1.0,
+    "status": "SUCCESS",
+    "error": "",
+    "inference_time": 2.3955671787261963
+  },
+  {
+    "sample_id": "valid_95",
+    "reference_text": "ᱦᱩᱸ",
+    "predicted_text": "ᱠ",
+    "WER": 1.0,
+    "CER": 1.0,
+    "status": "SUCCESS",
+    "error": "",
+    "inference_time": 0.4712948799133301
+  },
+  {
+    "sample_id": "valid_96",
+    "reference_text": "ᱦᱮᱸ ᱡᱚᱫ ᱵᱟᱲᱟ ᱞᱤᱱᱟᱹᱧ",
+    "predicted_text": "ᱦᱮᱸ ᱦᱚᱱ ᱵᱟᱨᱟᱞ ᱢᱟᱹᱭ",
+    "WER": 0.75,
+    "CER": 0.3684210526315789,
+    "status": "SUCCESS",
+    "error": "",
+    "inference_time": 1.1900196075439453
+  },
+  {
+    "sample_id": "valid_97",
+    "reference_text": "ᱦᱩᱸ",
+    "predicted_text": "ᱦᱚ",
+    "WER": 1.0,
+    "CER": 0.6666666666666666,
+    "status": "SUCCESS",
+    "error": "",
+    "inference_time": 0.49865078926086426
+  },
+  {
+    "sample_id": "valid_98",
+    "reference_text": "ᱦᱮᱸ ᱦᱟᱥᱩᱭᱤᱫᱤᱧ ᱠᱟᱱ ᱜᱮᱭᱟ ᱛᱷᱚᱲᱟ ᱛᱷᱚᱲᱟ",
+    "predicted_text": "ᱦᱮᱸ ᱟᱯᱟᱭ ᱵᱷᱮᱱᱠᱟᱱ ᱜᱮ ᱟᱛᱷᱚᱟ ᱛᱚᱰᱟ",
+    "WER": 0.8333333333333334,
+    "CER": 0.38235294117647056,
+    "status": "SUCCESS",
+    "error": "",
+    "inference_time": 0.980273962020874
+  },
+  {
+    "sample_id": "valid_99",
+    "reference_text": "ᱦᱮᱸ ᱛᱚᱠᱷᱚᱱ ᱜᱮ ᱦᱟᱥᱩᱭᱤᱫᱤᱧᱟ",
+    "predicted_text": "ᱦᱮᱸ ᱛᱚᱠᱷᱚᱱᱜᱮ ᱟᱹᱥᱩᱭᱞᱤᱧᱮ ᱟ",
+    "WER": 0.75,
+    "CER": 0.2916666666666667,
+    "status": "SUCCESS",
+    "error": "",
+    "inference_time": 1.7454214096069336
+  }
+]

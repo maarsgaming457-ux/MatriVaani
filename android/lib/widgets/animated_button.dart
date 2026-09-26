@@ -35,7 +35,7 @@ class AnimatedButton extends StatefulWidget {
   final Color? foregroundColor;
   final BorderSide? border;
 
-  // ── Convenience factories ───────────────────────────────────────────────
+  // â”€â”€ Convenience factories â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
   factory AnimatedButton.elevated({
     Key? key,
@@ -162,7 +162,8 @@ class _AnimatedButtonState extends State<AnimatedButton>
           borderRadius: BorderRadius.circular(widget.borderRadius),
           child: InkWell(
             borderRadius: BorderRadius.circular(widget.borderRadius),
-            splashColor: (fg ?? MatriVaaniColors.primary).withValues(alpha: 0.18),
+            splashColor:
+                (fg ?? MatriVaaniColors.primary).withValues(alpha: 0.18),
             highlightColor: Colors.transparent,
             onTap: null, // gesture detector handles it
             child: Container(
@@ -357,13 +358,6 @@ class _PttButtonState extends State<PttButton>
 
   // `tester.press` in widget tests can miss tap-down/up pairing; `onTap`
   // still fires so PTT remains testable.
-  void _onTap() {
-    if (widget.isRecording) {
-      widget.onRecordStop();
-    } else {
-      widget.onRecordStart();
-    }
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -374,7 +368,6 @@ class _PttButtonState extends State<PttButton>
       onTapDown: _onTapDown,
       onTapUp: _onTapUp,
       onTapCancel: _onTapCancel,
-      onTap: _onTap,
       child: SizedBox(
         width: 180,
         height: 180,
@@ -417,7 +410,9 @@ class _PttButtonState extends State<PttButton>
                 shape: BoxShape.circle,
                 color: MatriVaaniColors.surfaceAlt,
                 border: Border.all(
-                  color: isRec ? MatriVaaniColors.primary : MatriVaaniColors.border,
+                  color: isRec
+                      ? MatriVaaniColors.primary
+                      : MatriVaaniColors.border,
                   width: isRec ? 2 : 1,
                 ),
               ),
@@ -434,7 +429,9 @@ class _PttButtonState extends State<PttButton>
                     : MatriVaaniColors.primaryDark.withValues(alpha: 0.95),
                 boxShadow: [
                   BoxShadow(
-                    color: (isRec ? MatriVaaniColors.primary : MatriVaaniColors.primaryDark)
+                    color: (isRec
+                            ? MatriVaaniColors.primary
+                            : MatriVaaniColors.primaryDark)
                         .withValues(alpha: isRec ? 0.40 : 0.25),
                     blurRadius: isRec ? 24 : 18,
                   ),

@@ -9,7 +9,7 @@ class SyncService {
       if (!online) return false;
 
       final dirtyRecords = await DatabaseService.instance.getDirtyRecords();
-      
+
       List<Map<String, dynamic>> payload = dirtyRecords.map((r) {
         return {
           "id": r['id'],

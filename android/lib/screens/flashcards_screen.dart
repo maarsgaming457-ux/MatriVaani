@@ -100,7 +100,8 @@ class _FlashcardsScreenState extends State<FlashcardsScreen> {
                   ),
                   // XP badge
                   Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+                    padding:
+                        const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
                     decoration: BoxDecoration(
                       color: MatriVaaniColors.amber.withValues(alpha: 0.15),
                       borderRadius: BorderRadius.circular(999),
@@ -109,9 +110,13 @@ class _FlashcardsScreenState extends State<FlashcardsScreen> {
                     child: const Row(
                       mainAxisSize: MainAxisSize.min,
                       children: [
-                        Icon(Icons.stars, color: MatriVaaniColors.amber, size: 16),
+                        Icon(Icons.stars,
+                            color: MatriVaaniColors.amber, size: 16),
                         SizedBox(width: 4),
-                        Text('+10', style: TextStyle(fontWeight: FontWeight.w800, color: MatriVaaniColors.amber)),
+                        Text('+10',
+                            style: TextStyle(
+                                fontWeight: FontWeight.w800,
+                                color: MatriVaaniColors.amber)),
                         Text(' ⭐', style: TextStyle(fontSize: 14)),
                       ],
                     ),
@@ -124,7 +129,8 @@ class _FlashcardsScreenState extends State<FlashcardsScreen> {
                 child: LinearProgressIndicator(
                   value: progress,
                   backgroundColor: MatriVaaniColors.border,
-                  valueColor: const AlwaysStoppedAnimation<Color>(MatriVaaniColors.primary),
+                  valueColor: const AlwaysStoppedAnimation<Color>(
+                      MatriVaaniColors.primary),
                   minHeight: 8,
                 ),
               ),
@@ -156,11 +162,14 @@ class _FlashcardsScreenState extends State<FlashcardsScreen> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 5),
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 12, vertical: 5),
                       decoration: BoxDecoration(
                         color: MatriVaaniColors.forest.withValues(alpha: 0.12),
                         borderRadius: BorderRadius.circular(999),
-                        border: Border.all(color: MatriVaaniColors.forest.withValues(alpha: 0.5)),
+                        border: Border.all(
+                            color:
+                                MatriVaaniColors.forest.withValues(alpha: 0.5)),
                       ),
                       child: Row(
                         mainAxisSize: MainAxisSize.min,
@@ -174,11 +183,16 @@ class _FlashcardsScreenState extends State<FlashcardsScreen> {
                             ),
                           ),
                           const SizedBox(width: 5),
-                          const Text('Primary Glyph •', style: TextStyle(color: MatriVaaniColors.forest, fontWeight: FontWeight.w700, fontSize: 12)),
+                          const Text('Primary Glyph •',
+                              style: TextStyle(
+                                  color: MatriVaaniColors.forest,
+                                  fontWeight: FontWeight.w700,
+                                  fontSize: 12)),
                         ],
                       ),
                     ),
-                    Icon(Icons.compare, color: MatriVaaniColors.muted, size: 22),
+                    Icon(Icons.compare,
+                        color: MatriVaaniColors.muted, size: 22),
                   ],
                 ),
                 const SizedBox(height: 12),
@@ -209,17 +223,21 @@ class _FlashcardsScreenState extends State<FlashcardsScreen> {
                             Positioned(
                               top: 8,
                               left: 8,
-                              child: _StepBadge(label: '1', color: MatriVaaniColors.primaryDark),
+                              child: _StepBadge(
+                                  label: '1',
+                                  color: MatriVaaniColors.primaryDark),
                             ),
                             Positioned(
                               top: 8,
                               right: 8,
-                              child: _StepBadge(label: '2', color: MatriVaaniColors.forest),
+                              child: _StepBadge(
+                                  label: '2', color: MatriVaaniColors.forest),
                             ),
                             Positioned(
                               bottom: 8,
                               right: 8,
-                              child: _StepBadge(label: '3', color: MatriVaaniColors.forest),
+                              child: _StepBadge(
+                                  label: '3', color: MatriVaaniColors.forest),
                             ),
                             const Positioned(
                               bottom: 8,
@@ -254,8 +272,13 @@ class _FlashcardsScreenState extends State<FlashcardsScreen> {
                           child: Column(
                             mainAxisSize: MainAxisSize.min,
                             children: [
-                              Icon(Icons.park, size: 52, color: MatriVaaniColors.forest),
-                              Text('Sal Tree', style: TextStyle(fontWeight: FontWeight.w700, color: MatriVaaniColors.forest, fontSize: 13)),
+                              Icon(Icons.park,
+                                  size: 52, color: MatriVaaniColors.forest),
+                              Text('Sal Tree',
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.w700,
+                                      color: MatriVaaniColors.forest,
+                                      fontSize: 13)),
                             ],
                           ),
                         ),
@@ -269,13 +292,25 @@ class _FlashcardsScreenState extends State<FlashcardsScreen> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: const [
-                    Text('ᱫᱟᱨᱮ  ', style: TextStyle(fontSize: 24, fontWeight: FontWeight.w900, color: MatriVaaniColors.ink)),
-                    Text('Dare', style: TextStyle(fontSize: 22, fontWeight: FontWeight.w700, color: MatriVaaniColors.ink)),
-                    Text('  /da:re/', style: TextStyle(fontSize: 13, color: MatriVaaniColors.muted)),
+                    Text('ᱫᱟᱨᱮ  ',
+                        style: TextStyle(
+                            fontSize: 24,
+                            fontWeight: FontWeight.w900,
+                            color: MatriVaaniColors.ink)),
+                    Text('Dare',
+                        style: TextStyle(
+                            fontSize: 22,
+                            fontWeight: FontWeight.w700,
+                            color: MatriVaaniColors.ink)),
+                    Text('  /da:re/',
+                        style: TextStyle(
+                            fontSize: 13, color: MatriVaaniColors.muted)),
                   ],
                 ),
                 const SizedBox(height: 2),
-                const Text('Tree •', style: TextStyle(color: MatriVaaniColors.muted, fontSize: 14)),
+                const Text('Tree •',
+                    style:
+                        TextStyle(color: MatriVaaniColors.muted, fontSize: 14)),
                 const SizedBox(height: 16),
 
                 // Listen button
@@ -288,15 +323,21 @@ class _FlashcardsScreenState extends State<FlashcardsScreen> {
                     backgroundColor: MatriVaaniColors.forest,
                     foregroundColor: Colors.white,
                     borderRadius: 14,
-                    padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 16),
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 18, vertical: 16),
                     child: Row(
                       mainAxisSize: MainAxisSize.min,
                       children: [
-                        Icon(_isListening ? Icons.volume_up : Icons.volume_up_outlined, size: 20),
+                        Icon(
+                            _isListening
+                                ? Icons.volume_up
+                                : Icons.volume_up_outlined,
+                            size: 20),
                         const SizedBox(width: 8),
                         Text(
                           _isListening ? 'Playing …' : 'Listen •',
-                          style: const TextStyle(fontWeight: FontWeight.w700, fontSize: 15),
+                          style: const TextStyle(
+                              fontWeight: FontWeight.w700, fontSize: 15),
                         ),
                       ],
                     ),
@@ -318,14 +359,26 @@ class _FlashcardsScreenState extends State<FlashcardsScreen> {
                     children: const [
                       Row(
                         children: [
-                          Icon(Icons.book, size: 14, color: MatriVaaniColors.primary),
+                          Icon(Icons.book,
+                              size: 14, color: MatriVaaniColors.primary),
                           SizedBox(width: 4),
-                          Text('USAGE EXAMPLE •', style: TextStyle(fontSize: 11, letterSpacing: 0.5, fontWeight: FontWeight.w800, color: MatriVaaniColors.primary)),
+                          Text('USAGE EXAMPLE •',
+                              style: TextStyle(
+                                  fontSize: 11,
+                                  letterSpacing: 0.5,
+                                  fontWeight: FontWeight.w800,
+                                  color: MatriVaaniColors.primary)),
                         ],
                       ),
                       SizedBox(height: 6),
-                      Text('"ᱫᱟᱨᱮ ᱫᱚ ᱡᱤᱣᱤ ᱮᱢᱚᱜ-ᱟ"', style: TextStyle(fontSize: 14, fontWeight: FontWeight.w600, color: MatriVaaniColors.ink)),
-                      Text('"Dare do jiwi emog-a." (Trees give us life.)', style: TextStyle(fontSize: 12, color: MatriVaaniColors.muted)),
+                      Text('"ᱫᱟᱨᱮ ᱫᱚ ᱡᱤᱣᱤ ᱮᱢᱚᱜ-ᱟ"',
+                          style: TextStyle(
+                              fontSize: 14,
+                              fontWeight: FontWeight.w600,
+                              color: MatriVaaniColors.ink)),
+                      Text('"Dare do jiwi emog-a." (Trees give us life.)',
+                          style: TextStyle(
+                              fontSize: 12, color: MatriVaaniColors.muted)),
                     ],
                   ),
                 ),
@@ -343,7 +396,8 @@ class _FlashcardsScreenState extends State<FlashcardsScreen> {
             decoration: BoxDecoration(
               color: const Color(0xFFFDEDE8),
               borderRadius: BorderRadius.circular(16),
-              border: Border.all(color: MatriVaaniColors.primary.withValues(alpha: 0.25)),
+              border: Border.all(
+                  color: MatriVaaniColors.primary.withValues(alpha: 0.25)),
             ),
             child: Row(
               children: [
@@ -353,15 +407,22 @@ class _FlashcardsScreenState extends State<FlashcardsScreen> {
                     color: MatriVaaniColors.primary.withValues(alpha: 0.15),
                     borderRadius: BorderRadius.circular(10),
                   ),
-                  child: const Icon(Icons.draw_outlined, color: MatriVaaniColors.primary, size: 20),
+                  child: const Icon(Icons.draw_outlined,
+                      color: MatriVaaniColors.primary, size: 20),
                 ),
                 const SizedBox(width: 12),
                 const Expanded(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text('Practice Tracing', style: TextStyle(fontWeight: FontWeight.w700, fontSize: 15, color: MatriVaaniColors.ink)),
-                      Text('Finger draw Ol Chiki stroke order', style: TextStyle(fontSize: 12, color: MatriVaaniColors.muted)),
+                      Text('Practice Tracing',
+                          style: TextStyle(
+                              fontWeight: FontWeight.w700,
+                              fontSize: 15,
+                              color: MatriVaaniColors.ink)),
+                      Text('Finger draw Ol Chiki stroke order',
+                          style: TextStyle(
+                              fontSize: 12, color: MatriVaaniColors.muted)),
                     ],
                   ),
                 ),
@@ -390,7 +451,9 @@ class _FlashcardsScreenState extends State<FlashcardsScreen> {
               children: [
                 const Icon(Icons.check_circle_outline_rounded, size: 20),
                 const SizedBox(width: 8),
-                const Text('I Know This! •', style: TextStyle(fontWeight: FontWeight.w800, fontSize: 16)),
+                const Text('I Know This! •',
+                    style:
+                        TextStyle(fontWeight: FontWeight.w800, fontSize: 16)),
               ],
             ),
           ),
@@ -406,14 +469,19 @@ class _FlashcardsScreenState extends State<FlashcardsScreen> {
                 borderColor: MatriVaaniColors.border,
                 foregroundColor: MatriVaaniColors.muted,
                 borderRadius: 16,
-                padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 14),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 18, vertical: 14),
                 child: const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    Icon(Icons.arrow_back_rounded, size: 18, color: MatriVaaniColors.muted),
+                    Icon(Icons.arrow_back_rounded,
+                        size: 18, color: MatriVaaniColors.muted),
                     SizedBox(width: 8),
-                    Text('Previous •', style: TextStyle(color: MatriVaaniColors.muted, fontWeight: FontWeight.w600)),
+                    Text('Previous •',
+                        style: TextStyle(
+                            color: MatriVaaniColors.muted,
+                            fontWeight: FontWeight.w600)),
                   ],
                 ),
               ),
@@ -425,12 +493,14 @@ class _FlashcardsScreenState extends State<FlashcardsScreen> {
                 backgroundColor: MatriVaaniColors.primary,
                 foregroundColor: Colors.white,
                 borderRadius: 16,
-                padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 14),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 18, vertical: 14),
                 child: const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    Text('Next •', style: TextStyle(fontWeight: FontWeight.w700)),
+                    Text('Next •',
+                        style: TextStyle(fontWeight: FontWeight.w700)),
                     SizedBox(width: 6),
                     Icon(Icons.arrow_forward_rounded, size: 18),
                   ],
@@ -450,7 +520,11 @@ class _CategoryPill extends StatelessWidget {
   final IconData icon;
   final VoidCallback onTap;
 
-  const _CategoryPill({required this.label, required this.selected, required this.icon, required this.onTap});
+  const _CategoryPill(
+      {required this.label,
+      required this.selected,
+      required this.icon,
+      required this.onTap});
 
   @override
   Widget build(BuildContext context) {
@@ -460,14 +534,21 @@ class _CategoryPill extends StatelessWidget {
         duration: const Duration(milliseconds: 200),
         padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 12),
         decoration: BoxDecoration(
-          color: selected ? MatriVaaniColors.primaryDark : MatriVaaniColors.surface,
+          color: selected
+              ? MatriVaaniColors.primaryDark
+              : MatriVaaniColors.surface,
           borderRadius: BorderRadius.circular(999),
-          border: Border.all(color: selected ? MatriVaaniColors.primaryDark : MatriVaaniColors.border),
+          border: Border.all(
+              color: selected
+                  ? MatriVaaniColors.primaryDark
+                  : MatriVaaniColors.border),
         ),
         child: Row(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Icon(icon, size: 16, color: selected ? Colors.white : MatriVaaniColors.muted),
+            Icon(icon,
+                size: 16,
+                color: selected ? Colors.white : MatriVaaniColors.muted),
             const SizedBox(width: 6),
             Text(
               '$label •',
@@ -500,7 +581,9 @@ class _StepBadge extends StatelessWidget {
         color: color,
         shape: BoxShape.circle,
       ),
-      child: Text(label, style: const TextStyle(color: Colors.white, fontSize: 12, fontWeight: FontWeight.w800)),
+      child: Text(label,
+          style: const TextStyle(
+              color: Colors.white, fontSize: 12, fontWeight: FontWeight.w800)),
     );
   }
 }

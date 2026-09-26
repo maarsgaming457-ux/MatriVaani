@@ -31,8 +31,8 @@ class TranslationService:
             
         logger.info(f"Translating via provider '{self.provider}': {norm_source} -> {norm_target}")
         
-        if (norm_source == "Ho" or norm_target == "Ho") and self.provider != "mock":
-            raise TranslationError(f"Translation provider '{self.provider}' does not support Ho.")
+        if (norm_source == "Ho" or norm_target == "Ho"):
+            return "Ho translation is not yet available in the current prototype."
             
         try:
             if self.provider == "mock":
@@ -47,6 +47,8 @@ class TranslationService:
                 return self._indictrans2_translate(text, norm_source, norm_target)
             elif self.provider == "indictrans2_local":
                 return self._indictrans2_local_translate(text, norm_source, norm_target)
+            elif self.provider == "sarvam":
+                return self._sarvam_translate(text, norm_source, norm_target)
             else:
                 logger.warning(f"Unknown translation provider: {self.provider}. Falling back to groq.")
                 if norm_source == "Ho" or norm_target == "Ho":
@@ -55,6 +57,44 @@ class TranslationService:
         except Exception as e:
             logger.error(f"Translation execution failed: {e}")
             raise TranslationError(str(e))
+
+    def _sarvam_translate(self, text: str, source_lang: str, target_lang: str) -> str:
+        import requests
+        api_key = settings.SARVAM_API_KEY
+        if not api_key:
+            raise TranslationError("SARVAM_API_KEY is missing.")
+            
+        sarvam_map = {
+            "Hindi": "hi-IN",
+            "Santali": "sat-IN"
+        }
+        src = sarvam_map.get(source_lang)
+        tgt = sarvam_map.get(target_lang)
+        
+        if not src or not tgt:
+            raise TranslationError(f"Unsupported Sarvam language mapping: {source_lang} -> {target_lang}")
+            
+        headers = {
+            "api-subscription-key": api_key,
+            "Content-Type": "application/json"
+        }
+        payload = {
+            "input": text,
+            "source_language_code": src,
+            "target_language_code": tgt,
+            "speaker_gender": "Male",
+            "mode": "formal",
+            "model": "sarvam-translate:v1"
+        }
+        
+        try:
+            res = requests.post("https://api.sarvam.ai/translate", headers=headers, json=payload, timeout=15)
+            res.raise_for_status()
+            data = res.json()
+            return data.get("translated_text", "").strip()
+        except Exception as e:
+            logger.error(f"Sarvam translation failed: {e}")
+            raise TranslationError(f"Sarvam API error: {str(e)}")
 
     def _mock_translate(self, text: str, source_lang: str, target_lang: str) -> str:
         return f"[MOCK {target_lang.upper()}] Translated from {source_lang}: {text}"

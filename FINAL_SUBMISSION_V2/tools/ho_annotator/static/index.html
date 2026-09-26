@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MatriVaani Annotator</title>
+    <meta charset="utf-8">
+    <style>
+        body { font-family: sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; }
+        .card { border: 1px solid #ccc; padding: 20px; border-radius: 8px; }
+        .field { margin-bottom: 15px; }
+        label { font-weight: bold; display: block; margin-bottom: 5px; }
+        input, select, textarea { width: 100%; padding: 8px; box-sizing: border-box; }
+        button { padding: 10px 20px; font-size: 16px; cursor: pointer; margin-right: 10px; }
+        .nav-buttons { margin-top: 20px; text-align: center; }
+        .error { color: red; margin-bottom: 15px; }
+        .success { color: green; margin-bottom: 15px; }
+        .export-section { margin-top: 30px; border-top: 2px solid #eee; padding-top: 20px; }
+    </style>
+</head>
+<body>
+    <h2>MatriVaani Ho-Hindi Annotator</h2>
+    <div id="progress-counter" style="font-weight: bold; font-size: 1.2em; margin-bottom: 15px; color: #333; padding: 10px; background: #e9ecef; border-radius: 5px; text-align: center;"></div>\n
+    <div style="background-color: #fff3cd; padding: 15px; border-left: 5px solid #ffc107; margin-bottom: 20px;">
+        <strong>Ho ? Hindi Human Annotation Instructions:</strong>
+        <ol style="margin-top: 5px; margin-bottom: 5px;">
+            <li>Listen to the Ho recording.</li>
+            <li>Review the Raw Ho ASR.</li>
+            <li>Enter the Corrected Ho Transcription.</li>
+            <li>Enter the Hindi meaning manually.</li>
+            <li>Do not use machine translation as ground truth.</li>
+            <li>Verify that the Hindi meaning matches the spoken Ho sentence.</li>
+            <li>Mark Human Verified only after reviewing the complete pair.</li>
+            <li>Save the record.</li>
+        </ol>
+        <p style="color: red; font-weight: bold; margin-bottom: 0;">WARNING: Only a competent Ho speaker should complete or verify the linguistic annotation.</p>
+    </div>
+
+    <div id="msg"></div>
+    <div class="card" id="editor" style="display:none;">
+        <h3 id="record-id"></h3>
+        
+        <div class="field">
+            <label>Ho Audio</label>
+            <audio id="audio_player" controls style="width: 100%;"></audio>
+        </div>
+        
+        <div class="field">
+            <label>Raw Ho ASR</label><small style="display:block;margin-bottom:5px;color:#555;">Do not edit. This is the machine generated ASR.</small>
+            <textarea id="raw_asr_text" readonly rows="2" style="background:#f5f5f5;"></textarea>
+        </div>
+        
+        <div class="field">
+            <label>Corrected Ho Transcription</label><small style="display:block;margin-bottom:5px;color:#555;">Listen carefully to the recording and correct the Raw Ho ASR only when you are confident about the spoken Ho.</small>
+            <textarea id="ho" rows="2"></textarea>
+        </div>
+        
+        <div class="field">
+            <label>Human Hindi Translation</label><small style="display:block;margin-bottom:5px;color:#555;">Listen to the Ho recording and enter the Hindi meaning manually. Do not use machine-generated translation as ground truth.</small>
+            <textarea id="hindi" rows="2"></textarea>
+        </div>
+        
+        <div class="field">
+            <label>Category</label>
+            <select id="category">
+                <option value="greetings">Greetings</option>
+                <option value="classroom_instruction">Classroom Instruction</option>
+                <option value="numbers">Numbers/Counting</option>
+                <option value="colors">Colors/Shapes</option>
+                <option value="general_conversation">General Conversation</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+        
+        <div class="field">
+            <label><input type="checkbox" id="human_verified" style="width:auto;"> Human Verified (I am a competent Ho speaker)</label>
+        </div>
+        
+        <div class="field">
+            <label>Status</label>
+            <select id="review_status">
+                <option value="NEW">New</option>
+                <option value="IN_PROGRESS">In Progress</option>
+                <option value="NEEDS_REVIEW">Needs Review</option>
+                <option value="APPROVED">Approved</option>
+                <option value="REJECTED">Rejected</option>
+            </select>
+        </div>
+        
+        <div class="field">
+            <label>Notes</label>
+            <input type="text" id="notes">
+        </div>
+        
+        <div class="nav-buttons">
+            <button onclick="saveAndNext(-1)">&#8592; Previous</button>
+            <button onclick="saveRecord()">Save</button>
+            <button onclick="saveAndNext(1)">Next &#8594;</button>
+        </div>
+    </div>
+    
+    <div class="export-section">
+        <h3>Export Data</h3>
+        <button onclick="exportData('VERIFIED')">Export Verified (Phase 12 Pilot)</button>
+    </div>
+
+    <script>
+        let records = [];
+        let currentIndex = 0;
+
+        async function loadRecords() {
+            const res = await fetch("/api/records");
+            records = await res.json();
+            if(records.length > 0) {
+                document.getElementById("editor").style.display = "block";
+                updateProgress();
+                showRecord(0);
+            } else {
+                document.getElementById("msg").innerHTML = "No records found.";
+            }
+        }
+
+        
+        function updateProgress() {
+            let verifiedCount = records.filter(r => r.human_verified && r.ho && r.ho.trim() !== '' && r.hindi && r.hindi.trim() !== '').length;
+            let total = records.filter(r => !r.demo_only).length;
+            let pendingCount = total - verifiedCount;
+            document.getElementById("progress-counter").innerHTML = Verified:  /  &nbsp;&nbsp;|&nbsp;&nbsp; Pending:  / ;
+        }
+
+        function showRecord(index) {
+            if(index < 0 || index >= records.length) return;
+            currentIndex = index;
+            const r = records[index];
+            document.getElementById("record-id").innerText = r.id + (r.demo_only ? " [DEMO ONLY]" : "") + ` - Record ${index + 1} / ${records.length}`;
+            document.getElementById("raw_asr_text").value = r.raw_asr_text || "";
+            document.getElementById("ho").value = r.ho || "";
+            document.getElementById("hindi").value = r.hindi || "";
+            document.getElementById("category").value = r.category || "other";
+            document.getElementById("human_verified").checked = r.human_verified;
+            document.getElementById("review_status").value = r.review_status || "NEW";
+            document.getElementById("notes").value = r.notes || "";
+            document.getElementById("audio_player").src = "/api/audio/" + r.id;
+            document.getElementById("msg").innerHTML = "";
+        }
+
+        async function saveRecord() {
+            const r = records[currentIndex];
+            const data = {
+                ho: document.getElementById("ho").value,
+                hindi: document.getElementById("hindi").value,
+                category: document.getElementById("category").value,
+                human_verified: document.getElementById("human_verified").checked,
+                review_status: document.getElementById("review_status").value,
+                notes: document.getElementById("notes").value
+            };
+            
+            const res = await fetch(`/api/records/${r.id}`, {
+                method: "POST",
+                headers: {"Content-Type": "application/json"},
+                body: JSON.stringify(data)
+            });
+            const result = await res.json();
+            
+            if(result.error) {
+                document.getElementById("msg").innerHTML = `<div class="error">${result.error}</div>`;
+                return false;
+            } else {
+                document.getElementById("msg").innerHTML = `<div class="success">Saved ${r.id} successfully.</div>`;
+                // update local cache
+                Object.assign(records[currentIndex], data);
+                return true;
+            }
+        }
+
+        async function saveAndNext(step) {
+            const ok = await saveRecord();
+            if(ok) {
+                let nextIdx = currentIndex + step;
+                if(nextIdx >= 0 && nextIdx < records.length) {
+                    showRecord(nextIdx);
+                }
+            }
+        }
+
+        async function exportData(status) {
+            const res = await fetch(`/api/export/${status}`, { method: "POST" });
+            const result = await res.json();
+            if(result.status === "success") {
+                alert(`Exported ${result.count} records to ${result.file}`);
+            }
+        }
+
+        loadRecords();
+    </script>
+</body>
+</html>

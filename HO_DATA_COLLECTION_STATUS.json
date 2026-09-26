@@ -1,0 +1,32 @@
+{
+  "dashboard": "Real Native Collection Status V1",
+  "asr": {
+    "real_hours": 0.0,
+    "real_utterances": 0,
+    "unique_speakers": 0,
+    "verified_transcripts": 0,
+    "unverified_transcripts": 0,
+    "rejected_records": 0,
+    "duplicate_records": 0,
+    "gate": "NOT READY - REAL DATA INSUFFICIENT"
+  },
+  "translation": {
+    "human_ground_truth_pairs": 0,
+    "ho_to_hi_pairs": 0,
+    "hi_to_ho_pairs": 0,
+    "unverified": 0,
+    "rejected": 0,
+    "synthetic": 0,
+    "duplicates": 0,
+    "gate": "NOT READY - REAL DATA INSUFFICIENT"
+  },
+  "tts": {
+    "real_hours": 0.0,
+    "utterances": 0,
+    "unique_speakers": 0,
+    "verified_transcripts": 0,
+    "unverified": 0,
+    "duplicates": 0,
+    "gate": "NOT READY - REAL DATA INSUFFICIENT"
+  }
+}

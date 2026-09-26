@@ -1,0 +1,177 @@
+{
+  "hindi_to_santali": [
+    {
+      "test_id": "Test 1",
+      "hindi": "नमस्ते बच्चों।",
+      "santali": "ᱦᱚᱞᱮ ᱜᱤᱫᱽᱨᱟᱹᱠᱚ ᱾",
+      "status": 200,
+      "latency": 0.6703488826751709,
+      "provider": "indictrans2_local"
+    },
+    {
+      "test_id": "Test 2",
+      "hindi": "सुप्रभात, क्या हाल है?",
+      "santali": "ସୁପ୍ରଭାତ, ᱪᱮᱫ ᱦᱩᱭᱩᱜ ᱠᱟᱱᱟ?",
+      "status": 200,
+      "latency": 0.8372130393981934,
+      "provider": "indictrans2_local"
+    },
+    {
+      "test_id": "Test 3",
+      "hindi": "एक, दो, तीन, चार और पाँच।",
+      "santali": "ᱢᱤᱫᱴᱟᱝ, ᱵᱟᱨᱭᱟ, ᱯᱮᱭᱟ, ᱯᱳᱱ ᱟᱨ ᱢᱚᱬᱮ ᱜᱚᱴᱟᱝ ᱾",
+      "status": 200,
+      "latency": 1.056563138961792,
+      "provider": "indictrans2_local"
+    },
+    {
+      "test_id": "Test 4",
+      "hindi": "मेरे पास दो किताबें हैं।",
+      "santali": "ᱤᱧ ᱴᱷᱮᱱ ᱵᱟᱨᱭᱟ ᱯᱚᱛᱚᱵ ᱢᱮᱱᱟᱜᱼᱟ ᱾",
+      "status": 200,
+      "latency": 0.7533907890319824,
+      "provider": "indictrans2_local"
+    },
+    {
+      "test_id": "Test 5",
+      "hindi": "दो और दो चार होते हैं।",
+      "santali": "ᱵᱟᱨᱭᱟ ᱟᱨ ᱵᱟᱨᱭᱟ ᱦᱩᱭᱩᱜ ᱠᱟᱱᱟ ᱯᱳᱱ ᱾",
+      "status": 200,
+      "latency": 0.8416986465454102,
+      "provider": "indictrans2_local"
+    },
+    {
+      "test_id": "Test 6",
+      "hindi": "यह एक लाल गेंद है।",
+      "santali": "ᱱᱚᱶᱟ ᱫᱚ ᱢᱤᱫᱴᱟᱝ ᱨᱮᱞᱰ ᱵᱚᱞ ᱾",
+      "status": 200,
+      "latency": 0.807689905166626,
+      "provider": "indictrans2_local"
+    },
+    {
+      "test_id": "Test 7",
+      "hindi": "आसमान नीला है।",
+      "santali": "ᱚᱥᱚᱢᱚᱨ ᱫᱚ ᱱᱤᱞᱩ ᱾",
+      "status": 200,
+      "latency": 0.7815675735473633,
+      "provider": "indictrans2_local"
+    },
+    {
+      "test_id": "Test 8",
+      "hindi": "यह एक गोल मेज है।",
+      "santali": "ᱱᱚᱶᱟ ᱫᱚ ᱢᱤᱫᱴᱟᱝ ᱜᱳᱞ ᱴᱮᱵᱤᱞ ᱾",
+      "status": 200,
+      "latency": 0.8845477104187012,
+      "provider": "indictrans2_local"
+    },
+    {
+      "test_id": "Test 9",
+      "hindi": "मेरे पिता एक किसान हैं।",
+      "santali": "ᱤᱧᱟᱹᱜ ᱵᱟᱵᱟ ᱫᱚ ᱢᱤᱫ ᱪᱟᱥᱤᱭᱟᱹ ᱾",
+      "status": 200,
+      "latency": 0.7858190536499023,
+      "provider": "indictrans2_local"
+    },
+    {
+      "test_id": "Test 10",
+      "hindi": "मेरी माँ खाना बना रही है।",
+      "santali": "ᱤᱧᱟᱹᱜ ᱟᱭᱳ ᱡᱚᱢᱟᱜ ᱵᱮᱱᱟᱣ ᱟᱠᱟᱫᱟᱭ ᱾",
+      "status": 200,
+      "latency": 0.8474295139312744,
+      "provider": "indictrans2_local"
+    },
+    {
+      "test_id": "Test 11",
+      "hindi": "कुत्ता भौंक रहा है।",
+      "santali": "ᱜᱳᱲᱤᱭᱟᱹ ᱫᱚ ᱜᱷᱩᱨᱩᱢᱚᱜ ᱠᱟᱱᱟ ᱾",
+      "status": 200,
+      "latency": 0.907231330871582,
+      "provider": "indictrans2_local"
+    },
+    {
+      "test_id": "Test 12",
+      "hindi": "गाय घास खाती है।",
+      "santali": "ᱜᱳᱣ ᱫᱚ ᱜᱷᱩᱨᱮ ᱠᱚ ᱦᱟᱛᱟᱣᱟ ᱾",
+      "status": 200,
+      "latency": 0.9348313808441162,
+      "provider": "indictrans2_local"
+    },
+    {
+      "test_id": "Test 13",
+      "hindi": "यह मेरी आँखें हैं।",
+      "santali": "ᱱᱚᱶᱟ ᱫᱚ ᱤᱧᱟᱹᱜ ᱢᱮᱫ ᱾",
+      "status": 200,
+      "latency": 0.7485332489013672,
+      "provider": "indictrans2_local"
+    },
+    {
+      "test_id": "Test 14",
+      "hindi": "सूरज पूर्व दिशा से निकलता है।",
+      "santali": "ᱥᱩᱨᱡᱚ ᱫᱚ ᱯᱩᱨᱵᱚ ᱥᱮᱫ ᱠᱷᱚᱱ ᱦᱮᱡ ᱟᱠᱟᱱᱟ ᱾",
+      "status": 200,
+      "latency": 0.8726427555084229,
+      "provider": "indictrans2_local"
+    },
+    {
+      "test_id": "Test 15",
+      "hindi": "राम खेल रहा है।",
+      "santali": "ᱨᱟᱢ ᱠᱷᱮᱞᱳᱰ ᱟᱠᱟᱫᱟᱭ ᱾",
+      "status": 200,
+      "latency": 0.6502151489257812,
+      "provider": "indictrans2_local"
+    },
+    {
+      "test_id": "Test 16",
+      "hindi": "आज सोमवार है।",
+      "santali": "ᱛᱮᱦᱮᱧ ᱢᱩᱨᱩᱢ ᱢᱟᱦᱟ ᱾",
+      "status": 200,
+      "latency": 0.6527736186981201,
+      "provider": "indictrans2_local"
+    },
+    {
+      "test_id": "Test 17",
+      "hindi": "कल छुट्टी है।",
+      "santali": "ᱦᱚᱭᱦᱩᱫᱤᱥ ᱫᱚ ᱢᱤᱫᱴᱟᱝ ᱪᱷᱟᱹᱲ ᱠᱟᱱᱟ ᱾",
+      "status": 200,
+      "latency": 0.9520137310028076,
+      "provider": "indictrans2_local"
+    },
+    {
+      "test_id": "Test 18",
+      "hindi": "पेड़ हमें ऑक्सीजन देते हैं।",
+      "santali": "ᱵᱤᱨ ᱫᱚ ᱤᱧᱟᱹᱜ ᱚᱥᱤᱜᱮᱱ ᱮ ᱮᱢᱼᱟ ᱾",
+      "status": 200,
+      "latency": 1.136915922164917,
+      "provider": "indictrans2_local"
+    },
+    {
+      "test_id": "Test 19",
+      "hindi": "कृपया अपनी किताब खोलो।",
+      "santali": "ᱫᱟᱭᱟ ᱠᱟᱛᱮ ᱟᱢᱟᱜ ᱯᱚᱛᱚᱵ ᱫᱚ ᱮᱦᱚᱵ ᱢᱮ ᱾",
+      "status": 200,
+      "latency": 0.9398036003112793,
+      "provider": "indictrans2_local"
+    },
+    {
+      "test_id": "Test 20",
+      "hindi": "ध्यान से सुनो।",
+      "santali": "ᱟᱹᱰᱤ ᱱᱟᱯᱟᱭ ᱛᱮ ᱵᱟᱰᱟᱭ ᱢᱮ ᱾",
+      "status": 200,
+      "latency": 0.6170694828033447,
+      "provider": "indictrans2_local"
+    }
+  ],
+  "santali_to_hindi": {
+    "santali": "ᱦᱚᱞᱮ ᱜᱤᱫᱽᱨᱟᱹᱠᱚ ᱾",
+    "hindi": "अरे दोस्तों।",
+    "status": 200,
+    "latency": 0.497342586517334
+  },
+  "stats": {
+    "first_latency": 0.6703488826751709,
+    "min": 0.6170694828033447,
+    "max": 1.136915922164917,
+    "avg": 0.8425236626675254,
+    "median": 0.8416986465454102
+  }
+}

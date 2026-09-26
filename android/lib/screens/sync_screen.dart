@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../services/api_service.dart';
 
 import '../theme/app_theme.dart';
 import '../widgets/animated_button.dart';
@@ -19,7 +20,7 @@ class _SyncScreenState extends State<SyncScreen> {
   int _bufferOk = 2;
   int _bufferTotal = 4;
   bool _isSyncing = false;
-  String _endpoint = 'http://10.0.2.2:8000';
+  String _endpoint = ApiService.baseUrl;
   String _pingStatus = 'Idle';
 
   void _clearCache() {
@@ -82,10 +83,14 @@ class _SyncScreenState extends State<SyncScreen> {
           children: [
             CircleAvatar(
               radius: 18,
-              backgroundColor: pending ? MatriVaaniColors.primary.withValues(alpha: 0.12) : MatriVaaniColors.forest2.withValues(alpha: 0.12),
+              backgroundColor: pending
+                  ? MatriVaaniColors.primary.withValues(alpha: 0.12)
+                  : MatriVaaniColors.forest2.withValues(alpha: 0.12),
               child: Icon(
                 pending ? Icons.mic_outlined : Icons.check_circle_outline,
-                color: pending ? MatriVaaniColors.primaryDark : MatriVaaniColors.forest,
+                color: pending
+                    ? MatriVaaniColors.primaryDark
+                    : MatriVaaniColors.forest,
                 size: 18,
               ),
             ),
@@ -94,29 +99,43 @@ class _SyncScreenState extends State<SyncScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(title, style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 14)),
+                  Text(title,
+                      style: const TextStyle(
+                          fontWeight: FontWeight.w800, fontSize: 14)),
                   const SizedBox(height: 3),
-                  Text(subtitle, style: TextStyle(color: MatriVaaniColors.muted, fontSize: 12)),
+                  Text(subtitle,
+                      style: TextStyle(
+                          color: MatriVaaniColors.muted, fontSize: 12)),
                 ],
               ),
             ),
             Chip(
               label: Text(pending ? 'Pending' : 'Synced'),
-              backgroundColor: pending ? MatriVaaniColors.primary.withValues(alpha: 0.12) : MatriVaaniColors.forest2.withValues(alpha: 0.12),
-              side: BorderSide(color: pending ? MatriVaaniColors.primary.withValues(alpha: 0.25) : MatriVaaniColors.forest2.withValues(alpha: 0.25)),
+              backgroundColor: pending
+                  ? MatriVaaniColors.primary.withValues(alpha: 0.12)
+                  : MatriVaaniColors.forest2.withValues(alpha: 0.12),
+              side: BorderSide(
+                  color: pending
+                      ? MatriVaaniColors.primary.withValues(alpha: 0.25)
+                      : MatriVaaniColors.forest2.withValues(alpha: 0.25)),
             ),
             const SizedBox(width: 8),
             PressScale(
-              key: pending ? const Key('sync_btn_play_pending') : const Key('sync_btn_play_synced'),
+              key: pending
+                  ? const Key('sync_btn_play_pending')
+                  : const Key('sync_btn_play_synced'),
               onTap: () {
                 ScaffoldMessenger.of(context).showSnackBar(
-                  SnackBar(content: Text(pending ? 'Playing: $title' : 'Replaying: $title')),
+                  SnackBar(
+                      content: Text(
+                          pending ? 'Playing: $title' : 'Replaying: $title')),
                 );
               },
               scale: 0.92,
               child: Padding(
                 padding: const EdgeInsets.all(8),
-                child: Icon(Icons.play_circle_outline_rounded, color: MatriVaaniColors.forest, size: 28),
+                child: Icon(Icons.play_circle_outline_rounded,
+                    color: MatriVaaniColors.forest, size: 28),
               ),
             ),
           ],
@@ -138,15 +157,19 @@ class _SyncScreenState extends State<SyncScreen> {
           children: [
             Expanded(
               child: Container(
-                padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
                 decoration: BoxDecoration(
                   color: MatriVaaniColors.forest2.withValues(alpha: 0.12),
                   borderRadius: BorderRadius.circular(999),
-                  border: Border.all(color: MatriVaaniColors.forest2.withValues(alpha: 0.25)),
+                  border: Border.all(
+                      color: MatriVaaniColors.forest2.withValues(alpha: 0.25)),
                 ),
                 child: Text(
                   'Local Mode Active',
-                  style: TextStyle(color: MatriVaaniColors.forest, fontWeight: FontWeight.w800),
+                  style: TextStyle(
+                      color: MatriVaaniColors.forest,
+                      fontWeight: FontWeight.w800),
                 ),
               ),
             ),
@@ -160,7 +183,10 @@ class _SyncScreenState extends State<SyncScreen> {
               ),
               child: Text(
                 'SQLite v3.45',
-                style: TextStyle(color: MatriVaaniColors.muted, fontWeight: FontWeight.w700, fontSize: 13),
+                style: TextStyle(
+                    color: MatriVaaniColors.muted,
+                    fontWeight: FontWeight.w700,
+                    fontSize: 13),
               ),
             ),
           ],
@@ -183,71 +209,107 @@ class _SyncScreenState extends State<SyncScreen> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text('SYNC BUFFER', style: TextStyle(color: MatriVaaniColors.primaryDark, fontWeight: FontWeight.w900, fontSize: 13)),
+                      Text('SYNC BUFFER',
+                          style: TextStyle(
+                              color: MatriVaaniColors.primaryDark,
+                              fontWeight: FontWeight.w900,
+                              fontSize: 13)),
                       const SizedBox(height: 6),
-                      Text('4 Items Pending', style: TextStyle(color: MatriVaaniColors.ink, fontWeight: FontWeight.w900, fontSize: 22)),
+                      Text('4 Items Pending',
+                          style: TextStyle(
+                              color: MatriVaaniColors.ink,
+                              fontWeight: FontWeight.w900,
+                              fontSize: 22)),
                       const SizedBox(height: 4),
-                      Text('4 voice clips & student logs\nready to stream', style: TextStyle(color: MatriVaaniColors.muted, fontSize: 12)),
+                      Text('4 voice clips & student logs\nready to stream',
+                          style: TextStyle(
+                              color: MatriVaaniColors.muted, fontSize: 12)),
                       const SizedBox(height: 10),
                       Wrap(
                         spacing: 8,
                         runSpacing: 8,
                         children: [
                           Container(
-                            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 12, vertical: 8),
                             decoration: BoxDecoration(
-                              color: MatriVaaniColors.forest2.withValues(alpha: 0.12),
+                              color: MatriVaaniColors.forest2
+                                  .withValues(alpha: 0.12),
                               borderRadius: BorderRadius.circular(999),
                             ),
                             child: Row(
                               mainAxisSize: MainAxisSize.min,
                               children: [
-                                const Icon(Icons.wifi_outlined, size: 16, color: MatriVaaniColors.forest),
+                                const Icon(Icons.wifi_outlined,
+                                    size: 16, color: MatriVaaniColors.forest),
                                 const SizedBox(width: 8),
-                                Text('FastAPI ASR Server •', style: TextStyle(color: MatriVaaniColors.forest, fontWeight: FontWeight.w800, fontSize: 12)),
+                                Text('FastAPI ASR Server •',
+                                    style: TextStyle(
+                                        color: MatriVaaniColors.forest,
+                                        fontWeight: FontWeight.w800,
+                                        fontSize: 12)),
                               ],
                             ),
                           ),
                           Container(
-                            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 12, vertical: 8),
                             decoration: BoxDecoration(
-                              color: MatriVaaniColors.forest2.withValues(alpha: 0.12),
+                              color: MatriVaaniColors.forest2
+                                  .withValues(alpha: 0.12),
                               borderRadius: BorderRadius.circular(999),
                             ),
-                            child: Text('Online', style: TextStyle(color: MatriVaaniColors.forest, fontWeight: FontWeight.w900, fontSize: 12)),
+                            child: Text('Online',
+                                style: TextStyle(
+                                    color: MatriVaaniColors.forest,
+                                    fontWeight: FontWeight.w900,
+                                    fontSize: 12)),
                           ),
                         ],
                       ),
-
                       const SizedBox(height: 10),
                       Wrap(
                         spacing: 8,
                         runSpacing: 8,
                         children: [
                           Container(
-                            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 12, vertical: 8),
                             decoration: BoxDecoration(
                               color: MatriVaaniColors.surfaceAlt,
                               borderRadius: BorderRadius.circular(12),
-                              border: Border.all(color: MatriVaaniColors.border),
+                              border:
+                                  Border.all(color: MatriVaaniColors.border),
                             ),
                             child: Row(
                               mainAxisSize: MainAxisSize.min,
                               children: [
-                                const Icon(Icons.storage_outlined, size: 16, color: MatriVaaniColors.primaryDark),
+                                const Icon(Icons.storage_outlined,
+                                    size: 16,
+                                    color: MatriVaaniColors.primaryDark),
                                 const SizedBox(width: 8),
-                                Text('SQLite: matrivaani_local.db', style: TextStyle(color: MatriVaaniColors.muted, fontWeight: FontWeight.w800, fontSize: 12)),
+                                Text('SQLite: matrivaani_local.db',
+                                    style: TextStyle(
+                                        color: MatriVaaniColors.muted,
+                                        fontWeight: FontWeight.w800,
+                                        fontSize: 12)),
                               ],
                             ),
                           ),
                           Container(
-                            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 12, vertical: 8),
                             decoration: BoxDecoration(
                               color: MatriVaaniColors.surface,
                               borderRadius: BorderRadius.circular(12),
-                              border: Border.all(color: MatriVaaniColors.border),
+                              border:
+                                  Border.all(color: MatriVaaniColors.border),
                             ),
-                            child: Text('Schema v4 • WAL Mode', style: TextStyle(color: MatriVaaniColors.muted, fontWeight: FontWeight.w800, fontSize: 12)),
+                            child: Text('Schema v4 • WAL Mode',
+                                style: TextStyle(
+                                    color: MatriVaaniColors.muted,
+                                    fontWeight: FontWeight.w800,
+                                    fontSize: 12)),
                           ),
                         ],
                       ),
@@ -270,7 +332,8 @@ class _SyncScreenState extends State<SyncScreen> {
                             value: _bufferProgress,
                             strokeWidth: 10,
                             backgroundColor: MatriVaaniColors.border,
-                            valueColor: AlwaysStoppedAnimation<Color>(MatriVaaniColors.primary),
+                            valueColor: AlwaysStoppedAnimation<Color>(
+                                MatriVaaniColors.primary),
                           ),
                           Container(
                             width: 54,
@@ -278,12 +341,14 @@ class _SyncScreenState extends State<SyncScreen> {
                             decoration: BoxDecoration(
                               color: MatriVaaniColors.surface,
                               borderRadius: BorderRadius.circular(18),
-                              border: Border.all(color: MatriVaaniColors.border),
+                              border:
+                                  Border.all(color: MatriVaaniColors.border),
                             ),
                             child: Center(
                               child: Text(
                                 '$percent%',
-                                style: const TextStyle(fontWeight: FontWeight.w900),
+                                style: const TextStyle(
+                                    fontWeight: FontWeight.w900),
                               ),
                             ),
                           ),
@@ -291,7 +356,11 @@ class _SyncScreenState extends State<SyncScreen> {
                       ),
                     ),
                     const SizedBox(height: 8),
-                    Text('${_bufferOk} / $_bufferTotal OK', style: TextStyle(color: MatriVaaniColors.muted, fontWeight: FontWeight.w800, fontSize: 12)),
+                    Text('${_bufferOk} / $_bufferTotal OK',
+                        style: TextStyle(
+                            color: MatriVaaniColors.muted,
+                            fontWeight: FontWeight.w800,
+                            fontSize: 12)),
                   ],
                 ),
               ],
@@ -322,7 +391,8 @@ class _SyncScreenState extends State<SyncScreen> {
                     _isSyncing ? 'Syncing…' : 'Sync All Data to Server',
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
-                    style: const TextStyle(fontWeight: FontWeight.w900, fontSize: 16),
+                    style: const TextStyle(
+                        fontWeight: FontWeight.w900, fontSize: 16),
                   ),
                 ),
               ],
@@ -334,15 +404,25 @@ class _SyncScreenState extends State<SyncScreen> {
 
         // Storage partition bar
         Card(
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20), side: const BorderSide(color: MatriVaaniColors.border)),
+          shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(20),
+              side: const BorderSide(color: MatriVaaniColors.border)),
           child: Padding(
             padding: const EdgeInsets.all(14),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text('Storage Partition', style: TextStyle(color: MatriVaaniColors.ink, fontWeight: FontWeight.w900, fontSize: 16)),
+                Text('Storage Partition',
+                    style: TextStyle(
+                        color: MatriVaaniColors.ink,
+                        fontWeight: FontWeight.w900,
+                        fontSize: 16)),
                 const SizedBox(height: 10),
-                Text('14.2 GB Available', style: TextStyle(color: MatriVaaniColors.muted, fontWeight: FontWeight.w800, fontSize: 12)),
+                Text('14.2 GB Available',
+                    style: TextStyle(
+                        color: MatriVaaniColors.muted,
+                        fontWeight: FontWeight.w800,
+                        fontSize: 12)),
                 const SizedBox(height: 10),
                 ClipRRect(
                   borderRadius: BorderRadius.circular(999),
@@ -350,15 +430,24 @@ class _SyncScreenState extends State<SyncScreen> {
                     children: [
                       Expanded(
                         flex: 18,
-                        child: Container(height: 14, color: MatriVaaniColors.primary.withValues(alpha: 0.65)),
+                        child: Container(
+                            height: 14,
+                            color: MatriVaaniColors.primary
+                                .withValues(alpha: 0.65)),
                       ),
                       Expanded(
                         flex: 6,
-                        child: Container(height: 14, color: MatriVaaniColors.amber.withValues(alpha: 0.65)),
+                        child: Container(
+                            height: 14,
+                            color:
+                                MatriVaaniColors.amber.withValues(alpha: 0.65)),
                       ),
                       Expanded(
                         flex: 46,
-                        child: Container(height: 14, color: MatriVaaniColors.forest2.withValues(alpha: 0.65)),
+                        child: Container(
+                            height: 14,
+                            color: MatriVaaniColors.forest2
+                                .withValues(alpha: 0.65)),
                       ),
                     ],
                   ),
@@ -366,11 +455,16 @@ class _SyncScreenState extends State<SyncScreen> {
                 const SizedBox(height: 10),
                 Row(
                   children: [
-                    _LegendDot(color: MatriVaaniColors.primary, label: 'Audio (1.8 MB)'),
+                    _LegendDot(
+                        color: MatriVaaniColors.primary,
+                        label: 'Audio (1.8 MB)'),
                     const SizedBox(width: 10),
-                    _LegendDot(color: MatriVaaniColors.amber, label: 'DB (0.6 MB)'),
+                    _LegendDot(
+                        color: MatriVaaniColors.amber, label: 'DB (0.6 MB)'),
                     const SizedBox(width: 10),
-                    _LegendDot(color: MatriVaaniColors.forest2, label: 'Free (14.2 GB)'),
+                    _LegendDot(
+                        color: MatriVaaniColors.forest2,
+                        label: 'Free (14.2 GB)'),
                   ],
                 )
               ],
@@ -380,7 +474,11 @@ class _SyncScreenState extends State<SyncScreen> {
 
         const SizedBox(height: 16),
 
-        Text('Pending Queue & Logs', style: TextStyle(fontWeight: FontWeight.w900, fontSize: 16, color: MatriVaaniColors.ink)),
+        Text('Pending Queue & Logs',
+            style: TextStyle(
+                fontWeight: FontWeight.w900,
+                fontSize: 16,
+                color: MatriVaaniColors.ink)),
         const SizedBox(height: 10),
 
         _pendingRow(
@@ -419,7 +517,8 @@ class _SyncScreenState extends State<SyncScreen> {
               children: [
                 Icon(Icons.delete_outline_rounded, size: 18),
                 SizedBox(width: 6),
-                Text('Clear Cache', style: TextStyle(fontWeight: FontWeight.w700)),
+                Text('Clear Cache',
+                    style: TextStyle(fontWeight: FontWeight.w700)),
               ],
             ),
           ),
@@ -429,13 +528,19 @@ class _SyncScreenState extends State<SyncScreen> {
 
         // Diagnostics section
         Card(
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20), side: const BorderSide(color: MatriVaaniColors.border)),
+          shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(20),
+              side: const BorderSide(color: MatriVaaniColors.border)),
           child: Padding(
             padding: const EdgeInsets.all(14),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text('Diagnostics & Sync Config', style: TextStyle(color: MatriVaaniColors.ink, fontWeight: FontWeight.w900, fontSize: 16)),
+                Text('Diagnostics & Sync Config',
+                    style: TextStyle(
+                        color: MatriVaaniColors.ink,
+                        fontWeight: FontWeight.w900,
+                        fontSize: 16)),
                 const SizedBox(height: 12),
                 _ToggleRow(
                   title: 'Auto-sync when Wi-Fi is available',
@@ -449,10 +554,15 @@ class _SyncScreenState extends State<SyncScreen> {
                   onChanged: (v) => setState(() => _saveRawWavLocally = v),
                 ),
                 const SizedBox(height: 14),
-                Text('Custom Backend Endpoint (FastAPI ASR)', style: TextStyle(color: MatriVaaniColors.muted, fontWeight: FontWeight.w900, fontSize: 13)),
+                Text('Custom Backend Endpoint (FastAPI ASR)',
+                    style: TextStyle(
+                        color: MatriVaaniColors.muted,
+                        fontWeight: FontWeight.w900,
+                        fontSize: 13)),
                 const SizedBox(height: 10),
                 Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 12),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 12, vertical: 12),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(16),
                     border: Border.all(color: MatriVaaniColors.border),
@@ -460,7 +570,8 @@ class _SyncScreenState extends State<SyncScreen> {
                   ),
                   child: Row(
                     children: [
-                      const Icon(Icons.link_outlined, size: 18, color: MatriVaaniColors.primaryDark),
+                      const Icon(Icons.link_outlined,
+                          size: 18, color: MatriVaaniColors.primaryDark),
                       const SizedBox(width: 8),
                       Expanded(
                         child: TextField(
@@ -488,8 +599,11 @@ class _SyncScreenState extends State<SyncScreen> {
                   ),
                 ),
                 const SizedBox(height: 8),
-                Text('Ping Server: $_pingStatus', style: TextStyle(color: MatriVaaniColors.muted, fontWeight: FontWeight.w800, fontSize: 12)),
-
+                Text('Ping Server: $_pingStatus',
+                    style: TextStyle(
+                        color: MatriVaaniColors.muted,
+                        fontWeight: FontWeight.w800,
+                        fontSize: 12)),
                 const SizedBox(height: 14),
                 Container(
                   padding: const EdgeInsets.all(12),
@@ -500,12 +614,16 @@ class _SyncScreenState extends State<SyncScreen> {
                   ),
                   child: Row(
                     children: [
-                      const Icon(Icons.shield_outlined, color: MatriVaaniColors.forest, size: 18),
+                      const Icon(Icons.shield_outlined,
+                          color: MatriVaaniColors.forest, size: 18),
                       const SizedBox(width: 10),
                       Expanded(
                         child: Text(
                           'MatriVaani Offline Guard: All Santali speech samples are encrypted and securely stored in your local phone storage (SQLite).',
-                          style: TextStyle(color: MatriVaaniColors.muted, fontSize: 12, fontWeight: FontWeight.w700),
+                          style: TextStyle(
+                              color: MatriVaaniColors.muted,
+                              fontSize: 12,
+                              fontWeight: FontWeight.w700),
                         ),
                       ),
                     ],
@@ -532,9 +650,16 @@ class _LegendDot extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Container(width: 9, height: 9, decoration: BoxDecoration(color: color, shape: BoxShape.circle)),
+        Container(
+            width: 9,
+            height: 9,
+            decoration: BoxDecoration(color: color, shape: BoxShape.circle)),
         const SizedBox(width: 6),
-        Text(label, style: TextStyle(color: MatriVaaniColors.muted, fontSize: 12, fontWeight: FontWeight.w800)),
+        Text(label,
+            style: TextStyle(
+                color: MatriVaaniColors.muted,
+                fontSize: 12,
+                fontWeight: FontWeight.w800)),
       ],
     );
   }
@@ -545,14 +670,19 @@ class _ToggleRow extends StatelessWidget {
   final bool value;
   final ValueChanged<bool> onChanged;
 
-  const _ToggleRow({required this.title, required this.value, required this.onChanged});
+  const _ToggleRow(
+      {required this.title, required this.value, required this.onChanged});
 
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
         Expanded(
-          child: Text(title, style: TextStyle(color: MatriVaaniColors.muted, fontSize: 13, fontWeight: FontWeight.w900)),
+          child: Text(title,
+              style: TextStyle(
+                  color: MatriVaaniColors.muted,
+                  fontSize: 13,
+                  fontWeight: FontWeight.w900)),
         ),
         Switch(
           value: value,

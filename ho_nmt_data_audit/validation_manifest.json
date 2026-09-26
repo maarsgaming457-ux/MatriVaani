@@ -1,0 +1,278 @@
+[
+  {
+    "source": "ऋगवेद में अग्नी आग का देवता है।",
+    "target": "𑢼𑣂𑣌 𑢷𑣈𑣔𑣉 𑣜𑣈, 𑣞𑣈𑣊𑣈𑣚𑣔𑣉 𑣞𑣈𑣊𑣈𑣚 𑣗𑣉𑣊𑣋𑣁 𑣌𑣁𑣓𑣁𑣄.",
+    "direction": "hin_Deva2hoc_Wara",
+    "script_class": "WARANG_CITI"
+  },
+  {
+    "source": "मुझे पैसा चाहिए।",
+    "target": "𑢡𑣍 𑣘𑣉𑣆𑣞𑣁𑣍 𑣓𑣁𑣖𑣕𑣁𑣓𑣁.",
+    "direction": "hin_Deva2hoc_Wara",
+    "script_class": "WARANG_CITI"
+  },
+  {
+    "source": "जलेगा।",
+    "target": "𑢮𑣃𑣚𑣃𑣁.",
+    "direction": "hin_Deva2hoc_Wara",
+    "script_class": "WARANG_CITI"
+  },
+  {
+    "source": "फिर?",
+    "target": "𑢩𑣓𑣑𑣉𑣄 𑣖𑣂𑣞𑣈?",
+    "direction": "hin_Deva2hoc_Wara",
+    "script_class": "WARANG_CITI"
+  },
+  {
+    "source": "फिर से?",
+    "target": "𑢩𑣓𑣑𑣉𑣄 𑣖𑣂𑣞𑣈?",
+    "direction": "hin_Deva2hoc_Wara",
+    "script_class": "WARANG_CITI"
+  },
+  {
+    "source": "नहीं!",
+    "target": "𑢬𑣁𑣋𑣈!",
+    "direction": "hin_Deva2hoc_Wara",
+    "script_class": "WARANG_CITI"
+  },
+  {
+    "source": "मैं चावल खा रही हूँ।",
+    "target": "Manḍiń jom tana.",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "मैं चावल खा रहा हूँ।",
+    "target": "Manḍiń jom tana.",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "टॉम पागल नहीं था।",
+    "target": "Tom kać baya lena.",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "पक्का?",
+    "target": "Sari ge chi?",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "कैसे हो?",
+    "target": "Chilika menaḱbena?",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "आप कैसे हैं?",
+    "target": "Chilika menaḱmea?",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "आप कैसे हैं?",
+    "target": "Chilika menaḱbena?",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "आप कैसे हो?",
+    "target": "Chilika menaḱmea?",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "आप कैसे हो?",
+    "target": "Chilika menaḱbena?",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "आप कैसी हैं?",
+    "target": "Chilika menaḱmea?",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "आप कैसी हैं?",
+    "target": "Chilika menaḱbena?",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "तू कैसी है?",
+    "target": "Chilika menaḱmea?",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "तू कैसी है?",
+    "target": "Chilika menaḱbena?",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "तू कैसा है?",
+    "target": "Chilika menaḱmea?",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "तू कैसा है?",
+    "target": "Chilika menaḱbena?",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "तुम कैसी हो?",
+    "target": "Chilika menaḱmea?",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "तुम कैसी हो?",
+    "target": "Chilika menaḱbena?",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "तुम कैसे हो?",
+    "target": "Chilika menaḱmea?",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "तुम कैसे हो?",
+    "target": "Chilika menaḱbena?",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "कैसे हो?",
+    "target": "Chilika menaḱmea?",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "मेरी शादी हो चुकी है।",
+    "target": "Aandi akanań.",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "मैं शादीशुदा हूं।",
+    "target": "Aandi akanań.",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "मुझें आपकी याद आ रही है।",
+    "target": "Ameń uṛuḱ tana.",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "मुझें तुम्हारी याद आ रही है।",
+    "target": "Ameń uṛuḱ tana.",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "और जोर से।",
+    "target": "Onḍoḱ keḍeć te.",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "यह एक किताब है।",
+    "target": "Nena miat́ Kitaṕ.",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "यह किताब है।",
+    "target": "Nena miat́ Kitaṕ.",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "एक तालाब में एक बगुला, एक केकड़ा, बहुत से मछली और दूसरे जीव-जंतु रहते थे।",
+    "target": "Miat́ Koḱ, miat́ Kaakom, sange Há ko, onḍoḱ eṭaḱ Jivt́ann ko miat́ Banda rekô taenn taekena.",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "दवाई लो।",
+    "target": "Reeht́ jomê me.",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "एक, दो, तीन, चार, पाँच, छः, सात, आठ, नौ, दस।",
+    "target": "Mit́, bar, apé, upun, mõe, turui, ai, iril, are, gel.",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "बतख़!",
+    "target": "Ungut́enn me!",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "बतख़!",
+    "target": "Bohḱ naeć!",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "बतख़!",
+    "target": "Ungut́enn pe!",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "झुको!",
+    "target": "Ungut́enn me!",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "झुको!",
+    "target": "Bohḱ naeć!",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "झुको!",
+    "target": "Ungut́enn pe!",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "तुम कितने साल के हो?",
+    "target": "Chimin Sirmam hobaoḱ tana?",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "मैं जानना चाहती हूँ।",
+    "target": "Chirgal sukuń tana.",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "मैं जानना चाहता हूँ।",
+    "target": "Chirgal sukuń tana.",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  },
+  {
+    "source": "क्या आप शादीशुदा हैं?",
+    "target": "Aandi akanam?",
+    "direction": "hin_Deva2hoc_Latn",
+    "script_class": "LATIN"
+  }
+]

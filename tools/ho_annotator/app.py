@@ -1,4 +1,4 @@
-import sqlite3
+﻿import sqlite3
 import json
 import os
 import uvicorn
@@ -14,7 +14,7 @@ DB_FILE = "annotations.db"
 def init_db():
     conn = sqlite3.connect(DB_FILE)
     c = conn.cursor()
-    c.execute("""
+    c.execute('''
         CREATE TABLE IF NOT EXISTS annotations (
             id TEXT PRIMARY KEY,
             raw_asr_text TEXT,
@@ -30,20 +30,21 @@ def init_db():
             notes TEXT,
             demo_only BOOLEAN
         )
-    """)
+    ''')
     conn.commit()
     # Insert demo record if empty
     c.execute("SELECT COUNT(*) FROM annotations")
     if c.fetchone()[0] == 0:
-        c.execute("""INSERT INTO annotations VALUES (
+        c.execute('''INSERT INTO annotations VALUES (
             "DEMO_001", "[ENTER HO SENTENCE]", "[ENTER HO SENTENCE]", "[ENTER HINDI TRANSLATION]", 
-            "general_conversation", "manual", 0, 0, "ANON_001", NULL, "NEW", "", 1)""")
+            "general_conversation", "manual", 0, 0, "ANON_001", NULL, "NEW", "", 1)''')
         conn.commit()
     conn.close()
 
 init_db()
 
 class AnnotationUpdate(BaseModel):
+    translator_id: str
     ho: str
     hindi: str
     category: str
@@ -56,7 +57,7 @@ def get_records():
     conn = sqlite3.connect(DB_FILE)
     conn.row_factory = sqlite3.Row
     c = conn.cursor()
-    c.execute("SELECT * FROM annotations WHERE id != 'DEMO_001' ORDER BY source_split ASC, source_record_id ASC")
+    c.execute("SELECT * FROM annotations WHERE source_record_id IS NOT NULL ORDER BY source_split ASC, source_record_id ASC")
     rows = [dict(r) for r in c.fetchall()]
     conn.close()
     return rows
@@ -65,18 +66,66 @@ def get_records():
 def update_record(record_id: str, data: AnnotationUpdate):
     conn = sqlite3.connect(DB_FILE)
     c = conn.cursor()
-    # Validation checks
-    if data.review_status == "APPROVED" and (not data.human_verified or not data.ho.strip() or not data.hindi.strip()):
-        return {"error": "APPROVED records must be human verified and have non-empty Ho/Hindi text."}
     
-    c.execute("""
+    if data.human_verified and (not data.ho.strip() or not data.hindi.strip() or not data.translator_id.strip()):
+        data.human_verified = False
+        data.review_status = "NEEDS REVIEW"
+        return {"status": "error", "error": "Verification rejected: Corrected Ho, Hindi translation, and Translator ID must all be non-empty."}
+    elif data.human_verified:
+        data.review_status = "APPROVED"
+    else:
+        if data.review_status == "APPROVED":
+            data.review_status = "NEEDS REVIEW"
+    
+    c.execute('''
         UPDATE annotations SET
-        ho = ?, hindi = ?, category = ?, human_verified = ?, review_status = ?, notes = ?
+        ho = ?, hindi = ?, category = ?, human_verified = ?, review_status = ?, notes = ?, translator_id = ?
         WHERE id = ?
-    """, (data.ho, data.hindi, data.category, data.human_verified, data.review_status, data.notes, record_id))
+    ''', (data.ho, data.hindi, data.category, data.human_verified, data.review_status, data.notes, data.translator_id, record_id))
     conn.commit()
     conn.close()
-    return {"status": "success"}
+    return {"status": "success", "human_verified": data.human_verified, "review_status": data.review_status}
+
+@app.get("/api/audio/{record_id}")
+def get_audio(record_id: str):
+    from fastapi import HTTPException
+    from fastapi.responses import FileResponse
+    import sqlite3, json, os
+    
+    conn = sqlite3.connect(DB_FILE)
+    c = conn.cursor()
+    c.execute("SELECT source_record_id FROM annotations WHERE id = ?", (record_id,))
+    row = c.fetchone()
+    conn.close()
+    
+    if not row or not row[0]:
+        raise HTTPException(status_code=404, detail="Record not found")
+        
+    source_record_id = row[0]
+    manifest_path = r"C:\Users\maars\Downloads\ho_asr_recovery_manifest_100.jsonl"
+    audio_filename = None
+    if os.path.exists(manifest_path):
+        with open(manifest_path, "r", encoding="utf-8") as f:
+            for line in f:
+                if line.strip():
+                    r = json.loads(line)
+                    if r.get("source_record_id") == source_record_id:
+                        audio_filename = r.get("audio_filename")
+                        break
+                    
+    if not audio_filename:
+        raise HTTPException(status_code=404, detail="Audio not found in manifest")
+        
+    audio_dir = os.path.abspath("audio")
+    audio_path = os.path.abspath(os.path.join(audio_dir, audio_filename))
+    
+    if not audio_path.startswith(audio_dir):
+        raise HTTPException(status_code=403, detail="Forbidden")
+        
+    if not os.path.exists(audio_path):
+        raise HTTPException(status_code=404, detail="File not found")
+        
+    return FileResponse(audio_path, media_type="audio/wav")
 
 @app.post("/api/export/{status}")
 def export_records(status: str):
@@ -84,26 +133,32 @@ def export_records(status: str):
     conn.row_factory = sqlite3.Row
     c = conn.cursor()
     
-    if status == "ALL":
-        c.execute("SELECT * FROM annotations WHERE demo_only = 0")
-    else:
-        c.execute("SELECT * FROM annotations WHERE review_status = ? AND demo_only = 0", (status,))
-    
+    c.execute("SELECT * FROM annotations WHERE human_verified = 1 AND demo_only = 0 AND ho != '' AND hindi != ''")
     rows = [dict(r) for r in c.fetchall()]
     conn.close()
     
-    export_dir = os.path.join("..", "..", "data", "ho_hindi", "pilot_v0.1")
+    export_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "data", "ho_hindi", "verified"))
     os.makedirs(export_dir, exist_ok=True)
-    filename = os.path.join(export_dir, f"export_{status.lower()}.jsonl")
+    filename = os.path.join(export_dir, "ho_hindi_verified.jsonl")
     
+    exported_rows = []
     with open(filename, "w", encoding="utf-8") as f:
         for r in rows:
-            f.write(json.dumps(r, ensure_ascii=False) + "\\n")
+            export_record = {
+                "id": r.get("id"),
+                "ho": r.get("ho"),
+                "hindi": r.get("hindi"),
+                "source": r.get("source_dataset", "project-boli/ho"),
+                "license": "CC-BY-NC 4.0",
+                "human_verified": True
+            }
+            f.write(json.dumps(export_record, ensure_ascii=False) + "
+")
+            exported_rows.append(export_record)
             
-    return {"status": "success", "file": filename, "count": len(rows)}
+    return {"status": "success", "file": filename, "count": len(exported_rows)}
 
 app.mount("/", StaticFiles(directory="static", html=True), name="static")
 
 if __name__ == "__main__":
     uvicorn.run(app, host="127.0.0.1", port=8080)
-

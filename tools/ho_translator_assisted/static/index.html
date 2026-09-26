@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Translator Assisted UI - MatriVaani</title>
+    <meta charset="utf-8">
+    <style>
+        body { font-family: sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; background-color: #f8f9fa; }
+        .card { background: white; border: 1px solid #ced4da; padding: 25px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .field { margin-bottom: 20px; }
+        label { font-weight: bold; display: block; margin-bottom: 5px; color: #495057; }
+        input[type="text"], textarea { width: 100%; padding: 10px; box-sizing: border-box; border: 1px solid #ced4da; border-radius: 4px; font-size: 16px; }
+        textarea.readonly { background-color: #e9ecef; cursor: not-allowed; }
+        .reference-hint { background-color: #fff3cd; color: #856404; padding: 10px; border-left: 5px solid #ffe8a1; font-size: 0.9em; margin-top: 5px; border-radius: 4px;}
+        button { padding: 10px 20px; font-size: 16px; cursor: pointer; border-radius: 4px; border: none; font-weight: bold; }
+        .btn-primary { background-color: #007bff; color: white; }
+        .btn-secondary { background-color: #6c757d; color: white; }
+        .nav-buttons { margin-top: 25px; display: flex; justify-content: space-between; align-items: center; }
+        .error { color: #dc3545; font-weight: bold; margin-bottom: 15px; }
+        .success { color: #28a745; font-weight: bold; margin-bottom: 15px; }
+        .header-stats { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+        .counter { font-size: 1.2em; font-weight: bold; background: #e2e3e5; padding: 8px 15px; border-radius: 20px; }
+    </style>
+</head>
+<body>
+    <h2>MatriVaani Ho ↔ Hindi Translator Assisted Annotation</h2>
+    <div class="header-stats">
+        <div class="counter" id="progress-counter">Record 1 / 100</div>
+        <div>
+            <span id="completed-count" style="color: green; font-weight: bold;">0</span> / 100 Completed
+            <span id="milestone-status" style="margin-left: 10px; font-size: 0.9em; padding: 4px 8px; border-radius: 4px; background: #ffeeba;"></span>
+        </div>
+    </div>
+
+    <div id="msg"></div>
+
+    <div class="card" id="editor" style="display:none;">
+        <h4 id="record-id" style="margin-top:0; color:#6c757d;"></h4>
+
+        <div class="field">
+            <label>Ho Audio</label>
+            <audio id="audio_player" controls style="width: 100%;"></audio>
+        </div>
+
+        <div class="field">
+            <label>Verified Ho Transcript <span style="font-size:0.8em; font-weight:normal; color:#dc3545;">[READ ONLY]</span></label>
+            <textarea id="ho_transcript" rows="2" class="readonly" readonly></textarea>
+        </div>
+
+        <div class="field">
+            <label>Gloss Assist <span style="font-size:0.8em; font-weight:normal; color:#dc3545;">[READ ONLY]</span></label>
+            <div id="ho_gloss" class="reference-hint" style="font-family: monospace;"></div>
+        </div>
+
+        <div class="field">
+            <label>Resource Hint <span style="font-size:0.8em; font-weight:normal; color:#dc3545;">[REFERENCE ONLY — NOT VERIFIED]</span></label>
+            <div id="candidate_hint" class="reference-hint"></div>
+        </div>
+
+        <div class="field" style="margin-bottom: 30px;">
+            <label>Resource Source <span style="font-size:0.8em; font-weight:normal; color:#dc3545;">[READ ONLY]</span></label>
+            <div id="resource_source" style="font-size: 0.9em; color:#6c757d; font-style: italic;"></div>
+        </div>
+
+        <hr style="border:0; border-top: 1px solid #ced4da; margin-bottom: 25px;">
+
+        <div class="field">
+            <label>Hindi Translation <span style="font-size:0.8em; font-weight:normal; color:#28a745;">[EDITABLE]</span></label>
+            <textarea id="hindi_translation" rows="3" placeholder="Enter fluent Hindi translation here based on Ho audio and hints..."></textarea>
+        </div>
+
+        <div class="field">
+            <label>Translator ID <span style="font-size:0.8em; font-weight:normal; color:#28a745;">[EDITABLE]</span></label>
+            <input type="text" id="translator_id" placeholder="e.g. TR-001">
+        </div>
+
+        <div class="field">
+            <label>Notes <span style="font-size:0.8em; font-weight:normal; color:#28a745;">[EDITABLE]</span></label>
+            <input type="text" id="notes" placeholder="Linguistic notes, ambiguities, alternative meanings...">
+        </div>
+
+        <div class="field" style="background:#e9ecef; padding: 15px; border-radius: 4px; display: flex; gap: 20px;">
+            <label style="margin-bottom:0; cursor:pointer;"><input type="checkbox" id="completed" style="width:auto; margin-right:8px;"> Mark as Completed</label>
+            <label style="margin-bottom:0; cursor:pointer;"><input type="checkbox" id="human_verified" style="width:auto; margin-right:8px;"> Human Verified (I am a native/fluent speaker)</label>
+        </div>
+
+        <div class="nav-buttons">
+            <button class="btn-secondary" onclick="saveAndGo(-1)">&#8592; Prev</button>
+            <button class="btn-primary" onclick="saveOnly()">Save Current</button>
+            <button class="btn-secondary" onclick="saveAndGo(1)">Next &#8594;</button>
+        </div>
+    </div>
+
+    <script>
+        let records = [];
+        let currentIndex = 0;
+
+        async function init() {
+            try {
+                const res = await fetch("/api/records");
+                records = await res.json();
+                updateStatus();
+                if(records.length > 0) {
+                    document.getElementById('editor').style.display = 'block';
+                    loadRecord(0);
+                } else {
+                    document.getElementById('msg').innerHTML = "<p class='error'>No records found in database.</p>";
+                }
+            } catch(e) {
+                document.getElementById('msg').innerHTML = "<p class='error'>Failed to load records.</p>";
+            }
+        }
+
+        async function updateStatus() {
+            try {
+                const res = await fetch("/api/status");
+                const stats = await res.json();
+                document.getElementById('completed-count').innerText = stats.completed_count;
+                let msEl = document.getElementById('milestone-status');
+                msEl.innerText = stats.milestone_status;
+                if(stats.completed_count >= 50) {
+                    msEl.style.backgroundColor = "#d4edda";
+                    msEl.style.color = "#155724";
+                }
+            } catch(e) {}
+        }
+
+        function loadRecord(index) {
+            if(index < 0 || index >= records.length) return;
+            currentIndex = index;
+            document.getElementById('progress-counter').innerText = `Record ${index + 1} / ${records.length}`;
+
+            const r = records[index];
+            document.getElementById('record-id').innerText = r["ID"];
+            document.getElementById('ho_transcript').value = r["Verified Ho Transcript"];
+            document.getElementById('candidate_hint').innerText = r["Candidate Hindi Hints"];
+            document.getElementById('ho_gloss').innerText = r["Resource-Assisted Ho Gloss"];
+            document.getElementById('resource_source').innerText = r["Resource Source"] + " | Coverage: " + r["Resource Coverage"];
+
+            document.getElementById('hindi_translation').value = r["Hindi Translation"] || "";
+            document.getElementById('translator_id').value = r["Translator ID"] || "";
+            document.getElementById('notes').value = r["Notes"] || "";
+            document.getElementById('completed').checked = (r["Completed"] === "TRUE");
+            document.getElementById('human_verified').checked = (r["Human Verified"] === "TRUE");
+
+            const audioEl = document.getElementById('audio_player');
+            audioEl.src = `/api/audio/${r["ID"]}`;
+
+            document.getElementById('msg').innerHTML = "";
+        }
+
+        async function saveOnly() {
+            return await _save();
+        }
+
+        async function saveAndGo(step) {
+            const ok = await _save();
+            if(ok) {
+                let nextIdx = currentIndex + step;
+                if(nextIdx >= 0 && nextIdx < records.length) {
+                    loadRecord(nextIdx);
+                }
+            }
+        }
+
+        async function _save() {
+            const r = records[currentIndex];
+            const payload = {
+                hindi_translation: document.getElementById('hindi_translation').value,
+                translator_id: document.getElementById('translator_id').value,
+                notes: document.getElementById('notes').value,
+                completed: document.getElementById('completed').checked,
+                human_verified: document.getElementById('human_verified').checked
+            };
+
+            try {
+                const res = await fetch(`/api/records/${r["ID"]}`, {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify(payload)
+                });
+                const data = await res.json();
+                if(res.ok) {
+                    document.getElementById('msg').innerHTML = `<p class="success">Saved ${r["ID"]} successfully.</p>`;
+                    // Update local cache
+                    r["Hindi Translation"] = payload.hindi_translation;
+                    r["Translator ID"] = payload.translator_id;
+                    r["Notes"] = payload.notes;
+                    r["Completed"] = data.completed;
+                    r["Human Verified"] = data.human_verified;
+                    updateStatus();
+                    return true;
+                } else {
+                    document.getElementById('msg').innerHTML = `<p class="error">Error: ${data.detail || data.error}</p>`;
+                    return false;
+                }
+            } catch(e) {
+                document.getElementById('msg').innerHTML = `<p class="error">Network error saving record.</p>`;
+                return false;
+            }
+        }
+
+        window.onload = init;
+    </script>
+</body>
+</html>

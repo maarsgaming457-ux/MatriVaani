@@ -1,0 +1,10 @@
+{
+    "total_samples": 2169,
+    "successful_samples": 2169,
+    "failed_samples": 0,
+    "average_wer": 0.5133799473246429,
+    "average_cer": 0.20492733314271405,
+    "average_inference_time": 0.8620011599836618,
+    "median_inference_time": 0.6028778553009033,
+    "total_evaluation_time": 1869.6805160045624
+}

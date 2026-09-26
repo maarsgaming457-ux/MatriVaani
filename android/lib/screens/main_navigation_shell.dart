@@ -52,7 +52,8 @@ class _MainNavigationShellState extends State<MainNavigationShell> {
                   ),
                   Text(
                     'Santali Learning •',
-                    style: TextStyle(fontSize: 12, color: MatriVaaniColors.muted),
+                    style:
+                        TextStyle(fontSize: 12, color: MatriVaaniColors.muted),
                   ),
                 ],
               ),
@@ -222,7 +223,8 @@ class _AppLogo extends StatelessWidget {
         borderRadius: BorderRadius.circular(18),
         border: Border.all(color: MatriVaaniColors.border, width: 2),
       ),
-      child: const Icon(Icons.eco_outlined, color: MatriVaaniColors.primaryDark),
+      child:
+          const Icon(Icons.eco_outlined, color: MatriVaaniColors.primaryDark),
     );
   }
 }

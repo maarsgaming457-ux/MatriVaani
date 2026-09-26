@@ -1,0 +1,186 @@
+{
+  "ho_asr_research": {
+    "datasets": [
+      {
+        "name": "project-boli/ho",
+        "url": "https://huggingface.co/datasets/project-boli/ho",
+        "license": "CC-BY-NC-SA-4.0",
+        "speakers": 1,
+        "utterances": "< 1000",
+        "duration": "< 1 hour",
+        "sampling_rate": 16000,
+        "script": "Mixed Latin/Devanagari",
+        "transcript_format": "Tabular text",
+        "language_code": "hoc",
+        "quality": "Studio/Controlled",
+        "human_verified": true,
+        "suitable_for_asr_training": false
+      }
+    ],
+    "other_repositories_checked": [
+      "Common Voice",
+      "AI4Bharat IndicVoices",
+      "Bhashini",
+      "OpenSLR"
+    ],
+    "models": [
+      {
+        "name": "facebook/mms-1b-all",
+        "status": "Inadequate (incorrect script/domain mismatch)"
+      }
+    ]
+  },
+  "ho_hindi_translation_research": {
+    "human_ground_truth": "0 sentence pairs found publicly",
+    "resource_supported": "CIIL grammar PDFs, vocab dictionaries (not parallel sentences)",
+    "synthetic": "None public",
+    "ai_generated": "None public",
+    "unverified": "Generic GitHub scrapes"
+  },
+  "ho_tts_research": {
+    "datasets": "0 public Ho TTS datasets",
+    "models": [
+      {
+        "name": "facebook/mms-tts-hoc",
+        "actual_support": "Technical audio generation only",
+        "script": "Odia",
+        "compatibility": "Incompatible with Latin/Devanagari",
+        "status": "NOT SUITABLE"
+      }
+    ]
+  },
+  "model_candidates": {
+    "ho_asr": [
+      {
+        "candidate": "facebook/wav2vec2-large-xlsr-53",
+        "actual_ho_support": "None",
+        "tokenizer": "CTC (to be built)",
+        "script": "Agnostic",
+        "parameter_count": "317M",
+        "license": "Apache 2.0",
+        "fine_tuning_requirements": "50+ hours data",
+        "colab_feasibility": "Yes",
+        "category": "FINE-TUNING REQUIRED"
+      }
+    ],
+    "hindi_ho_nmt": [
+      {
+        "candidate": "ai4bharat/indictrans2-indic-indic-dist-320M",
+        "architecture": "Transformer Seq2Seq",
+        "languages": "22 Indic (No Ho)",
+        "tokenizer": "IndicTransTokenizer",
+        "script": "Devanagari/Latin",
+        "training_requirements": "Vocab extension + LoRA/full FT",
+        "minimum_parallel_data": "50,000 pairs",
+        "colab_feasibility": "Yes",
+        "inference_latency": "500ms - 1s",
+        "license": "MIT",
+        "category": "FINE-TUNING REQUIRED"
+      }
+    ],
+    "ho_tts": [
+      {
+        "candidate": "VITS",
+        "architecture": "End-to-End TTS (CVAE + Adversarial)",
+        "languages": "Agnostic",
+        "tokenizer": "Custom G2P required",
+        "script": "Devanagari/Latin",
+        "training_requirements": "5-10 hours single-speaker clean audio",
+        "minimum_parallel_data": "N/A",
+        "colab_feasibility": "Yes",
+        "inference_latency": "100ms - 300ms",
+        "license": "MIT",
+        "category": "TRAINING REQUIRED"
+      }
+    ]
+  },
+  "data_gap_analysis": [
+    {
+      "task": "Ho ASR",
+      "data_we_have": "0 hours",
+      "data_available_publicly": "< 1 hour",
+      "data_missing": "~49 hours",
+      "target_size": "50 hours"
+    },
+    {
+      "task": "Hindi->Ho",
+      "data_we_have": "Lexicons",
+      "data_available_publicly": "0 pairs",
+      "data_missing": "50,000 pairs",
+      "target_size": "50,000 sentence pairs"
+    },
+    {
+      "task": "Ho->Hindi",
+      "data_we_have": "Lexicons",
+      "data_available_publicly": "0 pairs",
+      "data_missing": "50,000 pairs",
+      "target_size": "50,000 sentence pairs"
+    },
+    {
+      "task": "Ho TTS",
+      "data_we_have": "0 hours",
+      "data_available_publicly": "0 hours",
+      "data_missing": "5-10 hours",
+      "target_size": "5-10 hours (single speaker)"
+    }
+  ],
+  "recommended_data_strategy": {
+    "ho_asr": {
+      "keep": "None",
+      "supplement": "project-boli/ho",
+      "collect_new": "50+ hours crowdsourced classroom speech",
+      "synthetic": "None",
+      "human_verification": "Required for all transcripts"
+    },
+    "translation": {
+      "keep": "Existing lexicons and rules",
+      "supplement": "None",
+      "collect_new": "Textbook translations",
+      "synthetic": "Template-based sentence generation using lexicons",
+      "human_verification": "Strictly required for all synthetic data"
+    },
+    "ho_tts": {
+      "keep": "None",
+      "supplement": "None",
+      "collect_new": "10-hour studio recording of single female teacher",
+      "synthetic": "None",
+      "human_verification": "Required"
+    }
+  },
+  "google_colab_feasibility": {
+    "asr": {
+      "gpu": "A100 (40GB) or L4",
+      "vram": "24GB+",
+      "ram": "32GB+",
+      "disk": "100GB",
+      "training_time": "10-15 hours",
+      "checkpoint_size": "~1.2 GB",
+      "inference_requirements": "CPU or T4 GPU"
+    },
+    "nmt": {
+      "gpu": "L4 or A100",
+      "vram": "16GB+",
+      "ram": "16GB+",
+      "disk": "50GB",
+      "training_time": "4-8 hours",
+      "checkpoint_size": "~1.2 GB",
+      "inference_requirements": "CPU or T4 GPU"
+    },
+    "tts": {
+      "gpu": "A100 (40GB)",
+      "vram": "24GB+",
+      "ram": "32GB+",
+      "disk": "50GB",
+      "training_time": "24-48 hours",
+      "checkpoint_size": "~200 MB",
+      "inference_requirements": "CPU or T4 GPU"
+    }
+  },
+  "final_decision": {
+    "ho_asr": "RETRAIN",
+    "hindi_ho": "REBUILD",
+    "ho_hindi": "REBUILD",
+    "ho_tts": "TRAIN",
+    "project_boli_ho": "SUPPLEMENT"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "PRIMARY_MODEL": "google/byt5-small",
+  "SECONDARY_MODEL": "google/mt5-small",
+  "train_pairs": 173,
+  "val_pairs": 46,
+  "test_pairs": 111,
+  "byt5_analysis": {
+    "warang_citi_support": true,
+    "unknown_tokens": false,
+    "reasoning": "ByT5 operates directly on UTF-8 bytes, meaning it natively represents the Warang Citi Unicode block without OOV (Out of Vocabulary) <unk> token degradation."
+  },
+  "nllb_analysis": {
+    "warang_citi_support": false,
+    "unknown_tokens": true,
+    "reasoning": "NLLB-200 SentencePiece vocabulary does not contain Warang Citi tokens. Output defaults to <unk> stripping."
+  }
+}

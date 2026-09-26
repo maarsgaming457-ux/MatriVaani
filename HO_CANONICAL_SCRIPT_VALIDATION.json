@@ -1,0 +1,21 @@
+{
+  "validation_objective": "Canonical Ho Script Selection",
+  "selected_script": "Devanagari",
+  "evidence_separation": {
+    "linguistic": "Requires orthographic conventions (apostrophes/halants) to handle Munda checked consonants/glottal stops.",
+    "dataset": "Highly fragmented globally (Latin, Odia, Devanagari, Warang Citi). Devanagari is standard in Jharkhand schools.",
+    "model_tokenizer": "Devanagari is highly optimized in IndicTrans2 and NLLB. Warang Citi would cause severe token fragmentation.",
+    "engineering": "Simplifies UI rendering, avoids custom BPE training, aligns with Hindi hub."
+  },
+  "key_findings": {
+    "target_user_appropriateness": "Hindi-medium teachers in Jharkhand can read it natively.",
+    "linguistic_preservation": "Possible, provided strict grapheme-to-phoneme rules are enforced for checked consonants.",
+    "unicode_normalization": "Requires standard NFC and strict conventions for glottal stops.",
+    "tokenizer_compatibility": "Excellent. Indic tokenizers support Devanagari natively.",
+    "tts_asr_readiness": "Fully feasible with custom G2P mapping."
+  },
+  "final_verdict": {
+    "decision": "KEEP DEVANAGARI",
+    "rationale": "It is the only script that satisfies both the pedagogical needs of the end-users (Hindi-medium teachers) and the computational realities of modern Indic NLP tokenizers."
+  }
+}

@@ -1,0 +1,250 @@
+{
+  "google/byt5-small": {
+    "hindi": [
+      {
+        "text": "पुलिस!",
+        "tokens": 17,
+        "decoded": "पुलिस!",
+        "unknown": false
+      },
+      {
+        "text": "शुक्रिया।",
+        "tokens": 28,
+        "decoded": "शुक्रिया।",
+        "unknown": false
+      },
+      {
+        "text": "मेरे पास एक गाड़ी है।",
+        "tokens": 56,
+        "decoded": "मेरे पास एक गाड़ी है।",
+        "unknown": false
+      }
+    ],
+    "warang_citi": [
+      {
+        "text": "𑢸𑣉𑣚𑣂𑣞!",
+        "tokens": 22,
+        "decoded": "𑢸𑣉𑣚𑣂𑣞!",
+        "unknown": false
+      },
+      {
+        "text": "𑢷𑣂𑣕𑣂𑣈𑣖.",
+        "tokens": 26,
+        "decoded": "𑢷𑣂𑣕𑣂𑣈𑣖.",
+        "unknown": false
+      },
+      {
+        "text": "𑢩𑣓𑣑𑣉𑣄 𑣖𑣂𑣞𑣈!",
+        "tokens": 39,
+        "decoded": "𑢩𑣓𑣑𑣉𑣄 𑣖𑣂𑣞𑣈!",
+        "unknown": false
+      }
+    ],
+    "latin": [
+      {
+        "text": "Ań taḱ Car menaḱa.",
+        "tokens": 24,
+        "decoded": "Ań taḱ Car menaḱa.",
+        "unknown": false
+      },
+      {
+        "text": "London remea chi?",
+        "tokens": 18,
+        "decoded": "London remea chi?",
+        "unknown": false
+      },
+      {
+        "text": "Hokaê me!",
+        "tokens": 11,
+        "decoded": "Hokaê me!",
+        "unknown": false
+      }
+    ]
+  },
+  "facebook/nllb-200-distilled-600M": {
+    "hindi": [
+      {
+        "text": "पुलिस!",
+        "tokens": 4,
+        "decoded": "पुलिस!",
+        "unknown": false
+      },
+      {
+        "text": "शुक्रिया।",
+        "tokens": 5,
+        "decoded": "शुक्रिया।",
+        "unknown": false
+      },
+      {
+        "text": "मेरे पास एक गाड़ी है।",
+        "tokens": 8,
+        "decoded": "मेरे पास एक गाड़ी है।",
+        "unknown": false
+      }
+    ],
+    "warang_citi": [
+      {
+        "text": "𑢸𑣉𑣚𑣂𑣞!",
+        "tokens": 5,
+        "decoded": "!",
+        "unknown": true
+      },
+      {
+        "text": "𑢷𑣂𑣕𑣂𑣈𑣖.",
+        "tokens": 5,
+        "decoded": ".",
+        "unknown": true
+      },
+      {
+        "text": "𑢩𑣓𑣑𑣉𑣄 𑣖𑣂𑣞𑣈!",
+        "tokens": 7,
+        "decoded": " !",
+        "unknown": true
+      }
+    ],
+    "latin": [
+      {
+        "text": "Ań taḱ Car menaḱa.",
+        "tokens": 11,
+        "decoded": "Ań ta Car menaa.",
+        "unknown": true
+      },
+      {
+        "text": "London remea chi?",
+        "tokens": 7,
+        "decoded": "London remea chi?",
+        "unknown": false
+      },
+      {
+        "text": "Hokaê me!",
+        "tokens": 7,
+        "decoded": "Hokaê me!",
+        "unknown": false
+      }
+    ]
+  },
+  "google/mt5-small": {
+    "hindi": [
+      {
+        "text": "पुलिस!",
+        "tokens": 4,
+        "decoded": "पुलिस!",
+        "unknown": false
+      },
+      {
+        "text": "शुक्रिया।",
+        "tokens": 4,
+        "decoded": "शुक्रिया।",
+        "unknown": false
+      },
+      {
+        "text": "मेरे पास एक गाड़ी है।",
+        "tokens": 10,
+        "decoded": "मेरे पास एक गाड़ी है।",
+        "unknown": false
+      }
+    ],
+    "warang_citi": [
+      {
+        "text": "𑢸𑣉𑣚𑣂𑣞!",
+        "tokens": 4,
+        "decoded": "!",
+        "unknown": true
+      },
+      {
+        "text": "𑢷𑣂𑣕𑣂𑣈𑣖.",
+        "tokens": 4,
+        "decoded": ".",
+        "unknown": true
+      },
+      {
+        "text": "𑢩𑣓𑣑𑣉𑣄 𑣖𑣂𑣞𑣈!",
+        "tokens": 6,
+        "decoded": " !",
+        "unknown": true
+      }
+    ],
+    "latin": [
+      {
+        "text": "Ań taḱ Car menaḱa.",
+        "tokens": 10,
+        "decoded": "Ań taḱ Car menaḱa.",
+        "unknown": false
+      },
+      {
+        "text": "London remea chi?",
+        "tokens": 6,
+        "decoded": "London remea chi?",
+        "unknown": false
+      },
+      {
+        "text": "Hokaê me!",
+        "tokens": 6,
+        "decoded": "Hokaê me!",
+        "unknown": false
+      }
+    ]
+  },
+  "facebook/mbart-large-50-many-to-many-mmt": {
+    "hindi": [
+      {
+        "text": "पुलिस!",
+        "tokens": 4,
+        "decoded": "पुलिस!",
+        "unknown": false
+      },
+      {
+        "text": "शुक्रिया।",
+        "tokens": 5,
+        "decoded": "शुक्रिया।",
+        "unknown": false
+      },
+      {
+        "text": "मेरे पास एक गाड़ी है।",
+        "tokens": 9,
+        "decoded": "मेरे पास एक गाड़ी है।",
+        "unknown": false
+      }
+    ],
+    "warang_citi": [
+      {
+        "text": "𑢸𑣉𑣚𑣂𑣞!",
+        "tokens": 5,
+        "decoded": "!",
+        "unknown": true
+      },
+      {
+        "text": "𑢷𑣂𑣕𑣂𑣈𑣖.",
+        "tokens": 5,
+        "decoded": ".",
+        "unknown": true
+      },
+      {
+        "text": "𑢩𑣓𑣑𑣉𑣄 𑣖𑣂𑣞𑣈!",
+        "tokens": 7,
+        "decoded": " !",
+        "unknown": true
+      }
+    ],
+    "latin": [
+      {
+        "text": "Ań taḱ Car menaḱa.",
+        "tokens": 11,
+        "decoded": "Ań taḱ Car menaḱa.",
+        "unknown": false
+      },
+      {
+        "text": "London remea chi?",
+        "tokens": 7,
+        "decoded": "London remea chi?",
+        "unknown": false
+      },
+      {
+        "text": "Hokaê me!",
+        "tokens": 7,
+        "decoded": "Hokaê me!",
+        "unknown": false
+      }
+    ]
+  }
+}

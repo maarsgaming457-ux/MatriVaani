@@ -1,0 +1,3 @@
+import inspect
+from transformers.generation.utils import GenerationMixin
+print(inspect.getsource(GenerationMixin._prepare_attention_mask_for_generation))

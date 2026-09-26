@@ -79,7 +79,8 @@ class MatriVaaniTheme {
         style: FilledButton.styleFrom(
           backgroundColor: MatriVaaniColors.primary,
           foregroundColor: Colors.white,
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(18)),
+          shape:
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(18)),
           padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 14),
         ),
       ),

@@ -1,0 +1,28 @@
+{
+  "audit_type": "Real Data vs Simulation Audit",
+  "quarantine_location": "data/ho_quarantine/simulated/",
+  "real_data_totals": {
+    "asr": {
+      "real_local_hours": 0.0,
+      "real_metadata_utterances": 100,
+      "real_speakers": 1,
+      "quarantined_simulations": 7250
+    },
+    "translation": {
+      "real_human_ground_truth_pairs": 0,
+      "real_synthetic_pairs": 223,
+      "quarantined_simulations": 1300
+    },
+    "tts": {
+      "real_hours": 0.0,
+      "real_speakers": 0,
+      "quarantined_simulations": 750
+    }
+  },
+  "training_gate": {
+    "asr": "NOT READY - REAL DATA INSUFFICIENT",
+    "translation": "NOT READY - REAL DATA INSUFFICIENT",
+    "tts": "NOT READY - REAL DATA INSUFFICIENT"
+  },
+  "critical_notice": "SIMULATED DATA MUST NOT BE USED AS GROUND TRUTH OR TRAINING DATA."
+}

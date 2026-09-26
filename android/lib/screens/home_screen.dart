@@ -1,462 +1,214 @@
 import 'package:flutter/material.dart';
-import 'translator_screen.dart';
 import '../theme/app_theme.dart';
-import '../widgets/animated_button.dart';
+import '../services/api_service.dart';
+import 'translator_screen.dart';
+import 'dart:async';
 
 class HomeScreen extends StatefulWidget {
-  final ValueChanged<int> onGoToTab;
-  const HomeScreen({super.key, required this.onGoToTab});
+  final ValueChanged<int>? onGoToTab;
+  const HomeScreen({super.key, this.onGoToTab});
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  bool _isHearing = false;
+  bool _isOnline = false;
+  Timer? _pingTimer;
 
-  void _goTo(int tabIndex) => widget.onGoToTab(tabIndex);
-
-  void _onHearWord() {
-    setState(() => _isHearing = true);
-
-    // Show immediately so widget tests don't need timer pumping.
-    ScaffoldMessenger.of(context).showSnackBar(
-      const SnackBar(content: Text('Playing word pronunciation…')),
-    );
-
-    Future.delayed(const Duration(milliseconds: 250)).then((_) {
-      if (!mounted) return;
-      setState(() => _isHearing = false);
-    });
+  @override
+  void initState() {
+    super.initState();
+    _checkStatus();
+    _pingTimer =
+        Timer.periodic(const Duration(seconds: 5), (_) => _checkStatus());
   }
 
   @override
-  Widget build(BuildContext context) {
-    return ListView(
-      padding: const EdgeInsets.fromLTRB(16, 10, 16, 24),
-      children: [
-        // Top greeting banner
-        Card(
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(22)),
-          child: Padding(
-            padding: const EdgeInsets.all(16),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Row(
-                  children: [
-                    _ClassChip(text: 'Class 2 •'),
-                    const Spacer(),
-                    _StatChip(
-                      icon: Icons.local_fire_department_outlined,
-                      label: '5 Days',
-                      color: MatriVaaniColors.primary.withValues(alpha: 0.13),
-                      fg: MatriVaaniColors.primary,
-                    ),
-                    const SizedBox(width: 8),
-                    _StatChip(
-                      icon: Icons.star_border_rounded,
-                      label: '120',
-                      color: MatriVaaniColors.amber.withValues(alpha: 0.18),
-                      fg: MatriVaaniColors.primaryDark,
-                      isStars: true,
-                    ),
-                  ],
-                ),
-                const SizedBox(height: 12),
-                Text(
-                  'ᱡᱚᱦᱟᱨ, ᱥᱚᱱᱟ! Ready to speak today?',
-                  style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w900),
-                ),
-              ],
-            ),
-          ),
-        ),
+  void dispose() {
+    _pingTimer?.cancel();
+    super.dispose();
+  }
 
-        const SizedBox(height: 14),
+  Future<void> _checkStatus() async {
+    bool online = await ApiService.isOnline();
+    if (mounted && online != _isOnline) {
+      setState(() {
+        _isOnline = online;
+      });
+    }
+  }
 
-        // Local mode pill + sync shortcut
-        Card(
-          color: MatriVaaniColors.surface,
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(22)),
-          child: Padding(
-            padding: const EdgeInsets.all(14),
-            child: Row(
-              children: [
-                const Icon(Icons.offline_bolt_outlined, size: 26, color: MatriVaaniColors.forest),
-                const SizedBox(width: 10),
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: const [
-                      Text('Local Mode Active', style: TextStyle(fontWeight: FontWeight.w900, fontSize: 16)),
-                      SizedBox(height: 4),
-                      Text('3 voice logs saved offline (matrivaani_local.db…)', style: TextStyle(color: MatriVaaniColors.muted, fontSize: 12, fontWeight: FontWeight.w700)),
-                    ],
-                  ),
-                ),
-                AnimatedButton.elevated(
-                  key: const Key('home_btn_sync'),
-                  onPressed: () => _goTo(3),
-                  backgroundColor: MatriVaaniColors.forest2,
-                  foregroundColor: Colors.white,
-                  padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
-                  child: const Row(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      Icon(Icons.sync_alt_rounded, size: 20),
-                      SizedBox(width: 8),
-                      Text('Sync'),
-                    ],
-                  ),
-                ),
-              ],
-            ),
-          ),
-        ),
+  void _navigateToTab(int index) {
+    if (widget.onGoToTab != null) {
+      widget.onGoToTab!(index);
+    }
+  }
 
-        const SizedBox(height: 14),
-
-        // Classroom hero card
-        Card(
-          color: const Color(0xFFA8431D),
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(22)),
-          child: Padding(
-            padding: const EdgeInsets.all(16),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Row(
-                  children: [
-                    _HeroBadge(text: 'Voice Interactive • Instant AI Echo'),
-                    const Spacer(),
-                    const Icon(Icons.mic, color: Colors.white, size: 28),
-                  ],
-                ),
-                const SizedBox(height: 10),
-                Text(
-                  'Classroom',
-                  style: TextStyle(color: Colors.white.withValues(alpha: 0.95), fontSize: 22, fontWeight: FontWeight.w900),
-                ),
-                const SizedBox(height: 6),
-                Text(
-                  'Speak in Santali, see Ol Chiki words live!',
-                  style: TextStyle(color: Colors.white.withValues(alpha: 0.9), fontSize: 14, fontWeight: FontWeight.w600),
-                ),
-                const SizedBox(height: 14),
-                Row(
-                  children: [
-                    _LiveRecDot(color: Colors.greenAccent),
-                    const SizedBox(width: 8),
-                    const Expanded(
-                      child: Text(
-                        'Live recognition',
-                        style: TextStyle(color: Colors.white, fontWeight: FontWeight.w800),
-                      ),
-                    ),
-                    AnimatedButton.elevated(
-                      key: const Key('home_btn_start_classroom'),
-                      onPressed: () => _goTo(1),
-                      backgroundColor: Colors.white,
-                      foregroundColor: const Color(0xFFA8431D),
-                      padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 14),
-                      child: const Row(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          Icon(Icons.mic_none_rounded, size: 20),
-                          SizedBox(width: 8),
-                          Text('Start •'),
-                        ],
-                      ),
-                    ),
-                  ],
-                )
-              ],
-            ),
-          ),
-        ),
-
-        const SizedBox(height: 14),
-
-        // Today's word card
-        Card(
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(22)),
-          child: Padding(
-            padding: const EdgeInsets.all(16),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Row(
-                  children: [
-                    const Icon(Icons.book_outlined, color: MatriVaaniColors.primaryDark),
-                    const SizedBox(width: 8),
-                    const Text('Today\'s Word •', style: TextStyle(fontWeight: FontWeight.w900, fontSize: 16)),
-                    const Spacer(),
-                    _LetterChip(text: 'Letter 1'),
-                  ],
-                ),
-                const SizedBox(height: 12),
-                Row(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Container(
-                      width: 86,
-                      height: 86,
-                      decoration: BoxDecoration(
-                        color: MatriVaaniColors.primaryDark,
-                        borderRadius: BorderRadius.circular(18),
-                      ),
-                      child: const Center(
-                        child: Text('ᱫ', style: TextStyle(fontSize: 44, color: Colors.white, fontWeight: FontWeight.w900)),
-                      ),
-                    ),
-                    const SizedBox(width: 14),
-                    Expanded(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          const Text('ᱫᱚᱨᱚᱡ (Doroj)', style: TextStyle(fontSize: 20, fontWeight: FontWeight.w900)),
-                          const SizedBox(height: 6),
-                          Text('Say it back: "ᱫᱚᱨᱚᱡ"', style: TextStyle(color: MatriVaaniColors.muted, fontWeight: FontWeight.w700)),
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
-                const SizedBox(height: 14),
-                AnimatedButton.elevated(
-                  key: const Key('home_btn_hear_word'),
-                  onPressed: _onHearWord,
-                  loading: _isHearing,
-                  child: const Row(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      Icon(Icons.hearing_rounded, size: 20),
-                      SizedBox(width: 8),
-                      Text('Hear •'),
-                    ],
-                  ),
-                ),
-              ],
-            ),
-          ),
-        ),
-
-        const SizedBox(height: 14),
-
-        // Translator shortcut
-        Card(
-          color: MatriVaaniColors.primary,
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(22)),
-          child: InkWell(
-            borderRadius: BorderRadius.circular(22),
-            onTap: () {
-              Navigator.push(context, MaterialPageRoute(builder: (_) => TranslatorScreen()));
-            },
-            child: Padding(
-              padding: const EdgeInsets.all(16),
-              child: Row(
-                children: [
-                  const Icon(Icons.translate, color: Colors.white, size: 28),
-                  const SizedBox(width: 14),
-                  Expanded(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text('Translator', style: TextStyle(color: Colors.white.withValues(alpha: 0.95), fontSize: 18, fontWeight: FontWeight.w900)),
-                        const SizedBox(height: 4),
-                        Text('Text & Voice Translation', style: TextStyle(color: Colors.white.withValues(alpha: 0.8), fontSize: 12, fontWeight: FontWeight.w600)),
-                      ],
-                    ),
-                  ),
-                  const Icon(Icons.arrow_forward_ios_rounded, color: Colors.white, size: 16),
-                ],
-              ),
-            ),
-          ),
-        ),
-
-        const SizedBox(height: 14),
-
-        // Feature chips
-        Wrap(
-          spacing: 10,
-          runSpacing: 10,
-          children: const [
-            _FeatureChip(icon: Icons.record_voice_over, text: 'PTT Mode', color: MatriVaaniColors.primary),
-            _FeatureChip(icon: Icons.translate, text: 'Bilingual Echo', color: MatriVaaniColors.forest),
-            _FeatureChip(icon: Icons.offline_bolt_outlined, text: 'Offline Voice DB', color: MatriVaaniColors.amber),
-            _FeatureChip(icon: Icons.fast_forward_rounded, text: 'Fast Inference', color: MatriVaaniColors.primaryDark),
-          ],
-        ),
-
-        const SizedBox(height: 22),
-
-        // Design cards
-        Row(
-          children: [
-            _DesignMock(
-              path: 'assets/designs/figma_classroom.png',
-              fallbackColor: const Color(0xFFF2EDF5),
-              fallbackIcon: Icons.mic_none_rounded,
-              label: 'Classroom •',
-            ),
-            const SizedBox(width: 12),
-            _DesignMock(
-              path: 'assets/designs/figma_flashcards.png',
-              fallbackColor: const Color(0xFFF5EEDD),
-              fallbackIcon: Icons.book_outlined,
-              label: 'Flashcards •',
-            ),
-          ],
-        ),
-
-        const SizedBox(height: 22),
-      ],
+  void _navigateToTranslator() {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => TranslatorScreen()),
     );
   }
-}
 
-// --- UI Helpers (unchanged from original file) ---------------------------
-class _ClassChip extends StatelessWidget {
-  final String text;
-  const _ClassChip({required this.text});
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
-      decoration: BoxDecoration(
-        color: MatriVaaniColors.primaryDark,
-        borderRadius: BorderRadius.circular(999),
-      ),
-      child: Text(text, style: const TextStyle(color: Colors.white, fontWeight: FontWeight.w800, fontSize: 12)),
-    );
-  }
-}
-
-class _StatChip extends StatelessWidget {
-  final IconData icon;
-  final String label;
-  final Color color;
-  final Color fg;
-  final bool isStars;
-
-  const _StatChip({required this.icon, required this.label, required this.color, required this.fg, this.isStars = false});
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
-      decoration: BoxDecoration(color: color, borderRadius: BorderRadius.circular(999)),
-      child: Row(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          Icon(icon, color: fg, size: 18),
-          const SizedBox(width: 6),
-          Text(label, style: TextStyle(color: fg, fontWeight: FontWeight.w900, fontSize: 12)),
-          if (isStars) const Text(' ⭐', style: TextStyle(fontSize: 14)),
-        ],
-      ),
-    );
-  }
-}
-
-class _HeroBadge extends StatelessWidget {
-  final String text;
-  const _HeroBadge({required this.text});
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
-      decoration: BoxDecoration(
-        color: Colors.white.withValues(alpha: 0.22),
-        borderRadius: BorderRadius.circular(999),
-      ),
-      child: Text(text, style: const TextStyle(color: Colors.white, fontWeight: FontWeight.w800, fontSize: 12)),
-    );
-  }
-}
-
-class _LiveRecDot extends StatelessWidget {
-  final Color color;
-  const _LiveRecDot({required this.color});
-  @override
-  Widget build(BuildContext context) {
-    return Container(width: 14, height: 14, decoration: BoxDecoration(color: color, shape: BoxShape.circle));
-  }
-}
-
-class _LetterChip extends StatelessWidget {
-  final String text;
-  const _LetterChip({required this.text});
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
-      decoration: BoxDecoration(
-        color: MatriVaaniColors.primaryDark,
-        borderRadius: BorderRadius.circular(999),
-      ),
-      child: Text(text, style: const TextStyle(color: Colors.white, fontWeight: FontWeight.w800, fontSize: 12)),
-    );
-  }
-}
-
-class _FeatureChip extends StatelessWidget {
-  final IconData icon;
-  final String text;
-  final Color color;
-
-  const _FeatureChip({required this.icon, required this.text, required this.color});
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
-      decoration: BoxDecoration(
-        color: color.withValues(alpha: 0.10),
-        borderRadius: BorderRadius.circular(999),
-        border: Border.all(color: color.withValues(alpha: 0.22)),
-      ),
-      child: Row(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          Icon(icon, color: color, size: 18),
-          const SizedBox(width: 8),
-          Text(text, style: TextStyle(color: color, fontWeight: FontWeight.w900, fontSize: 13)),
-        ],
-      ),
-    );
-  }
-}
-
-class _DesignMock extends StatelessWidget {
-  final String path;
-  final Color fallbackColor;
-  final IconData fallbackIcon;
-  final String label;
-
-  const _DesignMock({required this.path, required this.fallbackColor, required this.fallbackIcon, required this.label});
-
-  @override
-  Widget build(BuildContext context) {
-    return Expanded(
-      child: Container(
-        height: 140,
-        decoration: BoxDecoration(
-          color: fallbackColor,
-          borderRadius: BorderRadius.circular(20),
-        ),
-        child: Center(
+  Widget _buildCard(
+      String title, IconData icon, Color color, VoidCallback onTap) {
+    return Card(
+      elevation: 2,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+      child: InkWell(
+        onTap: onTap,
+        borderRadius: BorderRadius.circular(16),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 8),
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             mainAxisSize: MainAxisSize.min,
             children: [
-              Icon(fallbackIcon, color: MatriVaaniColors.muted, size: 32),
-              const SizedBox(height: 8),
-              Text(label, style: TextStyle(color: MatriVaaniColors.muted, fontWeight: FontWeight.w800)),
+              Icon(icon, size: 48, color: color),
+              const SizedBox(height: 12),
+              Text(
+                title,
+                textAlign: TextAlign.center,
+                style: const TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black87,
+                ),
+              ),
             ],
           ),
         ),
+      ),
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.grey.shade100,
+      body: SafeArea(
+        child: Column(
+          children: [
+            // Header
+            Container(
+              width: double.infinity,
+              padding: const EdgeInsets.symmetric(vertical: 24, horizontal: 16),
+              decoration: const BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(24),
+                  bottomRight: Radius.circular(24),
+                ),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black12,
+                    blurRadius: 4,
+                    offset: Offset(0, 2),
+                  )
+                ],
+              ),
+              child: Column(
+                children: [
+                  Text(
+                    'MatriVaani',
+                    style: TextStyle(
+                      fontSize: 32,
+                      fontWeight: FontWeight.w900,
+                      color: Colors.blue.shade900,
+                      letterSpacing: 1.2,
+                    ),
+                  ),
+                  const SizedBox(height: 8),
+                  const Text(
+                    'Learn • Speak • Understand',
+                    style: TextStyle(
+                      fontSize: 16,
+                      color: Colors.black54,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                  const SizedBox(height: 16),
+                  Container(
+                    padding:
+                        const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+                    decoration: BoxDecoration(
+                      color: _isOnline
+                          ? Colors.green.shade50
+                          : Colors.orange.shade50,
+                      borderRadius: BorderRadius.circular(16),
+                      border: Border.all(
+                        color: _isOnline
+                            ? Colors.green.shade300
+                            : Colors.orange.shade300,
+                      ),
+                    ),
+                    child: Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Icon(
+                          _isOnline ? Icons.cloud_done : Icons.cloud_off,
+                          size: 16,
+                          color: _isOnline
+                              ? Colors.green.shade700
+                              : Colors.orange.shade700,
+                        ),
+                        const SizedBox(width: 6),
+                        Text(
+                          _isOnline
+                              ? 'Synced (Online)'
+                              : 'Offline (Cached Mode)',
+                          style: TextStyle(
+                            fontSize: 13,
+                            fontWeight: FontWeight.bold,
+                            color: _isOnline
+                                ? Colors.green.shade800
+                                : Colors.orange.shade800,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+
+            // Grid
+            Expanded(
+              child: GridView.count(
+                padding: const EdgeInsets.all(20),
+                crossAxisCount: 2,
+                mainAxisSpacing: 16,
+                crossAxisSpacing: 16,
+                childAspectRatio: 1.1,
+                children: [
+                  _buildCard('Classroom\nVoice', Icons.mic,
+                      Colors.purple.shade600, () => _navigateToTab(1)),
+                  _buildCard('Translator', Icons.language, Colors.blue.shade600,
+                      _navigateToTranslator),
+                  _buildCard('Lessons', Icons.menu_book, Colors.green.shade600,
+                      () => _showComingSoon(context)),
+                  _buildCard('Worksheets', Icons.edit_note,
+                      Colors.orange.shade600, () => _showComingSoon(context)),
+                  _buildCard('Flashcards', Icons.style, Colors.red.shade600,
+                      () => _navigateToTab(2)),
+                  _buildCard('Sync Data', Icons.sync, Colors.teal.shade600,
+                      () => _navigateToTab(3)),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  void _showComingSoon(BuildContext context) {
+    ScaffoldMessenger.of(context).showSnackBar(
+      const SnackBar(
+        content: Text('Feature coming soon!'),
+        duration: Duration(seconds: 1),
       ),
     );
   }

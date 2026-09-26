@@ -1,0 +1,82 @@
+{
+  "ASR_Hindi": {
+    "status": 200,
+    "latency": 1.2181107997894287,
+    "output": " झाल"
+  },
+  "ASR_Ho1": {
+    "status": 200,
+    "latency": 0.24635648727416992,
+    "output": "आबु एन हो को नेनता काबु बेटाइचि कोआ"
+  },
+  "ASR_Ho2": {
+    "status": 200,
+    "latency": 0.18595051765441895,
+    "output": "एनको नेनता काबु बेटा इचिि कोआ"
+  },
+  "Trans_Hi_Sat_0": {
+    "status": 200,
+    "latency": 0.00463104248046875,
+    "output": "Mocked translation"
+  },
+  "Trans_Sat_Hi_0": {
+    "status": 200,
+    "latency": 0.004358768463134766,
+    "output": "Mocked translation"
+  },
+  "Trans_Hi_Sat_1": {
+    "status": 200,
+    "latency": 0.014449357986450195,
+    "output": "Mocked translation"
+  },
+  "Trans_Sat_Hi_1": {
+    "status": 200,
+    "latency": 0.005075693130493164,
+    "output": "Mocked translation"
+  },
+  "Trans_Hi_Sat_2": {
+    "status": 200,
+    "latency": 0.025056838989257812,
+    "output": "Mocked translation"
+  },
+  "Trans_Sat_Hi_2": {
+    "status": 200,
+    "latency": 0.004550457000732422,
+    "output": "Mocked translation"
+  },
+  "Trans_Hi_Sat_3": {
+    "status": 200,
+    "latency": 0.004468441009521484,
+    "output": "Mocked translation"
+  },
+  "Trans_Sat_Hi_3": {
+    "status": 200,
+    "latency": 0.0042400360107421875,
+    "output": "Mocked translation"
+  },
+  "Trans_Hi_Sat_4": {
+    "status": 200,
+    "latency": 0.004274606704711914,
+    "output": "Mocked translation"
+  },
+  "Trans_Sat_Hi_4": {
+    "status": 200,
+    "latency": 0.0043201446533203125,
+    "output": "Mocked translation"
+  },
+  "Trans_Ho_Hi_Blocked": {
+    "status": 200,
+    "latency": 0.002344846725463867,
+    "output": "Ho translation is not yet available in the current prototype."
+  },
+  "Trans_Hi_Ho_Blocked": {
+    "status": 200,
+    "latency": 0.002337932586669922,
+    "output": "Ho translation is not yet available in the current prototype."
+  },
+  "TTS_Hindi": {
+    "status": 200,
+    "latency": 2.024921417236328,
+    "output": "[Audio Data Received]"
+  }
+}

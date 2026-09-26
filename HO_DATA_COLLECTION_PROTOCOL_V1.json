@@ -1,0 +1,25 @@
+{
+  "protocol": "Real Native Ho Data Collection V1",
+  "rules": [
+    "NO SIMULATION",
+    "NO FABRICATION",
+    "PROVENANCE FIRST"
+  ],
+  "asr": {
+    "target_hours": "5-10",
+    "target_speakers": 10,
+    "spec": "16kHz Mono WAV",
+    "script": "Devanagari"
+  },
+  "translation": {
+    "target_pairs": 1000,
+    "required_status": "HUMAN_GROUND_TRUTH",
+    "script": "Devanagari"
+  },
+  "tts": {
+    "target_hours": 1.0,
+    "target_speakers": 1,
+    "spec": "Studio 16kHz Mono WAV",
+    "script": "Devanagari"
+  }
+}

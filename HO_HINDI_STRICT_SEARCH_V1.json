@@ -1,0 +1,21 @@
+{
+  "total_verified_hindi_ho_sentence_pairs": 0,
+  "actual_downloadable_pair_count": 0,
+  "gated_pair_count": 0,
+  "dictionary_entries": "unknown_not_downloadable",
+  "lexicon_entries": "unknown_not_downloadable",
+  "rejected_resources": [
+    "Glosbe",
+    "Tatoeba",
+    "OPUS",
+    "Hugging Face",
+    "GitHub",
+    "AI4Bharat",
+    "English-Ho Academic Corpus"
+  ],
+  "our_real_ho_asr": 100,
+  "english_ho_reported": 12500,
+  "synthetic": 223,
+  "simulated": 9300,
+  "final_statement": "NO VERIFIED HINDI-HO SENTENCE-ALIGNED DATASET FOUND."
+}

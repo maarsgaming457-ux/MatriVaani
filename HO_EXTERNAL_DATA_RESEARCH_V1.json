@@ -1,0 +1,14 @@
+{
+  "total_accessible_new_asr_hours": 0.0,
+  "total_accessible_new_ho_hindi_pairs": 0,
+  "total_accessible_new_tts_hours": 0.0,
+  "requestable_ho_english_pairs": 12500,
+  "gated_datasets": [
+    "karya/endangered-recipes-translated-500"
+  ],
+  "request_required_datasets": [
+    "Academic English-Ho Corpus (12,500 pairs)",
+    "Bhashini/ULCA Ho resources"
+  ],
+  "ready_to_download_clean_datasets": []
+}

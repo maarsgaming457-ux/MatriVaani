@@ -23,3 +23,15 @@ pytest-cov>=4.1.0
 python-dotenv>=1.0.0
 openai>=1.0.0
 requests>=2.31.0
+
+# Translation & NMT
+IndicTransToolkit
+sacremoses
+sentencepiece
+
+# Pydantic
+pydantic>=2.0.0
+
+# External API integration
+requests
+openai
