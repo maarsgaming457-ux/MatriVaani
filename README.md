@@ -1,29 +1,75 @@
-# MatriVaani
+<div align="center">
+  <img src="https://img.shields.io/badge/Flutter-%2302569B.svg?style=for-the-badge&logo=Flutter&logoColor=white" alt="Flutter">
+  <img src="https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi" alt="FastAPI">
+  <img src="https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white" alt="PyTorch">
+  <img src="https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white" alt="Android">
+</div>
 
-MatriVaani is a Mother Tongue Based Primary Education Tool designed for Android, backed by an offline-capable FastAPI backend with state-of-the-art Neural Machine Translation (NMT) and Automatic Speech Recognition (ASR) for Indian tribal languages.
+# MatriVaani 
 
-## Problem
-Vernacular primary education suffers from a severe lack of digital resources in tribal languages like Santali and Mundari. Teachers and students struggle with language barriers in foundational learning. MatriVaani bridges this gap by offering a fully functional translation and voice-interaction layer directly on Android.
+MatriVaani is a **Mother Tongue Based Primary Education Tool** designed natively for Android. It bridges the digital divide in vernacular primary education by offering a fully functional translation, Text-To-Speech (TTS), and Automatic Speech Recognition (ASR) layer for Indian tribal languages like **Santali** and **Mundari**.
 
-## Features
-- **Mundari NMT:** High-accuracy offline translation model fine-tuned for Hindi ↔ Mundari.
-- **Santali ASR:** Offline speech recognition for Santali built on a fine-tuned wav2vec2 architecture.
-- **FastAPI Backend:** Lightweight API handling offline inference, TTS wrapping, and routing.
-- **Flutter Android Application:** Native cross-platform user interface optimized for classroom environments.
+Our core mission is to enable seamless dual-mode execution, ensuring that students and teachers can interact with the app utilizing **Cloud APIs** when an internet connection is present, or fallback securely to **Genuine On-Device Inference** in zero-connectivity environments.
 
-## Architecture
+---
+
+## 🎯 Project Purpose
+
+Vernacular primary education suffers from a severe lack of digital resources in tribal languages. Teachers and students struggle with language barriers in foundational learning. 
+
+MatriVaani bridges this gap by offering a fully functional translation and voice-interaction layer directly on Android, allowing:
+- **Teachers** to translate state-curriculum material from Hindi/English to local tribal languages.
+- **Students** to interact via voice natively in their mother tongue.
+- **Remote Schools** to operate offline without requiring expensive internet infrastructure.
+
+---
+
+## ✨ Features Actually Implemented
+
+| Feature | Description | Status |
+| :--- | :--- | :---: |
+| **Mundari NMT** | High-accuracy translation model fine-tuned for Hindi ↔ Mundari based on IndicTrans2. | ✅ Active |
+| **Santali ASR** | Speech recognition for Santali built on a fine-tuned wav2vec2 architecture (Ol Chiki output). | ✅ Active |
+| **Dual-Mode Flutter UI** | Native cross-platform user interface optimized for classroom environments. | ✅ Active |
+| **Cloud FastAPI Backend** | Lightweight API handling online inference, TTS wrapping, and HTTP routing. | ✅ Active |
+| **On-Device True Offline Mode** | Full on-device model execution without a PC dependency. | 🚧 In Progress |
+
+---
+
+## 🏗️ Architecture (Dual-Mode)
+
+MatriVaani dynamically shifts between **Online Mode** and **Offline Mode** to provide the best user experience. 
+*(Note: PC-hosted FastAPI connecting to Android over Local Wi-Fi is considered an intermediate Developer Mode, not true offline).*
+
+```text
+                         MATRI VAANI
+                              │
+                    ┌─────────┴─────────┐
+                    │                   │
+               ONLINE MODE         OFFLINE MODE
+                    │                   │
+             Internet available     No Internet
+                    │                   │
+             Cloud FastAPI API       Android device
+                    │                   │
+          ┌─────────┼─────────┐      Local models
+          │         │         │         │
+       Translation  ASR      TTS       ASR/NMT/TTS
+          │         │         │         │
+          └─────────┴─────────┘         │
+                    │                   │
+                 Response          Response
+                    │                   │
+                    └─────────┬─────────┘
+                              │
+                       Flutter UI
 ```
-Flutter Android App
-        ↓
-FastAPI Backend
-        ↓
-Translation / ASR / TTS Services
-        ↓
-Production Models / External APIs
-```
 
-## Repository Structure
-```
+---
+
+## 📂 Repository Structure
+
+```text
 MatriVaani/
 ├── android/                   # Flutter dependencies and build configurations
 ├── app/                       # FastAPI application core, routers, and services
@@ -32,105 +78,97 @@ MatriVaani/
 │   └── best_model_main2/      # LFS-tracked Mundari NMT production model weights
 ├── models/
 │   └── santhali_asr_final_5k/ # LFS-tracked Santali ASR production model weights
+├── docs/                      # Extensive project architecture and deployment guides
 ├── .env.example               # Environment variable templates
 ├── .gitignore                 # Strict rules to prevent committing secrets & huge files
 ├── requirements.txt           # Python backend dependencies
-└── README.md                  # This file
+└── README.md                  # Master documentation
 ```
 
-## Models
-### Mundari NMT
-- **Purpose:** Translates text between Hindi and Mundari.
-- **Model Format:** `.safetensors` (IndicTrans2 architecture).
-- **Runtime Location:** `backend/best_model_main2/`
-- **Git LFS:** Tracks `model.safetensors` (~1.2 GB).
-- **License:** MIT (Fine-tuned from IndicTrans2).
+---
 
-### Santali ASR
-- **Purpose:** Transcribes spoken Santali into text (Ol Chiki script).
-- **Model Format:** `.safetensors` (Wav2Vec2 / MMS).
-- **Runtime Location:** `models/santhali_asr_final_5k/`
-- **Git LFS:** Tracks `model.safetensors` (~1.2 GB).
-- **License:** Apache 2.0 / CC-BY-NC 4.0 (depending on the base model used).
+## ⚙️ Installation & Setup
 
-## Requirements
-- **Python:** 3.10+
+### Prerequisites
+- **Python:** 3.10+ (C++ Build Tools required on Windows for `IndicTransToolkit`)
 - **Flutter SDK:** >=2.17.0 <4.0.0
-- **Android Studio / SDK:** Required to build the Android application.
-- **Git LFS:** Required to download production models.
-- **External APIs (Optional fallback):** Sarvam API, Groq API, Bhashini API.
+- **Git LFS:** Required to download production models natively.
 
-## Installation
+### 1. Clone & Pull Models
+Because GitHub restricts files over 100MB, the `model.safetensors` files for our models are tracked using **Git Large File Storage (LFS)**. You must run `git lfs pull` after cloning.
+
 ```bash
-# 1. Clone the repository
 git clone https://github.com/maarsgaming457-ux/MatriVaani.git
 cd MatriVaani
 
-# 2. Initialize and pull large model files
 git lfs install
 git lfs pull
-
-# 3. Create a Python virtual environment
-python -m venv venv
-
-# Windows activation
-venv\Scripts\activate
-# Linux/Mac activation
-source venv/bin/activate
-
-# 4. Install backend dependencies
-pip install -r requirements.txt
 ```
 
-## Environment Variables
-MatriVaani requires environment variables to connect to external fallback services (if used). 
-Copy the example environment file:
+### 2. Backend Setup & `.env`
+MatriVaani uses environment variables to connect to external fallback services safely. **Never commit `.env` to Git.**
+
 ```bash
+# Copy template securely
 cp .env.example .env
-```
-Fill in the credentials locally. **Never commit `.env` to Git.**
 
-## Backend Setup
-Start the local FastAPI server:
-```bash
+# Create and activate virtual environment
+python -m venv venv
+source venv/bin/activate  # On Windows: .\venv\Scripts\activate
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Start the server
 uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
 ```
 
-## Android Setup
+### 3. Flutter Setup
 1. Ensure the Flutter CLI is installed.
-2. Navigate to the `android/` directory (or project root if configured as such) and fetch dependencies:
+2. Navigate to the project root (where `pubspec.yaml` is located) and fetch dependencies:
    ```bash
    flutter pub get
    ```
-3. Create a local `.env` file in the Flutter assets directory mapping `API_BASE_URL` to your backend.
-   - For an Android Emulator testing the local backend, use: `http://10.0.2.2:8000`
-4. Run the application:
+3. Run the application:
    ```bash
    flutter run
    ```
+*(For Android Emulator testing, point your Flutter backend URL to `http://10.0.2.2:8000`)*
 
-## API Endpoints
-- `GET /health` : Returns API health status.
-- `POST /translate` : Accepts source text, source lang, target lang. Returns translated text.
-- `POST /asr` : Accepts audio binary. Returns transcribed text.
-- `POST /tts` : Accepts text and language. Returns synthesized audio binary.
+---
 
-## Deployment
-### Backend Deployment
-The FastAPI backend can be deployed online using Docker, Render, or Google Cloud Run.
-**Important Limitation:** The production models (NMT + ASR) combined consume over 3GB of RAM and ~2.5GB of disk space. Free-tier deployment services will likely crash out of memory. A VPS with at least 8GB of RAM or a dedicated Hugging Face Inference Endpoint is recommended if hosting models locally.
+## 🌐 Online Deployment
 
-If a deployment server lacks storage, configure the application to call external APIs (Sarvam/Groq) by passing those API keys as Environment Secrets in the deployment dashboard.
+The FastAPI backend can be deployed online via VPS or managed services (Docker, Google Cloud Run). 
+**⚠️ Important limitation:** The production local models (NMT + ASR) consume over **3.5 GB of RAM** combined when loaded into PyTorch. Free-tier deployment services will encounter Out Of Memory (OOM) errors. A VPS with at least **8GB of RAM** is required for hosting models locally on the cloud.
 
-## Git LFS
-Because GitHub restricts files over 100MB, the `model.safetensors` files for both models are tracked using Git Large File Storage (LFS). 
-You must run `git lfs pull` after cloning to retrieve the actual weights, otherwise you will only download 1KB text pointer files.
+See [ONLINE_DEPLOYMENT.md](docs/ONLINE_DEPLOYMENT.md) for full hosting instructions.
 
-## Troubleshooting
-- **ModuleNotFoundError:** Ensure your virtual environment is activated and `requirements.txt` is installed.
-- **Model weights missing / corrupted:** Run `git lfs pull`. Ensure Git LFS is installed globally.
+---
+
+## 📱 Offline Requirements
+
+The project is moving towards genuine on-device execution (LiteRT/TFLite/ONNX/ExecuTorch). 
+True offline mode strictly means:
+- No internet.
+- No cloud API.
+- No PC-hosted FastAPI server.
+
+We are currently tracking mobile inference feasibility. See [OFFLINE_CAPABILITY_MATRIX.md](docs/OFFLINE_CAPABILITY_MATRIX.md) and [MODEL_RUNTIME.md](docs/MODEL_RUNTIME.md) for implementation roadmaps.
+
+---
+
+## 🛠️ Troubleshooting
+
+- **ModuleNotFoundError for IndicTransToolkit (Windows):** Ensure you have installed Microsoft C++ Build Tools before running `pip install`.
+- **Model weights missing or 1KB in size:** You forgot to run `git lfs pull`. Ensure Git LFS is installed globally.
 - **Android Emulator Network Error:** Ensure the app points to `10.0.2.2:8000` instead of `localhost:8000`.
 
-## License / Attribution
-- Code licensed under MIT.
-- Models inherit base model licenses (IndicTrans2 -> MIT, Wav2Vec2/MMS -> Apache 2.0 / CC-BY-NC 4.0).
+---
+
+## 📄 License & Attribution
+
+- Application Code is licensed under **MIT**.
+- Models inherit base model licenses:
+  - **IndicTrans2** → MIT
+  - **Wav2Vec2/MMS** → Apache 2.0 / CC-BY-NC 4.0 (varies by base).

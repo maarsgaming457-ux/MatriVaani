@@ -1,31 +1,76 @@
 # MatriVaani Architecture
 
-## Overview
-MatriVaani is an AI-Powered Vernacular Pedagogy and Real-Time Translation Engine, designed specifically to process Santali speech into structured educational content.
+MatriVaani is designed using a **Dual-Mode Architecture**. It provides a fully connected experience via cloud APIs when the internet is available, and an on-device fallback when offline.
 
-## Components
+## Core Architecture Tree
 
-### 1. Frontend (Streamlit)
-- `app/frontend/app.py`: Provides the user interface for audio upload, language selection, and visualization of the multi-stage AI pipeline.
+```text
+                         MATRI VAANI
+                              │
+                    ┌─────────┴─────────┐
+                    │                   │
+               ONLINE MODE         OFFLINE MODE
+                    │                   │
+             Internet available     No Internet
+                    │                   │
+             Cloud FastAPI API       Android device
+                    │                   │
+          ┌─────────┼─────────┐      Local models
+          │         │         │         │
+       Translation  ASR      TTS       ASR/NMT/TTS
+          │         │         │         │
+          └─────────┴─────────┘         │
+                    │                   │
+                 Response          Response
+                    │                   │
+                    └─────────┬─────────┘
+                              │
+                       Flutter UI
+```
 
-### 2. Backend API (FastAPI)
-- `app/api/main.py`: Exposes REST endpoints (`/health`, `/api/v1/process`, etc.) to trigger the backend workflows. It handles file uploads, saves temporary files, calls the LangGraph pipeline, and cleans up resources.
+## Online Mode Layer
+When the internet is available, the Flutter application queries the Cloud FastAPI instance.
+- **Backend Framework:** FastAPI (`0.0.0.0`, configurable `$PORT`)
+- **Pipeline:** HTTPS → Translation/ASR/TTS endpoints → Response
 
-### 3. Pipeline Orchestration (LangGraph)
-- `app/graph/workflow.py`: Manages the sequential state flow of the data.
-- **Nodes**:
-  - `ASR`: Transcribes Santali audio using a Wav2Vec2 checkpoint.
-  - `Cleaner`: Normalizes the transcript, removes noise, and preserves Ol Chiki script.
-  - `Translator`: Translates the cleaned Santali text into the target language (e.g., Hindi, English).
-  - `Scriptwriter`: Uses an LLM to generate a structured educational script from the translated text.
-  - `Copy Editor`: Uses an LLM to professionally edit the generated script for clarity and flow.
-  - `Finalizer`: Consolidates the outputs, maps metadata, and determines the final success/failure state of the pipeline.
+## Offline Mode Layer
+True offline means no internet, no cloud API, no PC hosting the FastAPI server.
+- **Pipeline:** Android Microphone/Text → Local On-Device Inference (TFLite/ONNX) → Native App Response.
 
-### 4. Services (Adapters)
-- `ASRService`: Singleton service wrapping the Hugging Face `Wav2Vec2ForCTC` model. Supports a `checkpoint` provider (real model) and a `mock` provider.
-- `TranslationService`: Connects to OpenAI for translation, with a `mock` fallback.
-- `LLMService`: Handles Scriptwriter and Copy Editor prompts using OpenAI API.
-- `TTSService`: Placeholder for future Santali text-to-speech capabilities.
+## Mode Manager Abstraction
+The application utilizes a central execution-mode abstraction, avoiding scattered logic inside UI widgets:
 
-## Data Flow
-`Audio File -> ASR -> Raw Santali -> Cleaner -> Clean Santali -> Translator -> Translated Text -> Scriptwriter -> Draft Script -> Copy Editor -> Final Script`
+```text
+ExecutionMode
+ ├── automatic (Fallback preferred)
+ ├── online    (Force cloud)
+ └── offline   (Force local)
+```
+
+And corresponding internal engines:
+```text
+TranslationEngine
+ ├── OnlineTranslationEngine
+ └── OfflineTranslationEngine
+
+ASREngine
+ ├── OnlineASREngine
+ └── OfflineASREngine
+
+TTSEngine
+ ├── OnlineTTSEngine
+ └── OfflineTTSEngine
+```
+
+## Automatic Fallback Flow
+```text
+Internet available
+       ↓
+     ONLINE
+       ↓
+ request fails?
+    /       \
+  no         yes (with short timeout)
+  ↓           ↓
+response    OFFLINE
+```
