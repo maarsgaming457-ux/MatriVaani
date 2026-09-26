@@ -1,0 +1,59 @@
+{
+  "TOTAL_PHYSICAL_FILES": 100,
+  "TOTAL_UNIQUE_RECORDINGS": 100,
+  "TOTAL_DUPLICATES": 0,
+  "TOTAL_DURATION_HOURS": 0.07904718749999999,
+  "TOTAL_SPEAKERS": 1,
+  "VALID_WAV_FILES": 100,
+  "INVALID_WAV_FILES": 0,
+  "TRANSCRIPT_VERIFIED_RECORDS": 100,
+  "MANIFEST_MATCHED_RECORDS": 100,
+  "TRAINING_GATE": "NOT READY - REAL DATA INSUFFICIENT",
+  "AUDIO_STATS": {
+    "min_duration_s": 1.43,
+    "max_duration_s": 5.68,
+    "mean_duration_s": 2.84569875
+  },
+  "TEST_AUDIO": [
+    {
+      "path": "ho_test_audio\\ho1.wav",
+      "filename": "ho1.wav",
+      "duration": 3.92,
+      "sample_rate": 16000,
+      "channels": 1,
+      "sha256": "28b5f11666434993e1649de47b23b79705e7ed3c824d33ac735053671681c6bf",
+      "manifest_association": false,
+      "provenance": "ho_test_audio directory (Historical ASR tests)"
+    },
+    {
+      "path": "FINAL_SUBMISSION\\SOURCE\\ho_test_audio\\ho1.wav",
+      "filename": "ho1.wav",
+      "duration": 3.92,
+      "sample_rate": 16000,
+      "channels": 1,
+      "sha256": "28b5f11666434993e1649de47b23b79705e7ed3c824d33ac735053671681c6bf",
+      "manifest_association": false,
+      "provenance": "ho_test_audio directory (Historical ASR tests)"
+    },
+    {
+      "path": "ho_test_audio\\ho2.wav",
+      "filename": "ho2.wav",
+      "duration": 2.76,
+      "sample_rate": 16000,
+      "channels": 1,
+      "sha256": "332981223bd2c9fb69cccc0a7e11062bdb1d42075b1f34619a6b3df5d1db3235",
+      "manifest_association": false,
+      "provenance": "ho_test_audio directory (Historical ASR tests)"
+    },
+    {
+      "path": "FINAL_SUBMISSION\\SOURCE\\ho_test_audio\\ho2.wav",
+      "filename": "ho2.wav",
+      "duration": 2.76,
+      "sample_rate": 16000,
+      "channels": 1,
+      "sha256": "332981223bd2c9fb69cccc0a7e11062bdb1d42075b1f34619a6b3df5d1db3235",
+      "manifest_association": false,
+      "provenance": "ho_test_audio directory (Historical ASR tests)"
+    }
+  ]
+}

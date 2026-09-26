@@ -1,0 +1,12 @@
+{
+  "corpus_found": false,
+  "status": "NOT_FOUND",
+  "total_verified_hindi_ho_pairs": 0,
+  "hindi_to_ho_pairs": 0,
+  "ho_to_hindi_pairs": 0,
+  "external_ho_english_pairs": 12500,
+  "our_physical_ho_asr_recordings": 100,
+  "synthetic_records": 223,
+  "simulated_quarantined_records": 9300,
+  "message": "NO VERIFIED PUBLIC HINDI-HO PARALLEL CORPUS FOUND."
+}

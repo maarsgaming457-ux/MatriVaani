@@ -1,0 +1,34 @@
+{
+  "ho_asr_readiness": {
+    "hours": 0.2,
+    "speakers": 1,
+    "utterances": 100,
+    "unique_transcripts": 100,
+    "splits": {"train": 100, "validation": 0, "test": 0},
+    "verified_percentage": 100
+  },
+  "translation_readiness": {
+    "sentence_pairs": 223,
+    "human_ground_truth": 0,
+    "resource_supported": 223,
+    "synthetic": 223,
+    "ai_generated": 0,
+    "unverified": 0,
+    "splits": {"train": 181, "validation": 22, "test": 20}
+  },
+  "tts_readiness": {
+    "hours": 0,
+    "speakers": 0,
+    "utterances": 0,
+    "verified_transcripts": 0,
+    "audio_quality_statistics": null
+  },
+  "final_answers": {
+    "data_we_have": "100 ASR utterances (project-boli), small lexicons, 223 synthetic translation pairs, 0 TTS data.",
+    "data_missing": "50 hours ASR data, 50,000 parallel translation pairs, 5-10 hours TTS data.",
+    "ready_for_asr_training": false,
+    "ready_for_translation_training": false,
+    "ready_for_tts_training": false,
+    "recommended_next_phase": "Data Collection & Synthetic Validation Loop (Do NOT proceed to model training)"
+  }
+}

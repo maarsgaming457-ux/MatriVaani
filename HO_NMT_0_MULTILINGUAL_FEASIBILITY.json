@@ -1,0 +1,18 @@
+{
+  "corpus_source": "Not openly available. Academic request required.",
+  "verified_english_ho_pairs": 0,
+  "usable_english_ho_pairs": 0,
+  "license": "Private/Unknown",
+  "script": "Unknown (Likely Warang Citi)",
+  "candidate_models": [
+    "NLLB-200",
+    "IndicTrans2",
+    "mT5/ByT5"
+  ],
+  "hindi_support_verified": true,
+  "ho_support_verified": false,
+  "colab_feasible": true,
+  "latency_implications": "Single model is 2x faster than cascading.",
+  "evaluation_set_needed": "50-100 human-verified Hindi-Ho pairs",
+  "decision_gate": "OPTION_C_MORE_HINDI_HO_HUMAN_DATA_REQUIRED"
+}

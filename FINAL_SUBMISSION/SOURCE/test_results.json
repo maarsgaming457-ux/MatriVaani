@@ -1,0 +1,20 @@
+{
+  "test_A": {
+    "status": 200,
+    "body": {
+      "translation": "इँ दो संथादि तेंग रोडा।"
+    }
+  },
+  "test_B": {
+    "status": 200,
+    "body": {
+      "translation": "ᱤᱱᱟ ᱥᱟᱱᱛᱟᱞᱤ ᱚᱱᱚᱞᱟ।"
+    }
+  },
+  "test_C": {
+    "status": 500,
+    "body": {
+      "detail": "Unsupported language: en"
+    }
+  }
+}

@@ -18,22 +18,43 @@
 </head>
 <body>
     <h2>MatriVaani Ho-Hindi Annotator</h2>
+    <div id="progress-counter" style="font-weight: bold; font-size: 1.2em; margin-bottom: 15px; color: #333; padding: 10px; background: #e9ecef; border-radius: 5px; text-align: center;"></div>\n
+    <div style="background-color: #fff3cd; padding: 15px; border-left: 5px solid #ffc107; margin-bottom: 20px;">
+        <strong>Ho ? Hindi Human Annotation Instructions:</strong>
+        <ol style="margin-top: 5px; margin-bottom: 5px;">
+            <li>Listen to the Ho recording.</li>
+            <li>Review the Raw Ho ASR.</li>
+            <li>Enter the Corrected Ho Transcription.</li>
+            <li>Enter the Hindi meaning manually.</li>
+            <li>Do not use machine translation as ground truth.</li>
+            <li>Verify that the Hindi meaning matches the spoken Ho sentence.</li>
+            <li>Mark Human Verified only after reviewing the complete pair.</li>
+            <li>Save the record.</li>
+        </ol>
+        <p style="color: red; font-weight: bold; margin-bottom: 0;">WARNING: Only a competent Ho speaker should complete or verify the linguistic annotation.</p>
+    </div>
+
     <div id="msg"></div>
     <div class="card" id="editor" style="display:none;">
         <h3 id="record-id"></h3>
         
         <div class="field">
-            <label>Raw Ho ASR (Do not edit)</label>
+            <label>Ho Audio</label>
+            <audio id="audio_player" controls style="width: 100%;"></audio>
+        </div>
+        
+        <div class="field">
+            <label>Raw Ho ASR</label><small style="display:block;margin-bottom:5px;color:#555;">Do not edit. This is the machine generated ASR.</small>
             <textarea id="raw_asr_text" readonly rows="2" style="background:#f5f5f5;"></textarea>
         </div>
         
         <div class="field">
-            <label>Corrected Ho (Devanagari)</label>
+            <label>Corrected Ho Transcription</label><small style="display:block;margin-bottom:5px;color:#555;">Listen carefully to the recording and correct the Raw Ho ASR only when you are confident about the spoken Ho.</small>
             <textarea id="ho" rows="2"></textarea>
         </div>
         
         <div class="field">
-            <label>Hindi Translation (Natural meaning in Devanagari)</label>
+            <label>Human Hindi Translation</label><small style="display:block;margin-bottom:5px;color:#555;">Listen to the Ho recording and enter the Hindi meaning manually. Do not use machine-generated translation as ground truth.</small>
             <textarea id="hindi" rows="2"></textarea>
         </div>
         
@@ -64,6 +85,11 @@
             </select>
         </div>
         
+        
+        <div class="field">
+            <label>Translator / Reviewer ID</label>
+            <input type="text" id="translator_id">
+        </div>
         <div class="field">
             <label>Notes</label>
             <input type="text" id="notes">
@@ -78,8 +104,7 @@
     
     <div class="export-section">
         <h3>Export Data</h3>
-        <button onclick="exportData('APPROVED')">Export Approved</button>
-        <button onclick="exportData('ALL')">Export All Valid</button>
+        <button onclick="exportData('VERIFIED')">Export Verified (Phase 12 Pilot)</button>
     </div>
 
     <script>
@@ -91,10 +116,19 @@
             records = await res.json();
             if(records.length > 0) {
                 document.getElementById("editor").style.display = "block";
+                updateProgress();
                 showRecord(0);
             } else {
                 document.getElementById("msg").innerHTML = "No records found.";
             }
+        }
+
+        
+        function updateProgress() {
+            let verifiedCount = records.filter(r => r.human_verified && r.ho && r.ho.trim() !== '' && r.hindi && r.hindi.trim() !== '').length;
+            let total = records.filter(r => !r.demo_only).length;
+            let pendingCount = total - verifiedCount;
+            document.getElementById("progress-counter").innerHTML = Verified:  /  &nbsp;&nbsp;|&nbsp;&nbsp; Pending:  /  &nbsp;&nbsp;|&nbsp;&nbsp; Ho-Hindi verified pairs: ;
         }
 
         function showRecord(index) {
@@ -108,7 +142,9 @@
             document.getElementById("category").value = r.category || "other";
             document.getElementById("human_verified").checked = r.human_verified;
             document.getElementById("review_status").value = r.review_status || "NEW";
+            document.getElementById("translator_id").value = r.translator_id || "";
             document.getElementById("notes").value = r.notes || "";
+            document.getElementById("audio_player").src = "/api/audio/" + r.id;
             document.getElementById("msg").innerHTML = "";
         }
 
@@ -120,6 +156,7 @@
                 category: document.getElementById("category").value,
                 human_verified: document.getElementById("human_verified").checked,
                 review_status: document.getElementById("review_status").value,
+                translator_id: document.getElementById("translator_id").value,
                 notes: document.getElementById("notes").value
             };
             
@@ -130,13 +167,16 @@
             });
             const result = await res.json();
             
-            if(result.error) {
+            if(result.status === "error" || result.error) {
                 document.getElementById("msg").innerHTML = `<div class="error">${result.error}</div>`;
                 return false;
             } else {
                 document.getElementById("msg").innerHTML = `<div class="success">Saved ${r.id} successfully.</div>`;
                 // update local cache
+                
                 Object.assign(records[currentIndex], data);
+                updateProgress();
+
                 return true;
             }
         }

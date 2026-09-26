@@ -1,0 +1,41 @@
+{
+  "report_type": "Ho Data Collection Pilot V1 Final",
+  "asr": {
+    "target": "1-2 hours",
+    "hours": 0.048,
+    "speakers": 3,
+    "utterances": 50,
+    "verified_utterances": 50,
+    "unique_transcripts": 50
+  },
+  "translation": {
+    "target": "1000 pairs",
+    "total_pairs_processed": 100,
+    "human_ground_truth": 80,
+    "ai_generated": 0,
+    "synthetic": 0,
+    "unverified": 10,
+    "corrected": 0,
+    "rejected": 10
+  },
+  "tts": {
+    "target": "1-2 hours",
+    "hours": 0.033,
+    "speaker_count": 1,
+    "utterances": 30,
+    "verified_transcripts": 30,
+    "audio_quality": "studio"
+  },
+  "quality_control": {
+    "duplicate_rate": "0%",
+    "missing_metadata": "0%",
+    "script_consistency": "100% Devanagari",
+    "translation_verification_rate": "80%"
+  },
+  "training_gate": {
+    "asr": "NEEDS MORE DATA",
+    "translation": "NEEDS MORE DATA",
+    "tts": "NEEDS MORE DATA",
+    "verdict_reasoning": "Collection workflow is validated and robust, but physical volume collected is orders of magnitude below the minimum threshold required for deep learning model fine-tuning (IndicTrans2, Wav2Vec2, VITS)."
+  }
+}

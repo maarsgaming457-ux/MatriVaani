@@ -1,0 +1,62 @@
+[
+  {
+    "audio_file": "ho_test_audio\\ho1.wav",
+    "file_size_kb": 122.58,
+    "asr_transcript": "आबु एन हो को नेनता काबु बेटाइचि कोआ",
+    "asr_latency_sec": 1.334,
+    "translation": "हम उन लोगों को यहाँ पहुँचने नहीं देंगे।",
+    "translation_method": "resource_assisted_ai",
+    "confidence": "MEDIUM",
+    "translation_latency_sec": 3.336,
+    "tts_success": true,
+    "tts_bytes": 38274,
+    "tts_latency_sec": 12.265,
+    "tts_error": null,
+    "total_latency_sec": 16.935,
+    "details": {
+      "source_language": "hoc",
+      "target_language": "hin",
+      "ho_text": "आबु एन हो को नेनता काबु बेटाइचि कोआ",
+      "input": "आबु एन हो को नेनता काबु बेटाइचि कोआ",
+      "hindi_text": "हम उन लोगों को यहाँ पहुँचने नहीं देंगे।",
+      "translation": "हम उन लोगों को यहाँ पहुँचने नहीं देंगे।",
+      "method": "resource_assisted_ai",
+      "confidence": "MEDIUM",
+      "similarity_score": 0.81,
+      "dictionary_matches": 5,
+      "experimental": true,
+      "ground_truth": false,
+      "human_verified": false
+    }
+  },
+  {
+    "audio_file": "ho_test_audio\\ho2.wav",
+    "file_size_kb": 86.33,
+    "asr_transcript": "एनको नेनता काबु बेटा इचिि कोआ",
+    "asr_latency_sec": 0.157,
+    "translation": "हम उन लोगों को यहाँ पहुँचने नहीं देंगे।",
+    "translation_method": "resource_assisted_ai",
+    "confidence": "MEDIUM",
+    "translation_latency_sec": 1.83,
+    "tts_success": true,
+    "tts_bytes": 35542,
+    "tts_latency_sec": 1.079,
+    "tts_error": null,
+    "total_latency_sec": 3.067,
+    "details": {
+      "source_language": "hoc",
+      "target_language": "hin",
+      "ho_text": "एनको नेनता काबु बेटा इचिि कोआ",
+      "input": "एनको नेनता काबु बेटा इचिि कोआ",
+      "hindi_text": "हम उन लोगों को यहाँ पहुँचने नहीं देंगे।",
+      "translation": "हम उन लोगों को यहाँ पहुँचने नहीं देंगे।",
+      "method": "resource_assisted_ai",
+      "confidence": "MEDIUM",
+      "similarity_score": 0.676,
+      "dictionary_matches": 4,
+      "experimental": true,
+      "ground_truth": false,
+      "human_verified": false
+    }
+  }
+]

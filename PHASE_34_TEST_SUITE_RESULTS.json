@@ -1,0 +1,258 @@
+{
+  "category_a_known_base": [
+    {
+      "input": "आबु एन हो को नेनता काबु बेटा इचि कोआ",
+      "expected_intent": "हम उन लोगों को यहाँ पहुँचने नहीं देंगे।",
+      "translation": "हम उन लोगों को यहाँ पहुँचने नहीं देंगे।",
+      "method": "resource_supported_exact_retrieval",
+      "confidence": "HIGH",
+      "ground_truth": false,
+      "human_verified": false,
+      "latency_sec": 0.0
+    },
+    {
+      "input": "एन ओआ: आलेया हातुरे का हुजुए",
+      "expected_intent": "वह घर हमारे गाँव में नहीं आएगा।",
+      "translation": "वह घर हमारे गाँव में नहीं आएगा।",
+      "method": "resource_supported_exact_retrieval",
+      "confidence": "HIGH",
+      "ground_truth": false,
+      "human_verified": false,
+      "latency_sec": 0.0
+    },
+    {
+      "input": "एना आलेया हातुरे का हुजुए",
+      "expected_intent": "वह हमारे गाँव में नहीं आता है।",
+      "translation": "वह हमारे गाँव में नहीं आता है।",
+      "method": "resource_supported_exact_retrieval",
+      "confidence": "HIGH",
+      "ground_truth": false,
+      "human_verified": false,
+      "latency_sec": 0.0
+    },
+    {
+      "input": "एन हापानुम लो पोन रेञ जागार केना",
+      "expected_intent": "मैंने उस युवती के साथ फोन पर बात की थी।",
+      "translation": "मैंने उस युवती के साथ फोन पर बात की थी।",
+      "method": "resource_supported_exact_retrieval",
+      "confidence": "HIGH",
+      "ground_truth": false,
+      "human_verified": false,
+      "latency_sec": 0.0
+    },
+    {
+      "input": "आए लो पोन रेञ जागार केना",
+      "expected_intent": "मैंने फोन पर उससे बात की थी।",
+      "translation": "मैंने फोन पर उससे बात की थी।",
+      "method": "resource_supported_exact_retrieval",
+      "confidence": "HIGH",
+      "ground_truth": false,
+      "human_verified": false,
+      "latency_sec": 0.0
+    }
+  ],
+  "category_b_grammar_variants": [
+    {
+      "input": "आबु एन हो किन नेनता काबु बेटा इचि कोआ",
+      "expected_intent": "हम उन दोनों को यहाँ पहुँचने नहीं देंगे।",
+      "translation": "हम उन दोनों को यहाँ पहुँचने नहीं देंगे।",
+      "method": "grammar_rule_transformation",
+      "confidence": "MEDIUM",
+      "ground_truth": false,
+      "human_verified": false,
+      "latency_sec": 0.0
+    },
+    {
+      "input": "एन हातु आलेया हातुरे का हुजुए",
+      "expected_intent": "वह गाँव हमारे गाँव में नहीं आएगा।",
+      "translation": "वह गाँव हमारे गाँव में नहीं आएगा।",
+      "method": "grammar_rule_transformation",
+      "confidence": "MEDIUM",
+      "ground_truth": false,
+      "human_verified": false,
+      "latency_sec": 0.0
+    },
+    {
+      "input": "साबिन हातु रे मियड सेता मेनाइए",
+      "expected_intent": "हर गाँव में एक कुत्ता है।",
+      "translation": "हर गाँव में एक कुत्ता है।",
+      "method": "grammar_rule_transformation",
+      "confidence": "MEDIUM",
+      "ground_truth": false,
+      "human_verified": false,
+      "latency_sec": 0.0
+    },
+    {
+      "input": "आइंग जोका मान्डि एमाइंगपे",
+      "expected_intent": "मुझे थोड़ा भात दीजिए।",
+      "translation": "मुझे थोड़ा भात दीजिए।",
+      "method": "grammar_rule_transformation",
+      "confidence": "MEDIUM",
+      "ground_truth": false,
+      "human_verified": false,
+      "latency_sec": 0.0
+    },
+    {
+      "input": "आए एन पुतिको हातु रे बागे ताडा",
+      "expected_intent": "उसने वे किताबें गाँव में छोड़ रखी हैं।",
+      "translation": "उसने वे किताबें गाँव में छोड़ रखी हैं।",
+      "method": "grammar_rule_transformation",
+      "confidence": "MEDIUM",
+      "ground_truth": false,
+      "human_verified": false,
+      "latency_sec": 0.0
+    }
+  ],
+  "category_c_unseen_authentic": [
+    {
+      "input": "अले ओआ:रे मेना:लेया।",
+      "expected_intent": "हम लोग घर में हैं। (Deeney 1978: exclusive plural in house)",
+      "translation": "हम घर में हैं।",
+      "method": "resource_assisted_ai",
+      "confidence": "MEDIUM",
+      "ground_truth": false,
+      "human_verified": false,
+      "latency_sec": 3.034
+    },
+    {
+      "input": "हो को हातु रे मेना:कोआ।",
+      "expected_intent": "हो लोग गाँव में हैं। (Plural human existential)",
+      "translation": "हो लोग गाँव में मौजूद हैं।",
+      "method": "resource_assisted_ai",
+      "confidence": "MEDIUM",
+      "ground_truth": false,
+      "human_verified": false,
+      "latency_sec": 3.505
+    },
+    {
+      "input": "आइंग दाः नुः ताना।",
+      "expected_intent": "मैं पानी पी रहा हूँ। (Drinking water present continuous)",
+      "translation": "मैं पानी पी रहा हूँ।",
+      "method": "resource_assisted_ai",
+      "confidence": "MEDIUM",
+      "ground_truth": false,
+      "human_verified": false,
+      "latency_sec": 5.018
+    },
+    {
+      "input": "सोमा मंडी जोम ताना।",
+      "expected_intent": "सोमा खाना खा रहा है। (Eating food continuous)",
+      "translation": "सोमा भात खा रहा है।",
+      "method": "resource_assisted_ai",
+      "confidence": "MEDIUM",
+      "ground_truth": false,
+      "human_verified": false,
+      "latency_sec": 2.308
+    },
+    {
+      "input": "ने ओआ: रे ओकोए मेनाइए?",
+      "expected_intent": "इस घर में कौन है? (Interrogative locative existential)",
+      "translation": "क्या घर में कोई है?",
+      "method": "resource_assisted_ai",
+      "confidence": "MEDIUM",
+      "ground_truth": false,
+      "human_verified": false,
+      "latency_sec": 7.935
+    },
+    {
+      "input": "आबु गपा सेनोःआबु।",
+      "expected_intent": "हम कल चलेंगे / जाएँगे। (Future temporal adverbial)",
+      "translation": "हम सब गाँव गए।",
+      "method": "resource_assisted_ai",
+      "confidence": "LOW",
+      "ground_truth": false,
+      "human_verified": false,
+      "latency_sec": 2.677
+    }
+  ],
+  "edge_cases": [
+    {
+      "input": "",
+      "type": "empty_string",
+      "desc": "Empty input string",
+      "translation": "",
+      "method": "empty_input",
+      "confidence": "LOW",
+      "ground_truth": false,
+      "human_verified": false,
+      "latency_sec": 0.0
+    },
+    {
+      "input": "   ",
+      "type": "whitespace_only",
+      "desc": "Whitespace only",
+      "translation": "",
+      "method": "empty_input",
+      "confidence": "LOW",
+      "ground_truth": false,
+      "human_verified": false,
+      "latency_sec": 0.0
+    },
+    {
+      "input": "Hello how are you today?",
+      "type": "english_latin",
+      "desc": "Latin script English sentence",
+      "translation": "Ho translation is currently experimental and could not produce a reliable result.",
+      "method": "controlled_fallback",
+      "confidence": "LOW",
+      "ground_truth": false,
+      "human_verified": false,
+      "latency_sec": 0.0
+    },
+    {
+      "input": "नमस्ते, आप कैसे हैं और क्या कर रहे हैं?",
+      "type": "hindi_input",
+      "desc": "Hindi mistakenly passed as Ho",
+      "translation": "नमस्ते, आप कैसे हैं और क्या कर रहे हैं?",
+      "method": "resource_assisted_ai",
+      "confidence": "LOW",
+      "ground_truth": false,
+      "human_verified": false,
+      "latency_sec": 5.33
+    },
+    {
+      "input": "सेनोः",
+      "type": "single_word",
+      "desc": "Single Ho lexical verb",
+      "translation": "जाना",
+      "method": "resource_assisted_ai",
+      "confidence": "MEDIUM",
+      "ground_truth": false,
+      "human_verified": false,
+      "latency_sec": 4.591
+    },
+    {
+      "input": "ओआ:",
+      "type": "single_noun",
+      "desc": "Single Ho noun with glottal stop",
+      "translation": "घर",
+      "method": "resource_assisted_ai",
+      "confidence": "MEDIUM",
+      "ground_truth": false,
+      "human_verified": false,
+      "latency_sec": 1.187
+    },
+    {
+      "input": "asdfghjkl qwertyuiop zxcvbnm",
+      "type": "gibberish",
+      "desc": "Random non-lexical string",
+      "translation": "Ho translation is currently experimental and could not produce a reliable result.",
+      "method": "controlled_fallback",
+      "confidence": "LOW",
+      "ground_truth": false,
+      "human_verified": false,
+      "latency_sec": 0.0
+    },
+    {
+      "input": "अम अम अम अम अम अम अम अम अम अम अम अम अम अम अम अम अम...",
+      "type": "long_input",
+      "desc": "Repetitive extremely long string",
+      "translation": "अम अम अम अम अम अम अम अम अम अम अम अम अम अम अम अम अम अम अम अम अम अम अम अम अम अम अम अम अम अम अम अम अम अम अम अम अम अम",
+      "method": "resource_assisted_ai",
+      "confidence": "LOW",
+      "ground_truth": false,
+      "human_verified": false,
+      "latency_sec": 2.432
+    }
+  ]
+}

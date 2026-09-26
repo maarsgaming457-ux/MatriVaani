@@ -1,0 +1,112 @@
+{
+  "part_1_santali_reference": {
+    "asr_model": "Wav2Vec2ForCTC",
+    "asr_dataset": "Unknown internal dataset",
+    "asr_preprocessing": "Wav2Vec2Processor",
+    "santali_script": "Ol Chiki",
+    "hindi_to_santali_model": "IndicTrans2 / Sarvam / Bhashini",
+    "santali_to_hindi_model": "IndicTrans2 / Sarvam / Bhashini",
+    "translation_datasets": "Bharat Parallel Corpus Collection (BPCC)",
+    "translation_tokenizer": "IndicTransTokenizer",
+    "santali_tts_model": "None (TTSUnavailableError)",
+    "tts_input_script": null,
+    "tts_output_format": null,
+    "fastapi_endpoints": ["/asr", "/translate", "/tts"],
+    "service_classes": ["ASRService", "TranslationService", "TTSService", "OfflineService"],
+    "android_dart_code": ["ClassroomScreen", "ApiService"],
+    "language_routing": "sat",
+    "error_handling": "FastAPI exception handlers",
+    "online_offline_fallback": "Local inference and SQLite LWW offline DB",
+    "model_files": "model.safetensors, config.json, vocab.json",
+    "training_scripts": "Google Colab",
+    "colab_scripts": "Google Drive (/content/drive/MyDrive/MatriVaani_ASR/)"
+  },
+  "part_2_santali_dataset_inventory": {
+    "asr": {
+      "name": "Internal Santali Dataset",
+      "task": "ASR",
+      "script": "Ol Chiki"
+    },
+    "translation": {
+      "name": "BPCC",
+      "task": "NMT",
+      "script": "Devanagari to Ol Chiki"
+    },
+    "tts": null
+  },
+  "part_3_santali_model_inventory": {
+    "asr_model": {
+      "name": "santhali_asr_final_5k",
+      "architecture": "Wav2Vec2ForCTC",
+      "method": "Fine-tuning"
+    },
+    "nmt_model": {
+      "name": "IndicTrans2",
+      "architecture": "Transformer Seq2Seq",
+      "method": "API / Ngrok endpoint"
+    }
+  },
+  "part_4_current_ho_asr": {
+    "model": "Wav2Vec2ForCTC",
+    "checkpoint": "models/ho_asr/",
+    "latency": "5.0s - 7.5s",
+    "android_compatibility": true,
+    "decision": "RETRAIN"
+  },
+  "part_5_project_boli_ho": {
+    "samples": "< 1000",
+    "speakers": "Poonam Biruly",
+    "license": "CC-BY-NC-SA-4.0",
+    "suitability_asr": "Poor",
+    "suitability_translation": "None",
+    "suitability_tts": "Moderate",
+    "decision": "SUPPLEMENT"
+  },
+  "part_6_ho_translation": {
+    "architecture": "ExperimentalHindiToHoTranslator (Groq LLM + RAG)",
+    "failure_cases": ["Hallucinations", "Latency", "API dependent"],
+    "decision": "REPLACE"
+  },
+  "part_7_ho_tts": {
+    "current_attempt": "facebook/mms-tts-hoc",
+    "failure_reason": "Expects Odia script, fails on Latin/Devanagari.",
+    "alternatives": "None",
+    "decision": "TRAIN"
+  },
+  "part_8_new_ho_dataset_requirements": {
+    "asr": {"target_size": "50+ hours", "quality": "Mobile mic classroom", "method": "Crowdsourced recording"},
+    "translation": {"target_size": "50,000+ parallel sentences", "quality": "Verified orthography", "method": "Textbook translation"},
+    "tts": {"target_size": "5-10 hours", "quality": "Studio-quality single speaker", "method": "Professional recording"}
+  },
+  "part_9_model_selection": {
+    "ho_asr": {"candidate": "wav2vec2-large-xlsr-53 / Whisper", "status": "FINE-TUNING REQUIRED"},
+    "hindi_ho": {"candidate": "NLLB-200 / IndicTrans2", "status": "FINE-TUNING REQUIRED"},
+    "ho_hindi": {"candidate": "NLLB-200 / IndicTrans2", "status": "FINE-TUNING REQUIRED"},
+    "ho_tts": {"candidate": "VITS / FastSpeech2", "status": "TRAINING REQUIRED"}
+  },
+  "part_10_google_colab_plan": {
+    "hardware": "A100 (40GB)",
+    "pipeline": "Dataset Prep -> Tokenizer -> Fine-tuning -> Validation -> ONNX -> FastAPI",
+    "storage": "Google Drive"
+  },
+  "part_11_final_ho_architecture": {
+    "pipeline_a": "Hindi Speech -> Whisper ASR -> Hindi Text -> Fine-Tuned IndicTrans2 -> Ho Text -> Trained VITS TTS -> Android",
+    "pipeline_b": "Ho Speech -> Fine-Tuned Wav2Vec2 ASR -> Ho Text -> Fine-Tuned IndicTrans2 -> Hindi Text -> Sarvam TTS -> Android"
+  },
+  "part_12_final_decision": {
+    "ho_asr": "RETRAIN",
+    "hindi_ho": "REPLACE",
+    "ho_hindi": "REPLACE",
+    "ho_tts": "TRAIN",
+    "project_boli_ho": "SUPPLEMENT"
+  },
+  "part_13_implementation_order": [
+    "PHASE HO-0: Dataset Standardization",
+    "PHASE HO-1: NMT Fine-Tuning",
+    "PHASE HO-2: ASR Retraining",
+    "PHASE HO-3: TTS Training",
+    "PHASE HO-4: Backend API Update",
+    "PHASE HO-5: Android Integration",
+    "PHASE HO-6: E2E Latency Optimization"
+  ]
+}

@@ -1,0 +1,53 @@
+﻿# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Environment variables
+.env
+.env.local
+
+# Large datasets, models, and audio files
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.arrow
+*.wav
+*.mp3
+*.m4a
+*.ogg
+*.flac
+*.mp4
+*.pkl
+*.jsonl
+
+# Checkpoints and logs
+models/
+checkpoints/
+logs/
+evaluation/
+temp/
+tmp/
+*.log
+
+# IDEs and Editors
+.vscode/
+.idea/
+*.swp
+
+# SQLite / Database
+*.db
+*.sqlite3
+
+# Archives
+*.zip
+*.tar.gz
+*.gz

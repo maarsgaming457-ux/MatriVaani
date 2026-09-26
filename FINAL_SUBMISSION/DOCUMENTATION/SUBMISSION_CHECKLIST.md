@@ -1,0 +1,26 @@
+﻿# FINAL SUBMISSION CHECKLIST
+
+- [x] Final APK
+- [x] APK launches
+- [x] Source package
+- [x] No .env
+- [x] No API keys
+- [x] .env.example
+- [x] README
+- [x] Architecture
+- [x] Capability matrix
+- [x] Problem statement mapping
+- [x] Demo guide
+- [x] Demo script
+- [x] Presentation content
+- [x] Tech stack
+- [x] Known limitations
+- [x] Flutter analyze PASS
+- [x] Flutter release build PASS
+- [x] Hindi -> Santali PASS
+- [x] Santali -> Hindi PASS where available
+- [x] Ho ASR PASS
+- [x] Ho unsupported translation handled correctly
+- [x] No fake translations
+- [x] Protected assets unchanged
+- [x] Git not committed/pushed

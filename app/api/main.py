@@ -1,5 +1,6 @@
 from fastapi import FastAPI, HTTPException, Body, File, UploadFile, Form
 from fastapi.responses import Response
+from app.core.logging_config import logger
 from pydantic import BaseModel
 from typing import List, Dict, Any, Optional
 import tempfile
@@ -15,6 +16,8 @@ from app.services.translation_service import TranslationService
 from app.services.llm_service import LLMService
 from app.services.offline_service import OfflineService
 from app.services.tts_service import TTSService
+from app.services.experimental_ho_translation.translator import experimental_ho_translator
+from app.services.mundari_translation_service import mundari_translation_service
 
 app = FastAPI(title="MatriVaani Shared API")
 
@@ -36,6 +39,9 @@ class TranslatePayload(BaseModel):
     text: str
     source_lang: str = "santali"
     target_lang: str = "hi"
+
+class ExperimentalHoTranslatePayload(BaseModel):
+    text: str
 
 class ContentPayload(BaseModel):
     content_type: str
@@ -70,8 +76,22 @@ async def asr_endpoint(file: UploadFile = File(...), language: str = Form("santa
 @app.post("/tts")
 def tts_endpoint(payload: TTSPayload):
     from app.services.tts_service import TTSUnavailableError
+    from app.services.santali_tts_preprocessor import santali_to_tts_text
+    
     try:
-        audio_bytes = tts_service.synthesize(payload.text, payload.language, provider_override=payload.provider)
+        text_to_synthesize = payload.text
+        tts_lang = payload.language
+        
+        # Santali TTS Workaround: Use Hindi TTS engine via phonetic representation
+        if tts_lang.lower().strip() in ["sat", "santali", "santhali"]:
+            text_to_synthesize = santali_to_tts_text(payload.text)
+            if not text_to_synthesize.strip():
+                raise HTTPException(status_code=400, detail="Generated TTS text was empty.")
+            tts_lang = "hi"
+            logger.info(f"[TTS PREPROCESSOR] Original: {payload.text}")
+            logger.info(f"[TTS PREPROCESSOR] Devanagari representation: {text_to_synthesize}")
+
+        audio_bytes = tts_service.synthesize(text_to_synthesize, tts_lang, provider_override=payload.provider)
         return Response(content=audio_bytes, media_type="audio/wav")
     except TTSUnavailableError as e:
         raise HTTPException(status_code=503, detail=str(e))
@@ -83,6 +103,27 @@ def translate_endpoint(payload: TranslatePayload):
     try:
         trans = translation_service.translate(payload.text, payload.source_lang, payload.target_lang)
         return {"translation": trans}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.post("/experimental/translate/ho-hi")
+def experimental_ho_translate_endpoint(payload: ExperimentalHoTranslatePayload):
+    try:
+        result = experimental_ho_translator.translate(payload.text)
+        return result
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+class HindiToMundariPayload(BaseModel):
+    text: str
+
+@app.post("/translate/hindi-to-mundari")
+def translate_hindi_to_mundari_endpoint(payload: HindiToMundariPayload):
+    try:
+        logger.info(f"[NMT_REQUEST] Exact payload: {payload.model_dump()}")
+        translation = mundari_translation_service.translate(payload.text)
+        logger.info(f"[NMT_RESPONSE] Exact translation: {translation}")
+        return {"translation": translation}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
@@ -109,3 +150,12 @@ def save_content(payload: ContentPayload):
 def delete_content(item_id: str):
     offline_service.delete_content(item_id)
     return {"status": "deleted"}
+from app.services.experimental_ho_translation.hi_ho_translator import hi_ho_translator
+
+@app.post("/experimental/translate/hi-ho")
+def experimental_hi_ho_translate_endpoint(payload: ExperimentalHoTranslatePayload):
+    try:
+        result = hi_ho_translator.translate(payload.text)
+        return result
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))

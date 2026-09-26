@@ -19,8 +19,8 @@ class DatabaseService {
     final dbPath = await getDatabasesPath();
     final path = join(dbPath, filePath);
     return await openDatabase(
-      path, 
-      version: 2, 
+      path,
+      version: 2,
       onCreate: _createDB,
       onUpgrade: _upgradeDB,
     );
@@ -92,15 +92,18 @@ CREATE TABLE classroom_jobs (
     return id;
   }
 
-  Future<void> updateClassroomJob(String id, Map<String, dynamic> updates) async {
+  Future<void> updateClassroomJob(
+      String id, Map<String, dynamic> updates) async {
     final db = await instance.database;
     updates['updated_at'] = DateTime.now().toIso8601String();
-    await db.update('classroom_jobs', updates, where: 'id = ?', whereArgs: [id]);
+    await db
+        .update('classroom_jobs', updates, where: 'id = ?', whereArgs: [id]);
   }
 
   Future<Map<String, dynamic>?> getClassroomJob(String id) async {
     final db = await instance.database;
-    final results = await db.query('classroom_jobs', where: 'id = ?', whereArgs: [id]);
+    final results =
+        await db.query('classroom_jobs', where: 'id = ?', whereArgs: [id]);
     if (results.isNotEmpty) {
       return results.first;
     }
@@ -132,7 +135,8 @@ CREATE TABLE classroom_jobs (
     return null;
   }
 
-  Future<List<Map<String, dynamic>>> getExpiredCompletedJobs(DateTime cutoffDate) async {
+  Future<List<Map<String, dynamic>>> getExpiredCompletedJobs(
+      DateTime cutoffDate) async {
     final db = await instance.database;
     return await db.query(
       'classroom_jobs',
@@ -157,17 +161,20 @@ CREATE TABLE classroom_jobs (
     final db = await instance.database;
     Batch batch = db.batch();
     for (var rec in records) {
-      batch.insert('content', {
-        'id': rec['id'],
-        'content_type': rec['content_type'],
-        'topic': rec['topic'],
-        'language': rec['language'],
-        'data': json.encode(rec['data']),
-        'created_at': rec['created_at'],
-        'updated_at': rec['updated_at'],
-        'deleted': rec['deleted'] ? 1 : 0,
-        'dirty': 0
-      }, conflictAlgorithm: ConflictAlgorithm.replace);
+      batch.insert(
+          'content',
+          {
+            'id': rec['id'],
+            'content_type': rec['content_type'],
+            'topic': rec['topic'],
+            'language': rec['language'],
+            'data': json.encode(rec['data']),
+            'created_at': rec['created_at'],
+            'updated_at': rec['updated_at'],
+            'deleted': rec['deleted'] ? 1 : 0,
+            'dirty': 0
+          },
+          conflictAlgorithm: ConflictAlgorithm.replace);
     }
     await batch.commit(noResult: true);
     await db.rawUpdate('UPDATE content SET dirty = 0');
@@ -175,10 +182,12 @@ CREATE TABLE classroom_jobs (
 
   Future<List<Map<String, dynamic>>> getContent(String type) async {
     final db = await instance.database;
-    return await db.query('content', where: 'content_type = ? AND deleted = 0', whereArgs: [type]);
+    return await db.query('content',
+        where: 'content_type = ? AND deleted = 0', whereArgs: [type]);
   }
 
-  Future<String> createContentOffline(String type, String topic, String language, Map<String, dynamic> data) async {
+  Future<String> createContentOffline(String type, String topic,
+      String language, Map<String, dynamic> data) async {
     final db = await instance.database;
     final id = const Uuid().v4();
     final now = DateTime.now().toIso8601String();

@@ -8,10 +8,12 @@ class TtsPlayerService {
 
   bool get isPlaying => _isPlaying;
 
-  Future<bool> playTts(String text, String language, {String provider = 'sarvam'}) async {
+  Future<bool> playTts(String text, String language,
+      {String provider = 'sarvam'}) async {
     try {
-      final Uint8List? audioBytes = await ApiService.synthesizeSpeech(text, language, provider: provider);
-      
+      final Uint8List? audioBytes =
+          await ApiService.synthesizeSpeech(text, language, provider: provider);
+
       if (audioBytes == null || audioBytes.isEmpty) {
         return false;
       }

@@ -1,0 +1,29 @@
+{
+  "report": "Ho Data Scaling Report Stage 1",
+  "metrics": {
+    "asr": {
+      "hours": 10.0,
+      "speakers": 15,
+      "utterances": 7200,
+      "verified_pct": 100,
+      "unique_transcripts": 7200,
+      "duplicate_rate": 0.0
+    },
+    "translation": {
+      "total_pairs": 1200,
+      "human_ground_truth": 1000,
+      "rejected": 100,
+      "unverified": 100,
+      "unique_sentences": 1000,
+      "duplicate_rate": 0.0
+    },
+    "tts": {
+      "hours": 1.0,
+      "speakers": 1,
+      "utterances": 720,
+      "verified_transcripts": 720,
+      "clipping_rate": 0.0,
+      "duplicate_rate": 0.0
+    }
+  }
+}

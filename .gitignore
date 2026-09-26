@@ -1,53 +1,105 @@
-﻿# Byte-compiled / optimized / DLL files
-__pycache__/
-*.py[cod]
-*$py.class
-
-# Virtual environments
+# Environments
 venv/
-env/
-ENV/
-env.bak/
-venv.bak/
+.venv/
+test_venv/
+ho_test_env/
+indictrans2_env/
+bhashaverse_ho_env/
 
-# Environment variables
-.env
-.env.local
+# Python Cache
+__pycache__/
+*.pyc
+.pytest_cache/
 
-# Large datasets, models, and audio files
-*.safetensors
-*.bin
-*.pt
-*.pth
-*.arrow
-*.wav
-*.mp3
-*.m4a
-*.ogg
-*.flac
-*.mp4
-*.pkl
+# Flutter / Dart
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+build/
+
+# Android
+android/.gradle/
+android/build/
+android/app/build/
+android/.cxx/
+
+# IDEs
+.idea/
+.vscode/
+
+# Logs and outputs
+*.log
+logs/
+*.txt
+*.csv
+*.tsv
 *.jsonl
 
-# Checkpoints and logs
-models/
-checkpoints/
-logs/
-evaluation/
-temp/
-tmp/
-*.log
+# Do not ignore important config json/txt files (like tokenizer config)
+!backend/best_model_main2/*.json
+!backend/best_model_main2/*.txt
+!models/santhali_asr_final_5k/*.json
+!models/santhali_asr_final_5k/*.txt
 
-# IDEs and Editors
-.vscode/
-.idea/
-*.swp
-
-# SQLite / Database
-*.db
-*.sqlite3
-
-# Archives
+# Zip files
 *.zip
+
+# Intermediate training checkpoints and model states
+optimizer.pt
+optimizer.bin
+trainer_state.json
+checkpoint-*/
+
+# Datasets and cache
+datasets/
+data/
+fleurs_hi/
+__pycache__/
+
+# Secrets
+.env
+*.env
+credentials
+secret files
+API key files
+service-account files
+*.key
+*.pem
+*.p12
+*.pfx
+
+# Ignore all model files generally to be safe, then whitelist production ones
+*.safetensors
+*.pt
+*.bin
+*.pth
+*.onnx
+*.tflite
+*.ckpt
+*.h5
+*.pb
+*.model
+
+# WHITELIST PRODUCTION MODELS (Tracked by Git LFS)
+!backend/best_model_main2/model.safetensors
+!models/santhali_asr_final_5k/model.safetensors
+
+# Additional Large Exclusions
 *.tar.gz
-*.gz
+*.apk
+*.pkl
+
+# Audio test files
+*.wav
+*.mp3
+*.ogg
+
+# Other generated and backup files
+*.xml
+*.xml.gz
+*.db
+*.db.*
+*.py.*
+*.bak
+*.html.*

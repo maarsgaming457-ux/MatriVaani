@@ -1,0 +1,12 @@
+{
+  "data_collection_status": "NOT_STARTED",
+  "verified_hindi_ho_pairs": 0,
+  "human_collection_required": true,
+  "model_training": "NOT_STARTED",
+  "production_changes": "NONE",
+  "split_plan": {
+    "train": 70,
+    "val": 15,
+    "test": 15
+  }
+}

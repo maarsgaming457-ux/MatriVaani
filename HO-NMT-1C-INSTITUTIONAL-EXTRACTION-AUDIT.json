@@ -1,0 +1,17 @@
+{
+  "institutional_resources_inspected": [
+    "An Ho-Hindi Dictionary",
+    "Ho Durang Hisir",
+    "Ho Bhasha Ka Vaigyanik Adhyayan",
+    "Parichay: Aadivasi Ho Samaj"
+  ],
+  "access_status": "ACCESS_RESTRICTED",
+  "license_status": "COPYRIGHT_RESTRICTED",
+  "raw_candidate_pairs": 0,
+  "unique_candidate_pairs": 0,
+  "accepted_pairs": 0,
+  "dictionary_entries": 0,
+  "final_unique_hindi_ho_sentence_pairs": 0,
+  "final_training_candidate_pairs": 0,
+  "nmt_training_readiness": "NMT_TRAINING_NOT_READY"
+}
